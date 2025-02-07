@@ -1,0 +1,27 @@
+
+
+.gridFade {
+    opacity: 0;
+}
+
+/* @keyframes gridChange1 {
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.gridChangeAnim2 {
+    animation: gridChange2 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes gridChange2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */

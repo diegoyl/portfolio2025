@@ -1,0 +1,137 @@
+:root {
+  --c-cream: rgb(247, 244, 240);
+  --c-cream-zero: rgb(254,253,251,0);
+  --c-blue: rgb(0,81,255);
+  --c-blue: rgb(13,72,245);
+  --c-aqua: rgb(80, 220, 255);
+  --c-gray: rgba(11, 11, 18, 0.4);
+  --c-black: rgb(41, 38, 43);
+  --content-pad: 16px;
+  --split-grid-gap: 24px;
+  --img-radius: 2%;
+}
+
+
+@font-face {
+  font-family: "PangramDisplay";
+  src: url(../public/PPPangramSansRounded-CompressedExtrabold.otf);
+}
+@font-face {
+  font-family: "PangramCompact";
+  src: url(../public/PPPangramSansRounded-CompactRegular.otf);
+}
+@font-face {
+  font-family: "PangramText";
+  src: url(../public/PPPangramSansRounded-Light.otf);
+}
+@font-face {
+  font-family: "PangramTextBold";
+  src: url(../public/PPPangramSansRounded-Medium.otf);
+}
+@font-face {
+  font-family: "PangramHeader";
+  src: url(../public/PPPangramSansRounded-NarrowSemibold.otf);
+}
+@font-face {
+  font-family: "PangramHeaderItalic";
+  src: url(../public/PPPangramSansRounded-NarrowSemiboldItalic.otf);
+}
+
+body {
+  text-align: center;
+  background-color: var(--c-cream);
+
+  color: var(--c-black);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* font-family: PangramDisplay; */
+
+}
+
+
+.PangramDisplay {
+  font-family: "PangramDisplay";
+  letter-spacing: .03em;
+}
+.PangramCompact {
+  font-family: "PangramCompact";
+  letter-spacing: .02em;
+}
+.PangramText {
+  font-family: "PangramText";
+  font-weight: bold;
+  letter-spacing: .02em;
+}
+.PangramTextBold {
+  font-family: "PangramTextBold";
+  letter-spacing: .02em;
+}
+.PangramHeader {
+  font-family: "PangramHeader";
+  letter-spacing: .03em;
+}
+.PangramHeaderItalic {
+  font-family: "PangramHeaderItalic";
+  letter-spacing: .02em;
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--c-black);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+
+  font-family: PangramHeader;
+  
+  background-color: var(--c-blue);
+  color: var(--c-cream);
+  
+  padding: .5em 1em;
+  
+  border-radius: .5em;
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--split-grid-gap);
+}
+
+.splitDiv {
+  width: 100%;
+  vertical-align: top;
+}
+.leftSplit {
+  /* background-color: rgb a(34, 0, 255, 0.07); */
+}
+
+.rightSplit {
+  /* background-color: rgba(255, 0, 0, 0.07); */
+}
+
+.content-padding{
+  padding: var(--content-pad);
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.guppySVG {
+  fill: var(--c-blue);
+}
+
+.svgContainer {
+  width: 5em;
+  height: auto;
+  /* aspect-ratio: 1; */
+  border: red 1px solid;
+}
+
+
+.defaultGuppy {
+  width: 11em;
+}

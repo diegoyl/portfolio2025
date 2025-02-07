@@ -1,0 +1,101 @@
+:root {
+    --navHeight: 2em;
+    --navbar-pad: .4em;
+}
+  
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    margin: 0 auto;
+    height: var(--navHeight);
+
+    font-family: PangramDisplay;
+    font-size: .9em;
+    padding: var(--navbar-pad) 0;
+
+    background-color: var(--c-cream-zero);
+
+    transition: 300ms ease-in-out;
+    /* background-color: yellow; */
+}
+#navbar:hover {
+    background-color: var(--c-cream);
+}
+.navHalf {
+    display: inline-block;
+    /* height: 100%; */
+    margin-top: var(--navbar-pad);
+    width: fit-content;
+    vertical-align: top;
+    text-align: left;
+    position: absolute;
+    top: 0;
+
+}
+.navLeft {
+    text-align: left;
+    /* background-color: rgba(0, 255, 255, 0.409); */
+    left: 0;
+}
+.navRight {
+    text-align: right;
+    /* background-color: pink; */
+    right: 0;
+}
+
+#navGuppy {
+    height: 5.5em;
+    margin-left: -7.5em;
+    margin-top: -1.4em;
+    transition: 500ms ease-out;
+    rotate: 2.5deg;
+}
+.navLeft:hover #navGuppy {
+    margin-left: -4.8em;
+    margin-top: -.9em;
+    rotate: -4deg;
+}
+
+
+.navlink p {
+    display: inline-block;
+    /* margin: 0; */
+    vertical-align: top;
+    padding: 0 .4em;
+    margin: 0 .6em;
+    line-height: var(--navHeight);
+    /* background-color: green; */
+    letter-spacing: 0;
+    transition: letter-spacing 300ms ease-out;
+}
+#navName {
+    color: var(--c-blue);
+    margin-left: .3em;
+    padding: 0 .5em 0 0;
+}
+.pagelink p {
+    transition: 200ms ease-in-out;
+    color: var(--c-black);
+}
+.pagelink-last p {
+    padding-right: 0;
+    margin-right: var(--content-pad);
+}
+
+
+.navlink p:hover {
+    letter-spacing: .02em;
+}
+.pagelink p:hover {
+    color: var(--c-aqua);
+    rotate: 3deg;
+}
+
+.activeNavLink {
+    color: var(--c-blue);
+}
+.activeNavLink p:hover {
+    color: var(--c-blue);
+}
+
