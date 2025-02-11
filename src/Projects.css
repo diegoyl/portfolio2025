@@ -1,25 +1,18 @@
-#projects-menu-fixed {
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    /* background-color: rgba(255, 255, 88, 0.219); */
-    z-index: 8;
-    width: 48%;
-    /* padding-right: 16px; */
-    /* margin-top: -20em; */
-
+.leftSplit {
 }
-#projects-menu-tablecell {
-    display: table-cell;
-    height: 100vh;
-    vertical-align: middle;
-    /* background-color: rgba(255, 111, 0, 0.219); */
-    width: 100%;
-    text-align: left;
+.projectsMarginTop {
+    margin-top: 5em;
+}
+#projects-menu-fixed {
+    position: fixed;
+    /* background-color: rgba(255, 0, 0, 0.273) */
+
 }
 
 #projects-menu-inner {
+    /* top: calc(var(--navHeight)*3); */
     text-align: left;
+    width: 100%;
     
     font-family: PangramHeader;
     font-size: 2.7em;
@@ -27,7 +20,7 @@
     left: 0;
 
     display: inline-block;
-    /* background-color: rgba(255, 0, 0, 0.219); */
+    /* background-color: rgba(255, 204, 0, 0.219); */
 }
 #projects-menu-inner p {
     width:fit-content;
@@ -39,6 +32,7 @@
     letter-spacing: -.02em;
 
     transition: color 400ms ease-in-out, transform 200ms ease-out, letter-spacing 300ms ease-out, opacity 200ms ease-in-out, font-size 400ms 150ms ease-out;;
+    transform-origin: 0% 50%;
 
 
 
@@ -46,11 +40,9 @@
 #projects-menu-inner p:hover {
     cursor: pointer;
     /* font-family: PangramHeaderItalic; */
-    transform: skew(-9deg, 0);
+    transform: skew(-9deg, 0) scale(1.2);
     letter-spacing: .01em;
     color: var(--c-black);
-
-    font-size: 1.05em;
 }
 .inactiveCategory {
     color: var(--c-gray);
@@ -59,7 +51,7 @@
     opacity: 1;
     color: var(--c-blue);
     /* font-family: PangramHeaderItalic; */
-    transform: skew(-14deg, 0);
+    transform: skew(-14deg, 0) translateX(1%);
     letter-spacing: 0em;
 }
 
@@ -126,6 +118,8 @@
 #projectGrid {
     display: grid;
     transition: 400ms ease-in-out;
+    min-height: 90vh;
+    grid-template-rows: min-content;
 }
 
 .grid1 {
@@ -135,6 +129,8 @@
 .grid2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1em;
+    /* height: 50px; */
+
 }
 .grid3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -206,4 +202,25 @@
 
 #archiveLink {
     font-size: .4em;
+}
+
+.thumbFadeOut {
+    animation-name: thumbFade;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+.thumbFadeIn {
+    animation-name: thumbFade;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+}
+@keyframes thumbFade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }

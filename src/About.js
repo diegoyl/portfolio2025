@@ -1,17 +1,22 @@
 import './App.css';
 import './About.css';
+import transition from './transition.js';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import React, {useState, useEffect} from 'react';
 
 import profilePic from './img/profilePic.jpeg';
 
-function About() {
+
+function About(props) {
+  useEffect(() => {
+      document.title = "About"
+  },[])
 
 
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBar page={"about"}></NavBar>
 
         <div id="projectPage" className="content-left content-margintop content-padding">
 
@@ -66,4 +71,4 @@ function About() {
   );
 }
 
-export default About;
+export default transition(About);

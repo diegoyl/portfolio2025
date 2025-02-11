@@ -1,42 +1,102 @@
 import './App.css';
 import './Projects.css';
 import './Animations.css';
+import transition from './transition.js';
 import NavBar from './NavBar';
 import ProjectThumb from './ProjectThumb';
 import Footer from './Footer';
 import React, {useState, useEffect} from 'react';
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import {Link} from "react-router-dom"
 
 
-function Projects(props) {
+
+import Thumb_Clock from './img/project/clock/thumb.jpg';
+import Thumb_Footwork from './img/project/footwork/thumb.jpg';
+
+
+
+const thumbDataDict = {
+    "footwork":[ Thumb_Footwork, "Footwork XVII", "Project P.g Subtitle FW" ],
+    "clock": [ Thumb_Clock, "Sequencer Clock", "CLK Project Page st FW" ],
+}
+
+const categoryDict = {
+    "all": [
+        "footwork",
+        "clock",
+    ],
+    "design": [
+        "clock",
+        "footwork",
+        "footwork",
+    ],
+    "engineering": [
+        "clock",
+        "clock",
+        "clock",
+        "clock",
+        "clock",
+
+    ],
+    "coding": [
+        "clock",
+        "clock",
+        "footwork",
+    ],
+    "interactive": [
+        "clock",
+
+    ],
+    "graphic design": [
+        "footwork",
+
+    ],
+}  
+  
+function Projects() {
+    var [category, setCategory] = useState("all")
+    var [gridType, setGridType] = useState("grid1")
+    
+    console.log("defCat= ",category)
+    
+    const location = useLocation();
+    const navigate = useNavigate();
+    var categoryPassedIn = false;
     useEffect(() => {
-        document.title = props.title
+        document.title = "Projects"
+        
+        var searchData = location.search + "";
+        if (searchData) {
+            categoryPassedIn = searchData.split("=")[1];
+            console.log("SD: ",searchData)
+            setCategory(categoryPassedIn)
+            navigate('/projects', { replace: true });
+        } else {
+            setCategory("all")
+        }
     },[])
 
-    const location = useLocation();
-    const state = location.state;
-    var categoryPassedIn = state["categoryPassedIn"]
     
-    console.log("Cat Pass In: ",categoryPassedIn)
-    if (!categoryPassedIn) {
-        categoryPassedIn = "all";
-        console.log("\tChanged to: ",categoryPassedIn)
-    }
-    var [category, setCategory] = useState(categoryPassedIn)
-    var [gridType, setGridType] = useState("grid1")
-
     function changeCategory(cat)  {
         // console.log(cat)
-        setCategory(cat)
+        window.scrollTo({top: 0, behavior: 'smooth'});
+
+        const projectGrid = document.getElementById('projectGrid')
+        projectGrid.classList.add('gridFade'); // start animation            
+
+        setTimeout(() => {
+
+            setCategory(cat)
+            projectGrid.classList.remove('gridFade'); // reset animation
+        },700)
     }
 
     function changeGridType(gt)  {
+        window.scrollTo({top: 0, behavior: 'smooth'});
         if (gt!=gridType){
             const projectGrid = document.getElementById('projectGrid')
-            // void projectGrid.offsetWidth; // trigger reflow
-            projectGrid.classList.add('gridFade'); // start animation
-            
+            projectGrid.classList.add('gridFade'); // start animation            
             
             setTimeout(() => {
                 setGridType(gt)
@@ -44,36 +104,38 @@ function Projects(props) {
             },700)
         }
     }
+
   return (
     <div>
       <NavBar page={"projects"}></NavBar>
 
-        <div className="content-padding splitGrid">
+        <div className="content-padding splitGrid projectsMarginTop">
 
             <div className='splitDiv leftSplit'>
                 <div id="projects-menu-fixed">
-                    <div id="projects-menu-tablecell">
-                        <div id="projects-menu-inner">
-                            <p className={category==="all" ? "activeCategory":"inactiveCategory"} onClick={() => changeCategory("all")}>ALL</p>
-                            <p className={category==="design" ? "activeCategory":"inactiveCategory"} onClick={() => changeCategory("design")}>DESIGN</p>
-                            <p className={category==="engineering" ? "activeCategory":"inactiveCategory"} onClick={() => changeCategory("engineering")}>ENGINEERING</p>
-                            <p className={category==="coding" ? "activeCategory":"inactiveCategory"} onClick={() => changeCategory("coding")}>CODING</p>
-                            <p className={category==="interactive" ? "activeCategory":"inactiveCategory"} onClick={() => changeCategory("interactive")}>INTERACTIVE</p>
-                            <p className={category==="graphic design"  ? "activeCategory":"inactiveCategory"} onClick={() => changeCategory("graphic design")}>GRAPHIC DESIGN</p>
-                            <div id="gridBtnContainer">
-                                <button id="gridBtn1" className={gridType==="grid1" ? "gridBtnActive gridButton":"gridButton"} onClick={() => changeGridType("grid1")}></button>
-                                <button id="gridBtn2" className={gridType==="grid2" ? "gridBtnActive gridButton":"gridButton"} onClick={() => changeGridType("grid2")}></button>
-                                <button id="gridBtn3" className={gridType==="grid3" ? "gridBtnActive gridButton":"gridButton"} onClick={() => changeGridType("grid3")}></button>
-                            </div>
-                            <br></br>
-                            {/* TODO LINK THIS */}
-                            <p className="inactiveCategory" id="archiveLink" onClick={() => changeCategory("archive")}>ARCHIVE</p>
+                    
+                    <div id="projects-menu-inner">
 
+                        {Object.keys(categoryDict).map(function(categoryName,index) {
+                            return (
+                                <p key={index} className={category===categoryName ? "activeCategory":"inactiveCategory"} 
+                                onClick={() => changeCategory(categoryName)}
+                                >{categoryName.toUpperCase()}</p>
+                            )
+                        })}
+
+                        <div id="gridBtnContainer">
+                            <button id="gridBtn1" className={gridType==="grid1" ? "gridBtnActive gridButton":"gridButton"} onClick={() => changeGridType("grid1")}></button>
+                            <button id="gridBtn2" className={gridType==="grid2" ? "gridBtnActive gridButton":"gridButton"} onClick={() => changeGridType("grid2")}></button>
+                            <button id="gridBtn3" className={gridType==="grid3" ? "gridBtnActive gridButton":"gridButton"} onClick={() => changeGridType("grid3")}></button>
                         </div>
-                    </div>
-                    <div id="projects-menu-tablecell">
-                    </div>
 
+                        <br></br>
+
+                        {/* TODO LINK THIS */}
+                        {/* <p className="inactiveCategory" id="archiveLink" onClick={() => changeCategory("archive")}>ARCHIVE</p> */}
+                    
+                    </div>
       
                 </div>
 
@@ -83,34 +145,22 @@ function Projects(props) {
             <div className='splitDiv rightSplit content-left'>
                 <div id="projectGrid" className={gridType}>
 
-                    <Link to="/projectpage1"
-                        state={{ categoryPassedIn: "all" }}>
-                            <ProjectThumb 
-                                name={"Project Districts"}
-                            ></ProjectThumb>                
-                    </Link>
-
-
-                    <Link to="/projectpage2"
-                        state={{ categoryPassedIn: "all" }}>
-                            <ProjectThumb 
-                                name={"ProJect No. 2"}
-                            ></ProjectThumb>
-                    </Link>
-
-                    <Link to="/projectpage3"
-                        state={{ categoryPassedIn: "all" }}>
-                            <ProjectThumb 
-                                name={"proyecto] No. 3"}
-                            ></ProjectThumb>
-                    </Link>
-
-                    <Link to="/projectpage3"
-                        state={{ categoryPassedIn: "all" }}>
-                            <ProjectThumb 
-                                name={"proyecto] No. 3"}
-                            ></ProjectThumb>
-                    </Link>
+                    {category ? (
+                        <>
+                        {categoryDict[category].map(function(projName,index) {
+                            return (
+                                <Link to={"/"+projName} key={index}> 
+                                    <ProjectThumb 
+                                        thumbSrc={thumbDataDict[projName][0]}
+                                        title={thumbDataDict[projName][1]}
+                                        subtitle={thumbDataDict[projName][2]}
+                                    ></ProjectThumb>                
+                                </Link>
+                            )
+                        })}
+                        </>
+                    ) : (<></>)
+                    }   
                     
                 </div>
             </div>
@@ -124,4 +174,4 @@ function Projects(props) {
   );
 }
 
-export default Projects;
+export default transition(Projects);

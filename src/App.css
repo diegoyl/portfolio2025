@@ -1,8 +1,11 @@
 :root {
   --c-cream: rgb(247, 244, 240);
   --c-cream-zero: rgb(254,253,251,0);
+  --c-cream-transparent: rgb(247, 244, 240,.86);
   --c-blue: rgb(0,81,255);
   --c-blue: rgb(13,72,245);
+  --c-blue: rgb(6,76,250);
+  --c-blue-transparent: rgb(6,76,250,.9);
   --c-aqua: rgb(80, 220, 255);
   --c-gray: rgba(11, 11, 18, 0.4);
   --c-black: rgb(41, 38, 43);
@@ -35,6 +38,13 @@
 @font-face {
   font-family: "PangramHeaderItalic";
   src: url(../public/PPPangramSansRounded-NarrowSemiboldItalic.otf);
+}
+
+html, body {
+  /* cursor: url("./img/crsr.png") 40 40,auto; */
+}
+.loadingCursor {
+  cursor: url("./img/crsr.png") 40 40,auto;
 }
 
 body {
@@ -120,18 +130,101 @@ button {
   text-decoration: line-through;
 }
 
-.guppySVG {
-  fill: var(--c-blue);
-}
 
 .svgContainer {
   width: 5em;
   height: auto;
   /* aspect-ratio: 1; */
-  border: red 1px solid;
+  /* border: red 1px solid; */
 }
 
 
-.defaultGuppy {
-  width: 11em;
+.guppyContainer {
+  width: 10em;
+  aspect-ratio: 1216/652;
+  position: absolute;
+
+  /* background-color: rgba(255, 166, 0, 0.148); */
+  /* border: red solid .2px; */
+}
+
+.guppySVGboth {
+  width: 100%;
+  position: absolute;
+
+  display: block;
+}
+.guppySVGfill {
+  fill: var(--c-blue);
+}
+.guppySVGbg {
+  fill: var(--c-cream);
+  /* stroke-width: 5;
+  stroke: red; */
+}
+
+
+/* ///////////////////////////////////////////// */
+/* TRANSITION.JS   ///////////////////////////// */
+
+.erase-transition {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 0, 255);
+  transform-origin: bottom;
+  pointer-events: none;
+}
+.reveal-transition {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--c-cream);
+  transform-origin: top;
+  pointer-events: none;
+}
+
+#erase-container {
+  z-index: 900;
+  background-color: var(--c-cream);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.beginErase {
+  animation: eraseFade;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes eraseFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.bubbleContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 200;
+  pointer-events: none;
+  /* background-color: rgba(255, 0, 0, 0.255); */
 }

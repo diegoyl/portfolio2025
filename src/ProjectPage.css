@@ -12,6 +12,10 @@
     margin-left: 6%;
     width: 94%;
 }
+#projectPage {
+    min-height: 100vh;
+}
+
 #projectPage .splitGrid {
     margin-bottom: calc(var(--content-pad)*8);
     margin-top: calc(var(--content-pad)*.5);
@@ -100,3 +104,4 @@
 .dividerBottom {
     margin-bottom: calc(var(--content-pad)*2);
 }
+

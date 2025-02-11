@@ -1,100 +1,52 @@
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import './ProjectPage.css';
+import transition from './transition.js';
 import NavBar from './NavBar';
 import Footer from './Footer';
-import React, {useState, useEffect} from 'react';
+import { useLocation } from 'react-router-dom';
 
-import thumb from './img/thumb.jpg';
 
-function ProjectPage(props) {
+import Cont_Clock from './img/project/clock/Cont_Clock';
+import Cont_Footwork from './img/project/footwork/Cont_Footwork';
+
+
+
+const projComponentDict = {
+  "footwork": [<Cont_Footwork />, "Footwork XVII"],
+  "clock": [ <Cont_Clock />, "Sequencer Clock"],
+}
+
+
+function ProjectPage() {
+    var [projectKey, setProjectKey] = useState()
+    var [projComponent, setProjComponent] = useState()
+    const location = useLocation();
+
     useEffect(() => {
-        document.title = props.title
+        var path = location.pathname
+        var projectKeyRemoveSlash = path.slice(1)
+        console.log("projectKey = ", projectKeyRemoveSlash)
+
+        setProjectKey(projectKeyRemoveSlash)
+        setProjComponent(projComponentDict[projectKeyRemoveSlash][0])
+    
+        document.title = projComponentDict[projectKeyRemoveSlash][1]
     },[])
+
 
 
   return (
     <div>
       <NavBar></NavBar>
 
-        <div id="projectPage" className="content-left content-margintop content-padding">
+      {projComponent ? (
+          projComponent     
+      ) : ( <></>)}
 
-            <div className="splitGrid projectHeaderDiv">
-              <div className='splitDivIndent splitDiv leftSplit'>
-                <h1>Project Title</h1>
-                <h2>This is a one sentence description of the project, catchy!</h2>
-
-                <div className="metaList">
-                  <p className="metaHeader">SKILLS</p>
-                  <p>Design</p>
-                  <p>User Testing</p>
-                  <p>Protopying</p>
-                </div>
-
-                <div className="metaList">
-                  <p className="metaHeader">TOOLS</p>
-                  <p>CAD</p>
-                  <p>Python</p>
-                  <p>3D-Printing</p>
-                  <p>Laser Cutting</p>
-                </div>
-
-                <div className="metaList">
-                  <p className="metaHeader">DURATION</p>
-                  <p>2022-2024</p>
-                </div>
-
-                <div className="metaList">
-                  <p className="metaHeader">LOCATION</p>
-                  <p>MIT Voxel Lab</p>
-                  <p>Cambridge, MA</p>
-                </div>
-              </div>
-
-
-              <div className='splitDiv rightSplit'>
-                  <img src={thumb} style={{"width":"100%","border-radius":"2%"}}/>
-              </div>
-
-            </div>
-
-            <div className="divider dividerTop"></div>
-            <div className="divider"></div>
-            <div className="divider dividerBottom"></div>
-
-
-            <div className="splitGrid">
-              <div className='splitDiv leftSplit'>
-                <h3>Sectijgon #3 Section #3 SBBBection #3</h3>
-              </div>
-
-
-              <div className='splitDiv rightSplit'>
-                <p>Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. </p>
-              </div>
-
-            </div>
-
-            <div className="divider dividerTop"></div>
-
-
-            <div className="splitGrid">
-              <div className='splitDiv leftSplit'>
-                <h3>Design Process</h3>
-              </div>
-
-
-              <div className='splitDiv rightSplit'>
-                <p>Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. Idk, some stuff about my process or soeemthign. </p>
-              </div>
-
-            </div>
-
-            <div className="divider dividerTop"></div>
-
-        </div>
-        <Footer></Footer>
+      <Footer></Footer>
     </div>
   );
 }
 
-export default ProjectPage;
+export default transition(ProjectPage);
