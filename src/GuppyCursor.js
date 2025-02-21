@@ -82,7 +82,7 @@ function GuppyCursor() {
       yAccPrev.push(yAccRaw);
 
       xAcc.value = (average(xAccPrev) / 500) * maxAcc 
-      yAcc.value = (average(yAccPrev) / 500) * maxAcc
+      yAcc.value = (average(yAccPrev) / 500) * maxAcc 
 
       // console.log(average(xAccPrev).toFixed(0), " | ",average(yAccPrev).toFixed(0))
 
