@@ -6,18 +6,17 @@ import Divider from '../../../components/projectPage/Divider';
 // Projects.js : update array, imports, and categories
 
 ///// PROJECT IMG/VID IMPORTS
-import i_ from './thumb.jpg';
 // import i_XXX from "./XXX.jpg"
 
-function Cont_XXX() {
-  const projKey = "pkey"
+function Cont_Futbot() {
+  const projKey = "futbot"
 
   return (
     <div id="projectPage" className="content-left content-margintop content-padding">
         <ProjectHeader
 
-            title="XXX"
-            subtitle="subtitle"
+            title="Futbot"
+            subtitle="...coming soon... super cool robot !!!"
             
             metaLists={[
                 {"title":"SKILLS",
@@ -48,10 +47,10 @@ function Cont_XXX() {
 
 
         <ProjectSection
-            left={"SectionTitle"} leftType=""
+            left={"hi :P"} leftType=""
             right={<>
                 <p>
-
+                ... very soon
                     
                 </p>
                 
@@ -67,4 +66,4 @@ function Cont_XXX() {
   );
 }
 
-export default Cont_XXX;
+export default Cont_Futbot;

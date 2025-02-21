@@ -26,10 +26,10 @@ function About(props) {
                 <h2>Hi, I'm Diego!</h2>
 
                 <p>
-                    I recently graduated from MIT where I studied Art & Design and Computer Science. I'm originally from Austin, TX 🤠.
+                    I recently graduated from MIT, where I studied Art & Design and Computer Science and a bit of Mechanical Engineering. I'm originally from Austin, TX 🤠.
                     Recently, I've been most interested in interaction design and creative technology.
                     I am also interested/experienced 
-                    in computational design, any kind of coding, graphic design, music, and actually using ML/AI in interesting ways.
+                    in any kind of coding, graphic design, music, and  using ML/AI in actually interesting ways.
                     <br></br>
                     <br></br>
 
@@ -51,22 +51,22 @@ function About(props) {
                 </p>
                 <br></br>
 
-                <p className='PangramHeader'>Current Obsessions...</p>
+                <p className='PangramHeader'>CURRENT OBSESSIONS...</p>
                 <p>
                   <a target="_blank" href="https://www.https://www.youtube.com/@blaccmassxx" rel="noreferrer">blaccmass remixes</a> 
 
                     
                     , 
-                    Three Body Problem, Dr. K, watermelon
+                    Three Body Problem, Dr. K, watermelon, Overcooked
                     <br></br>
                     <br></br>
 
                 </p>
 
                 <div style={{"opacity":".5"}}>
-                  <p className='PangramHeader'>Obsessions Archive...</p>
+                  <p className='PangramHeader'>OBESSIONS ARCHIVE...</p>
                   <p>
-                      the olympics, Conductor Williams instrumentals, Dune, cooking, mummy_joe (instagram page), mango sticky rice, jookin (dance style), Attack on Titan, Pocket Operators, Denzel Curry, sports betting models, Kendrick, orange chicken, Julian DeGuzman, MPC drum machine, Formula 1, buffalo wings, Avatar TLA, collaging, Rosalia, NCT 127, Hamilton
+                      mango sticky rice, Conductor Williams instrumentals, Dune, the olympics, cooking, mummy_joe (instagram page), mango sticky rice, jookin (dance style), Attack on Titan, Pocket Operators, Denzel Curry, sports betting models, Kendrick, orange chicken, Julian DeGuzman, MPC drum machine, Formula 1, buffalo wings, Avatar TLA, collaging, Rosalia, NCT 127, Hamilton
                   </p>
 
                 </div>
@@ -76,6 +76,15 @@ function About(props) {
 
               <div className='splitDiv rightSplit'>
                   <img src={profilePic} style={{"width":"100%"}} alt="diego's face"/>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <h3>Contact Me!</h3>
+                  <p><strong>EMAIL / </strong>hi.diegoyl@gmail.com</p>
+                  <p><strong>LINKEDIN / </strong><a href="https://www.linkedin.com/in/diego-yanez-laguna/" target="_blank">linkedin.com/in/diego-yanez-laguna/</a></p>
+                  <p><strong>INSTA / </strong><a href="https://www.instagram.com/tryingtryiing/" target="_blank">@tryingtryiing</a></p>
+                  <p><strong>PHONE # / </strong>...maybe if you email me I'll give it to you</p>
+              
               </div>
 
             </div>

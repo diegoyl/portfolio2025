@@ -1,7 +1,9 @@
 :root {
   --c-cream: rgb(247, 244, 240);
-  --c-cream-zero: rgb(254,253,251,0);
-  --c-cream-transparent: rgb(247, 244, 240,.86);
+  --c-cream: rgb(246, 246, 243);
+  
+  --c-cream-zero: rgba(254, 254, 251, 0);
+  --c-cream-transparent: rgb(246, 246, 243,.86);
   --c-blue: rgb(0,81,255);
   --c-blue: rgb(13,72,245);
   --c-blue: rgb(6,76,250);

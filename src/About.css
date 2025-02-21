@@ -50,7 +50,11 @@
 
 
 .aboutPage img{
-    border-radius: calc(var(--content-pad));
+    border-radius: 15px;
+}
+
+.aboutPage strong{
+    font-family: PangramHeader;
 }
 
 

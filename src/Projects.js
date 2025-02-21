@@ -60,11 +60,12 @@ const thumbDataDict = {
     "footwork":[ Thumb_Footwork, "Footwork XVII", "Branding & T-Shirt Design" , false],
     "21m080": [ Thumb_21m080, "21M.080 Interface", "Making music with live-coding", false],
     "adobe-home": [ Thumb_AdobeHome, "Adobe Home", "", false],
+    "infinite-merch": [ Thumb_InfiniteMerch, "Infinite Merch", "Hand-printed T-Shirts, stickers, and totes for Infinite Magazine", false],
+    "infinite": [ Thumb_Infinite, "Infinite Magazine", "I was the Visual Design Director for MIT's fashion magazine", false],
 
 
 
-    "infinite-merch": [ Thumb_InfiniteMerch, "Infinite Merch", "subtitle", false],
-    "tangible-sampling": [ Thumb_TangibleSampling, "Tangible Sampling", "subtitle", false],
+    "tangible-sampling": [ Thumb_TangibleSampling, "Tangible Sampling", "Collaborative music-making installation", false],
     "mask": [ Thumb_Mask, "Mask", "subtitle", false],
     "hardcell": [ Thumb_Hardcell, "HARDCELL®", "subtitle", false],
     "ims": [ Thumb_IMS, "Interactive Music Systems", "subtitle", false],
@@ -72,7 +73,6 @@ const thumbDataDict = {
     "pecan-sans": [ Thumb_PecanSans, "Pecan Sans", "subtitle", false],
     "futbot": [ Thumb_Futbot, "Futbot", "subtitle", false],
     "pendulum": [ Thumb_Pendulum, "Pendulum Sculptures", "subtitle", false],
-    "infinite": [ Thumb_Infinite, "Infinite Magazine", "subtitle", false],
     "light": [ Thumb_Light, "Wax Lamp", "subtitle", false],
     "pedals": [ Thumb_Pedals, "Guitar Pedals", "subtitle", false],
     "models": [ Thumb_Models, "Miniatures", "subtitle", false],
@@ -83,28 +83,29 @@ const categoryDict = {
     "all": [
         "clock",
         "squish",
-        "forting",
+        "forting", // TODO: add forting process
+        "tangible-sampling", 
         "footwork",
-        "chair",
         "21m080",
+        "infinite-merch",
+        "chair",
         "ai",
         "beatfarm",
+        "infinite", //  TODO: infinite unfinished
         "birth-certificate",
         "tactical-type",
         "drift",
         "adobe-home",
+        "hardcell",
+        "futbot",
 
         "b2web",
 
 
-        // "tangible-sampling",
 
-        // "infinite-merch",
         // "hardcell",
 
         // "ims",
-        // "infinite",
-        // "futbot",
 
         // "mask",
         // "honest-type",
@@ -120,8 +121,10 @@ const categoryDict = {
         "clock",
         "squish",
         "forting",
+        "tangible-sampling", 
         "chair",
         "adobe-home",
+        "drift",
 
     ],
     "coding/ux": [
@@ -132,12 +135,14 @@ const categoryDict = {
         
     ],
     "engineering": [
-
+        "futbot",
+        "hardcell",
     ],
     "interactive": [
         "clock",
         "squish",
         "forting",
+        "tangible-sampling", 
         "beatfarm",
         "tactical-type",
         "birth-certificate",
@@ -145,6 +150,7 @@ const categoryDict = {
     ],
     "graphic design": [
         "footwork",
+        "infinite-merch",
         "tactical-type",
         "drift",
         "birth-certificate",

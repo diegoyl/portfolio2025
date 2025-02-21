@@ -1,67 +1,145 @@
 import ProjectHeader from '../../../components/projectPage/ProjectHeader';
-import thumbSrc from './thumb.jpg';
+import ProjectSection from '../../../components/projectPage/ProjectSection';
+import Divider from '../../../components/projectPage/Divider';
+
+// 1: Cont_XXX   2: projKey  3: title,subtitle,lists  
+// Projects.js : update array, imports, and categories
 
 ///// PROJECT IMG/VID IMPORTS
-import i from './thumb.jpg';
+import i_ from './thumb.jpg';
+// import i_XXX from "./XXX.jpg"
+import i_iss11 from "./iss11.png"
+import i_issXmerch from "./issXmerch.png"
+import i_issXmerch2 from "./issXmerch2.png"
+import i_stickers from "./stickers.png"
+import i_tote from "./tote.jpg"
+import i_sweatshirt1 from "./sweatshirt1.jpg"
+import i_sweatshirt2 from "./sweatshirt2.JPG"
 
 
-function Cont_() {
-    
+
+function Cont_InfiniteMerch() {
+  const projKey = "infinite-merch"
+
+  function redirectDelay(path) {
+    setTimeout(() => {
+      window.location.href = path;
+    }, 310)
+  }
+
+
   return (
     <div id="projectPage" className="content-left content-margintop content-padding">
         <ProjectHeader
-            title="Default"
-            subtitle="subtitle"
+
+            title="Infinite Merch"
+            subtitle="T-Shirts, stickers, and totes for Infinite Magazine"
+            
             metaLists={[
                 {"title":"SKILLS",
                     "items":[
-                        "skill1",
-                        "skill2",
-                        "skill3"
+                        "Graphic Design",
+                        "Branding",
+                        "Screen Printing"
+                        
                 ]},
                 {"title":"TOOLS",
                     "items":[
-                        "tool1",
-                        "tool2",
-                        "tool3",
-                        "tool4"
+                        "Illustrator",
+                        "Photoshop"
                 ]},
             ]}
-            thumbSrc={thumbSrc}
+            projKey={projKey}
+            h2margBot={""} // 2.2em default , type Xem
         ></ProjectHeader>
 
 
         {/* PROJECT CONTENT */}
 
-        <div className="splitGrid">
-            <div className='splitDiv leftSplit'><h3>
-                Section Title
-            </h3></div>
+        {/* <ProjectSection
+            left={"SectionTitle"} leftType=""
+            right={<>
+                <p></p>
+            </>} 
+        ></ProjectSection> */}
 
-            <div className='splitDiv rightSplit'>
-
-                <p>Words words words...</p>
-                <img src={thumbSrc} style={{"width":"100%"}}/>
-
-            </div>
-        </div><div className="divider dividerTop"></div>
+        {/* <Divider /> */}
+        {/* <img src={i_xx} style={{mixBlendMode:""}}/> */}
 
 
+        <ProjectSection
+            left={"T-Shirts"} leftType=""
+            right={<>
+                <p>
+                    For Issue 11 we screen printed our own merch so that we could add sleeve designs and print on a larger area on the back.
 
-        <div className="splitGrid">
-            <div className='splitDiv leftSplit'><h3>
-                Section Title #2
-            </h3></div>
+                    
+                </p>
+                <img src={i_iss11} style={{maxHeight:"90vh", width:"auto", rotate:"12deg"}} className='' />
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <h5 className='centerText'>
+                    Issue X Shirt + Bucket Hat
 
-            <div className='splitDiv rightSplit'>
+                    
+                </h5>
 
-                <p>Palabras words palabras...</p>
-                <img src={thumbSrc} style={{"width":"100%"}}/>
+                <img src={i_issXmerch} />
+                <img src={i_issXmerch2} />
+                         <br></br>           
+                         <br></br>           
+                         <br></br>           
+                         <br></br>           
+            </>} 
+        ></ProjectSection>
 
-            </div>
-        </div><div className="divider dividerTop"></div>
+        <ProjectSection
+            left={"Stickers"} leftType=""
+            right={<>
+                <p>
+                    ... and also a patch!
+                </p>
+                <img src={i_stickers} style={{maxHeight:"80vh", width:"auto"}} className='' />
+                <br></br>
+                <br></br>
+                <br></br>
+            </>} 
+        ></ProjectSection>
+        <ProjectSection
+            left={"Issue 9"} leftType=""
+            right={<>
+                <p>
+                    Tote bag and sweatshirt
+                </p>
+                <div className='imgRow3'>
+                    <img src={i_tote}  />
+                    <img src={i_sweatshirt1}  />
+                    <img src={i_sweatshirt2}  />
 
-
+                </div>
+                
+            </>} 
+        ></ProjectSection>
+        <Divider />
+        <ProjectSection
+            left={"More Infinite"} leftType=""
+            right={<>
+                <p className='centerText w80' style={{margin:"0 auto"}}>
+                    I was the Visual Design Director for Infinite Magazine for 3 years. Check out all the non-merch stuff I did here:
+                    <br></br>
+                    <br></br>
+                    <button onClick={() => {redirectDelay("/infinite")}} 
+                        >
+                        INFINITEEEEEE
+                    </button>
+                </p>
+                
+            </>} 
+        ></ProjectSection>
+        
 
 
 
@@ -69,4 +147,4 @@ function Cont_() {
   );
 }
 
-export default Cont_;
+export default Cont_InfiniteMerch;

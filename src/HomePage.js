@@ -150,7 +150,6 @@ function HomePage() {
       <div className='floatUp' style={{"--j":2.5}}>
         <p id="home-bio" >
           Hi, I’m Diego! I love making things, experimenting, and learning new things along the way. I recently graduated from MIT, where I took classes on design, computer science, mechanical engineering, and music!
-          I ended up with an Art & Design major and CS minor.
           <br></br>
           <br></br>
           My projects are roughly categorized below (most of them overlap). Feel free to reach out if you want to work together on anything! 

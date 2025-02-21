@@ -6,7 +6,23 @@
     font-family: PangramHeader;
     color: var(--c-gray);
     padding: 10em 0 3em;
-    background: linear-gradient(180deg, rgba(247, 244, 240,0) 0%, rgb(215, 206, 195) 100%);
+    background: linear-gradient(180deg, rgba(246, 246, 243,0) 0%, rgb(215, 212, 195) 100%);
+    background: 
+        linear-gradient(180deg, 
+            rgba(246, 246, 243,0) 0%, 
+            #f6f6f300 0%,
+            #ebf6f4 10%,
+            #d1f5f7 20%,
+            #c0f5f9 31%,
+            #b1f5fb 42%,
+            #a3f3fc 53%,
+            #98effd 64%,
+            #83dafd 75%,
+            #449af6 88%,
+            /* #3679f7 93%, */
+            #1855f6  100%
+    );
+
     vertical-align: top;
     color: var(--c-gray);
     /* margin-top: 10em; */
