@@ -1,0 +1,32 @@
+Z_INDEXES
+
+
+1000
+    .reveal-transition
+    .erase-transition
+
+900
+    #erase-container 
+
+710 homeProjLink
+700
+    #animateDiv 
+
+300
+    #bubblesContainer button
+
+201
+    #bubblesContainer span
+
+200
+    #bubblesContainer
+
+20 
+    #navbar
+
+-10
+    .homeBg
+
+
+TODO: add magnify popup for images
+

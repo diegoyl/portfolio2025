@@ -1,0 +1,90 @@
+.bubbleContainer {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(99, 182, 182, 0.95); */
+    z-index: 200;
+    pointer-events: none;
+
+}
+
+.bubbleContainer span {
+    z-index: 201;
+    position: absolute;
+    
+    background-color: rgba(247, 244, 240, 1);
+    outline: 1px var(--c-blue) solid;
+    border-radius: 50%;
+
+    /* left: 0; */
+
+    /* box-shadow: inset 0 0 20px 10px rgba(255, 255, 255, 0.5); */
+
+    animation: bubbleRise 6s linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+/* .bubbleContainer span:before {
+    content: '';
+    position: absolute;
+
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    outline: 4px var(--c-blue) solid;
+    border-radius: 50%;
+
+} */
+
+#bubblesContainer button {
+    z-index: 300;
+    pointer-events: all;
+}
+
+
+:root {
+    --riseSpeed: -4000%;
+}
+
+@keyframes bubbleRise {
+    0% {
+        transform: translateY(0%) translateX(0%) scale(0);
+        opacity: 1;
+        /* transform: scale(0); */
+        outline: 6px var(--c-blue) solid;
+        /* outline: 6px rgba(247, 244, 240, 1) solid; */
+    }
+    2% {
+        transform: translateY(0%) translateX(0%) scale(1);
+        outline: 4px var(--c-blue) solid;
+        /* outline: 4px rgba(247, 244, 240, 1) solid; */
+    }
+    25% {
+        transform: translateY(calc(var(--riseSpeed) * .25)) translateX(30%);
+    }
+    50% {
+        transform: translateY(calc(var(--riseSpeed) * .5)) translateX(-25%);
+    }
+    75% {
+        transform: translateY(calc(var(--riseSpeed) * .75)) translateX(30%);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(calc(var(--riseSpeed) * 1)) translateX(-33%);
+        opacity: .9;
+        outline: 4px var(--c-blue) solid;
+        /* outline: 4px rgba(247, 244, 240, 1) solid; */
+    }
+}
+
+
+
+
+.bubbleContainer span {
+    background-color: var(--c-blue-transparent);
+    background-color: var(--c-cream-transparent);
+    /* outline: 1px rgba(247, 244, 240, 1) solid; */
+}

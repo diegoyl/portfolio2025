@@ -1,0 +1,271 @@
+:root {
+  --c-cream: rgb(247, 244, 240);
+  --c-cream-zero: rgb(254,253,251,0);
+  --c-cream-transparent: rgb(247, 244, 240,.86);
+  --c-blue: rgb(0,81,255);
+  --c-blue: rgb(13,72,245);
+  --c-blue: rgb(6,76,250);
+  --c-blue-transparent: rgb(6,76,250,.9);
+  --c-aqua: rgb(80, 220, 255);
+  --c-gray: rgba(11, 11, 18, 0.35);
+  --c-black: rgb(51, 52, 59);
+  --content-pad: 32px;
+  --content-pad-big: 96px;
+  --split-grid-gap: 24px;
+  --img-radius: 2%;
+}
+
+
+@font-face {
+  font-family: "PangramDisplay";
+  src: url(../public/PPPangramSansRounded-CompressedExtrabold.otf);
+}
+@font-face {
+  font-family: "PangramCompact";
+  src: url(../public/PPPangramSansRounded-CompactRegular.otf);
+}
+@font-face {
+  font-family: "PangramText";
+  src: url(../public/PPPangramSansRounded-Light.otf);
+}
+@font-face {
+  font-family: "PangramTextBold";
+  src: url(../public/PPPangramSansRounded-Medium.otf);
+}
+@font-face {
+  font-family: "PangramHeader";
+  src: url(../public/PPPangramSansRounded-NarrowSemibold.otf);
+}
+@font-face {
+  font-family: "PangramHeaderItalic";
+  src: url(../public/PPPangramSansRounded-NarrowSemiboldItalic.otf);
+}
+
+html, body {
+  /* cursor: url("./img/crsr.png") 40 40,auto; */
+}
+.loadingCursor {
+  cursor: url("./img/crsr.png") 40 40,auto;
+}
+
+body {
+  text-align: center;
+  background-color: var(--c-cream);
+
+  color: var(--c-black);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* font-family: PangramDisplay; */
+
+}
+
+
+.PangramDisplay {
+  font-family: "PangramDisplay";
+  letter-spacing: .03em;
+}
+.PangramCompact {
+  font-family: "PangramCompact";
+  letter-spacing: .02em;
+}
+.PangramText {
+  font-family: "PangramText";
+  font-weight: bold;
+  letter-spacing: .02em;
+}
+.PangramTextBold {
+  font-family: "PangramTextBold";
+  letter-spacing: .02em;
+}
+.PangramHeader {
+  font-family: "PangramHeader";
+  letter-spacing: .03em;
+}
+.PangramHeaderItalic {
+  font-family: "PangramHeaderItalic";
+  letter-spacing: .02em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--c-black);
+}
+.centerText {
+  text-align: center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+
+  font-family: PangramHeader;
+  
+  background-color: var(--c-blue);
+  color: var(--c-cream);
+  
+  padding: .5em 1em;
+  
+  border-radius: .5em;
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--split-grid-gap);
+  /* background-color: rgba(34, 0, 255, 0.07); */
+  /* height: min-content; */
+
+}
+
+.splitDiv {
+  width: 100%;
+  vertical-align: top;
+
+}
+.leftSplit {
+  /* background-color: rgb a(34, 0, 255, 0.07); */
+}
+
+.rightSplit {
+  /* background-color: rgba(255, 0, 0, 0.07); */
+}
+
+.content-padding{
+  padding: 0 var(--content-pad) var(--content-pad) var(--content-pad);
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+
+.svgContainer {
+  width: 5em;
+  height: auto;
+  /* aspect-ratio: 1; */
+  /* border: red 1px solid; */
+}
+
+
+.guppyContainer {
+  width: 10em;
+  aspect-ratio: 1216/652;
+  position: absolute;
+
+  /* background-color: rgba(255, 166, 0, 0.148); */
+  /* border: red solid .2px; */
+}
+
+.guppySVGboth {
+  width: 100%;
+  position: absolute;
+
+  display: block;
+}
+.guppySVGfill {
+  fill: var(--c-blue);
+}
+.guppySVGbg {
+  fill: var(--c-cream);
+  /* stroke-width: 5;
+  stroke: red; */
+}
+
+
+/* ///////////////////////////////////////////// */
+.erase-transition {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform-origin: bottom;
+  pointer-events: none;
+}
+.reveal-transition {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--c-cream);
+  transform-origin: top;
+  pointer-events: none;
+}
+.transition-container {
+  z-index: 900;
+  background-color: var(--c-cream);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+#erase-container {
+  opacity: 0;
+}
+#load-container {
+  opacity: 1;
+}
+
+
+/* TEST TRANSITION  ///////////////////////////// */
+/* #erase-container {background-color: rgb(255, 0, 0);}
+.reveal-transition {background-color: rgb(0, 255, 30);} */
+/* #erase-container {background-color: var(--c-blue);}
+.reveal-transition {background-color: var(--c-blue);} */
+/* TEST TRANSITION  ///////////////////////////// */
+
+.transition-container p {
+  font-size: 5em;
+  font-family: PangramHeader;
+  color: var(--c-gray);
+  margin-top: 40vh;
+  opacity: 1;
+  /* animation: loadingFlash 100ms infinite; */
+}
+/* @keyframes loadingFlash {
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: .5
+  }
+} */
+.beginErase {
+  animation: eraseFade 300ms ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.removeErase {
+  animation: eraseFade 600ms ease-in-out;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+
+@keyframes eraseFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.bubbleContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 200;
+  pointer-events: none;
+  /* background-color: rgba(255, 0, 0, 0.255); */
+}

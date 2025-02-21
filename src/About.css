@@ -1,0 +1,76 @@
+
+
+
+.aboutPage {
+    min-height: 100vh;
+}
+
+.aboutPage .splitGrid {
+    margin-bottom: calc(var(--content-pad)*8);
+    margin-top: calc(var(--content-pad)*.5);
+    font-family: PangramText;
+    font-weight: bold;
+    /* font-family: PangramCompact; */
+}
+.aboutPage .rightSplit p {
+    font-size: .9em;
+    line-height: 1.4em;
+}
+
+.aboutPage .projectHeaderDiv{
+    margin-bottom: calc(var(--content-pad)*2);
+}
+
+.aboutPage h1 {
+    font-family: PangramHeader;
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: .4em;
+    letter-spacing: .02em;
+    font-optical-sizing: none;
+}
+
+.aboutPage h2 {
+    font-family: PangramHeader;
+    font-size: 3em;
+    color: var(--c-blue);
+    margin: 0;
+    font-size: 6vw;
+    margin-bottom: .5em;
+    margin-top: 1em;
+}
+
+.aboutPage h3 {
+    font-family: PangramHeader;
+    font-size: 3em;
+    color: var(--c-black);
+    margin: 0;
+    line-height: 1.05em;
+}
+
+
+.aboutPage img{
+    border-radius: calc(var(--content-pad));
+}
+
+
+.aboutPage p{
+    letter-spacing: .04em;
+    /* font-family: PangramCompact; */
+    line-height: 1.4em;
+}
+
+.aboutPage a{
+    /* color: var(--c-blue); */
+    text-decoration: underline;
+    /* font-family: PangramTextBold; */
+    /* display: inline-block; */
+    transition: 300ms ease-out;
+}
+.aboutPage a:hover {
+    /* transform: skew(1.2deg,0); */
+    color: var(--c-blue);
+    font-family: PangramTextBold;
+
+    /* letter-spacing: .03em; */
+}

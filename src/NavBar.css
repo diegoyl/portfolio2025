@@ -1,0 +1,212 @@
+:root {
+    --navHeight: 1.5em;
+    --navHeightGrow: 2em;
+    --navbar-pad: .7em;
+    --navbar-padGrow: .7em;
+}
+  
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    margin: 0 auto;
+    height: var(--navHeight);
+
+    font-family: PangramDisplay;
+    font-family: PangramHeader;
+    font-weight: bold;
+    /* font-family: PangramCompact; */
+    font-size: .9em;
+    font-size: 1em;
+    padding: var(--navbar-pad) 0;
+
+    letter-spacing: .01em;
+    background-color: var(--c-cream-zero);
+
+    transition:  300ms ease-out;
+    /* background-color: yellow; */
+}
+#navbar:hover {
+    /* background-color: var(--c-cream); */
+    background-color: var(--c-cream);
+    /* height: var(--navHeightGrow); */
+    
+}
+
+
+#navbar:hover .navlink p {
+    /* line-height: var(--navHeightGrow); */
+}
+
+
+.navHalf {
+    display: inline-block;
+    /* height: 100%; */
+    margin-top: var(--navbar-pad);
+    width: fit-content;
+    vertical-align: top;
+    text-align: left;
+    position: absolute;
+    top: 0;
+
+}
+.navLeft {
+    text-align: left;
+    /* background-color: rgba(0, 255, 255, 0.409); */
+    left: 0;
+}
+.navRight {
+    text-align: right;
+    /* background-color: pink; */
+    right: 0;
+}
+
+#navGuppy {
+    /* height: 5.45em;
+    margin-left: -7.1em;
+    margin-top: -1.66em; */
+
+    height: 3.6em;
+    margin-left: -4.2em;
+    margin-top: -.91em;
+
+    transition: 1000ms ease-out;
+    rotate: 4deg;
+
+
+    /* height: 2.6em;
+    margin-left: 16px;
+    margin-top: 0em;
+    transition: 500ms ease-out;
+    rotate: 0deg; */
+}
+#navName {
+    transition: 300ms ease-in-out;
+    text-align: left;
+}
+.navLeft:hover #navName {
+    /* transform: scale(1.02) translateX(5%); */
+}
+
+
+
+.navlink {
+    display: inline-block;
+
+}
+.navlink p {
+    display: inline-block;
+    /* margin: 0; */
+    vertical-align: top;
+    padding: 0 .4em;
+    margin: 0 .5em;
+    /* margin: 0 1.5vw; */
+    line-height: var(--navHeight);
+    /* background-color: green; */
+}
+#navName {
+    color: var(--c-blue);
+    margin-left: .5em;
+    padding: 0 .5em 0 0;
+}
+.pagelink p {
+    transition: 230ms ease-in-out;
+    color: var(--c-black);
+}
+.pagelink-last p {
+    padding-right: 0;
+    margin-right: var(--content-pad);
+}
+.navlink p , .navlink span, .pagelink p , .pagelink span{
+    cursor: pointer;
+}
+.navRight a{
+    cursor: pointer;
+}
+
+
+.navLeft:hover #navGuppy {
+    cursor: pointer;
+    margin-left: -3em;
+    margin-top: -1.3em;
+    rotate: -2deg;
+    animation: navGuppyFloat 5s infinite ease-in-out;
+}
+@keyframes navGuppyFloat {
+    0% {
+        rotate: 2.5deg;
+        transform: translateY(0%)
+    }
+    12% {
+        rotate: 5deg;
+        transform: translateY(5%)
+    }
+    25% {
+        transform: translateY(0%)
+    }
+    37% {
+        transform: translateY(-5%)
+    }
+    50% {
+        transform: translateY(0%)
+    }
+    62% {
+        rotate: -5deg;
+        transform: translateY(5%)
+    }
+    75% {
+        transform: translateY(0%)
+    }
+    87% {
+        transform: translateY(-5%)
+    }
+    100% {
+        rotate: 2.5deg;
+        transform: translateY(0%)
+    }
+}
+
+
+.pagelink p:hover {
+    color: var(--c-blue);
+    rotate: 1.6deg;
+    transform: scale(1.2);
+}
+
+.activeNavLink p{
+    color: var(--c-blue);
+}
+.activeNavLink p:hover {
+    color: var(--c-blue);
+}
+
+
+
+.navRight span {
+    transform: scale(1.64) translateY(-7%);
+    /* outline: red 1px solid; */
+    margin-right: .1em;
+    font-family: PangramCompact;
+    display: inline-block;
+}
+
+#centerTitle {
+    /* background-color: rgba(252, 5, 5, 0.467); */
+    position: absolute;
+    top: 0;
+    /* margin: auto; */
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    pointer-events: none;
+    /* opacity: 0; */
+    transition: 200ms ease-in-out;
+
+    letter-spacing: .02em;
+}
+.showCt {
+    opacity: .5;
+}
+.hideCt {
+    opacity: 0;
+}

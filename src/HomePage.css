@@ -1,0 +1,272 @@
+.homeBg {
+    position: fixed;
+    z-index: -10;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: var(--c-gray);
+    -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317.66 51.07"><path d="M317.66 14.49v12.72l-6.36-6.36c-15.82-15.81-41.54-15.81-57.35 0l-15.7 15.7c-9.36 9.36-21.81 14.52-35.04 14.52s-25.68-5.16-35.04-14.52l-15.7-15.7c-15.82-15.81-41.54-15.81-57.36 0l-15.7 15.7c-9.36 9.36-21.8 14.52-35.04 14.52S18.69 45.91 9.33 36.55L0 27.22V14.49l15.7 15.7C31.51 46 57.24 46 73.05 30.19l15.7-15.7c19.32-19.32 50.76-19.32 70.08 0l15.7 15.7c15.81 15.81 41.54 15.81 57.35 0l15.7-15.7c19.32-19.32 50.76-19.32 70.08 0Z" style="fill:%23000;stroke-width:0"/></svg>');
+    mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317.66 51.07"><path d="M317.66 14.49v12.72l-6.36-6.36c-15.82-15.81-41.54-15.81-57.35 0l-15.7 15.7c-9.36 9.36-21.81 14.52-35.04 14.52s-25.68-5.16-35.04-14.52l-15.7-15.7c-15.82-15.81-41.54-15.81-57.36 0l-15.7 15.7c-9.36 9.36-21.8 14.52-35.04 14.52S18.69 45.91 9.33 36.55L0 27.22V14.49l15.7 15.7C31.51 46 57.24 46 73.05 30.19l15.7-15.7c19.32-19.32 50.76-19.32 70.08 0l15.7 15.7c15.81 15.81 41.54 15.81 57.35 0l15.7-15.7c19.32-19.32 50.76-19.32 70.08 0Z" style="fill:%23000;stroke-width:0"/></svg>');
+    mask-size: 20em;
+    mask-repeat: repeat;
+    opacity: .9; */
+    background-color: var(--c-gray);
+}
+#home-name {
+    color: var(--c-blue);
+    font-size: 16vw;
+    white-space: nowrap;
+    text-align: center;
+    letter-spacing: -.02em;
+    margin: 0;
+    margin-top: 3vh;
+    margin-left: -1.5vw;
+}
+
+
+#home-bio {
+    width: 70%;
+    text-align: center;
+    letter-spacing: -.01em;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+    font-size: 1.7em;
+    font-family: PangramHeader;
+    /* color: var(--c-blue); */
+    animation: paragraphWave 5s ease infinite;
+}
+
+.hplC {display: inline-block;margin-bottom:6em;}
+
+.homeProjLink {
+    display: inline-block;
+    margin: 0;
+    padding: .2em .8em;
+    cursor: pointer;
+    z-index: 710;
+
+    font-family: PangramDisplay;
+    font-size: 3em;
+
+    border-radius: .5em;
+    
+    animation: linkWave 4s ease-in-out infinite;
+    animation-delay: calc(1s * var(--i));
+}
+
+.hplC p {
+    margin:0;
+    transition: .3s ease;
+}
+.hplC p:hover {
+    color: var(--c-blue);
+    transform: scale(1.2);
+}
+
+
+.homeGuppy {
+    /* position: absolute;
+    top: 50%;
+    bottom: 50%;
+    z-index: 500;
+    width: 44em; */
+    /* fill: red; */   
+
+}
+
+
+
+
+:root {
+    --waveAmplitude: .5vw;
+    --rotAmplitude: 2deg;
+    --waveFreq: .3s;
+    --waveSpeed: 3s;
+    --globalDelay: 1s;
+
+}
+#wavy-name {
+    position: relative;
+    color: var(--c-blue);
+    font-size: 14vw;
+    letter-spacing: -.02em;
+    /* border: red 2px solid; */
+    margin: 0;
+    margin-bottom: 40px;
+    margin-top: .1em;
+    margin-top: 20px;
+}
+#wavy-name span {
+    position: relative;
+    display: inline-block;
+    animation: wave var(--waveSpeed) ease-in-out infinite;
+    animation-delay: calc(var(--waveFreq) * var(--i));
+    transform: translateY(calc(var(--waveAmplitude) * 1));
+}
+
+@keyframes wave {
+    0% , 100% {
+        transform: translateY(calc(var(--waveAmplitude) * 1));
+        rotate: 0;
+    }
+    50% {
+        transform: translateY(calc(var(--waveAmplitude) * -1));
+        rotate: 0;
+    }
+
+    25% {
+        rotate: calc(var(--rotAmplitude) * 1);
+    }
+    75% {
+        rotate: calc(var(--rotAmplitude) * -1);
+    }
+}
+
+#enye {
+    position: absolute;
+    width: .45em;
+    height: 1em;
+    /* border: red 2px solid; */
+    display:inline-block; 
+    transform: translateX(-1%); 
+}
+#wavy-name  #ene {
+    display:block; 
+    top: 0;
+    left: 0;
+    /* border: yellow 2px solid; */
+    position: absolute;
+    height: min-content;
+    transform: translateY(12.2%) translateX(0%); 
+
+    animation: none;
+    animation-delay: 0;
+}
+#wavy-name  #tilde {
+    display:block; 
+    top: 0;
+    left: 0;
+    position: absolute;
+    /* border: aqua 2px solid; */
+    height: min-content;
+    
+    animation: tildeWave 2.6s ease-in-out infinite;
+    animation-delay: 0;
+}
+
+@keyframes tildeWave {
+    0% , 100% {
+        transform: translateY(-37%) translateX(8%);
+        rotate: 0;
+    }
+    50% {
+        transform: translateY(-32%) translateX(8%);
+        rotate: 0;
+    }
+
+    25% {
+        rotate: calc(var(--rotAmplitude) * 1);
+    }
+    75% {
+        rotate: calc(var(--rotAmplitude) * -1);
+    }
+}
+
+
+@keyframes paragraphWave {
+    0% , 100% {
+        transform: translateY(5px);
+        rotate: -.5deg;
+    }
+    50% {
+        transform: translateY(-5px);
+        rotate: 1deg;
+    }
+}
+
+
+@keyframes linkWave {
+    0% , 100% {
+        transform: translateY(8%);
+        rotate: -1.2deg;
+    }
+    50% {
+        transform: translateY(-8%);
+        rotate: .9deg;
+    }
+}
+
+
+.floatUp {
+    transform: translateY(500%);
+    opacity: 0;
+    animation: floatUp 6s ease-in-out;
+    animation-iteration-count: 1;
+    animation-delay: calc(500ms * var(--j) + var(--globalDelay));
+    animation-fill-mode: forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(250%);
+        opacity: 0;
+    }
+    10% {
+        /* transform: translateY(00%); */
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-10%);
+    }
+    60% {
+        transform: translateY(7%);
+
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+
+    }
+}
+
+#initBubbleGenerator span{
+    animation: bubbleRise 6s linear;
+}
+
+
+
+
+
+/* OCEAN MODE */
+
+/* html {
+    background-color: var(--c-blue);
+    color: var(--c-cream)
+}
+#homeContainer {
+    background-color: var(--c-blue);
+}
+#wavy-name, #home-bio, .homeProjLink p {
+    background-color: var(--c-blue);
+    color: var(--c-cream);
+
+} */
+
+#home-bio span {
+    /* font-family: cou; */
+}
+
+#rotatingWord {
+    /* background-color: red; */
+    /* width: 5.5em; */
+    /* width: 10px; */
+    /* transition: 300ms ease-in-out; */
+    display: inline-block;
+    text-align: center;
+    overflow-x: visible;
+    transition: 500ms ease-in-out;
+}
+
+.rotFade {
+    opacity: 0;
+    /* transform: scaleY(0%) */
+}
