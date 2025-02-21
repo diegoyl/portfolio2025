@@ -30,7 +30,7 @@ import v_crush from "./crush.mp4"
 import v_eqPalm from "./eqPalm.mp4"
 import i_generic1 from "./generic1.png"
 import i_generic2 from "./generic2.png"
-
+//  TODO: aadd more protoype vids like eqpalm
 
 import thesisPDF from "./Diego_UgThesis.pdf"
 

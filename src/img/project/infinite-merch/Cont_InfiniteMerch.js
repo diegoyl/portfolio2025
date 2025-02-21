@@ -9,8 +9,8 @@ import Divider from '../../../components/projectPage/Divider';
 import i_ from './thumb.jpg';
 // import i_XXX from "./XXX.jpg"
 import i_iss11 from "./iss11.png"
-import i_issXmerch from "./issXmerch.png"
-import i_issXmerch2 from "./issXmerch2.png"
+import i_issXmerch from "./issXmerch.jpg"
+import i_issXmerch2 from "./issXmerch2.jpg"
 import i_stickers from "./stickers.jpg"
 import i_tote from "./tote.jpg"
 import i_sweatshirt1 from "./sweatshirt1.jpg"
