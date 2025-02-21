@@ -7,8 +7,8 @@ import Divider from '../../../components/projectPage/Divider';
 ///// PROJECT IMG/VID IMPORTS
 import i_3dprint from "./3dprint.png"
 import i_anim from "./anim.gif"
-import i_process1 from "./process1.png"
-import i_process2 from "./process2.png"
+import i_process1 from "./process1.jpg"
+import i_process2 from "./process2.jpg"
 import i_seal1 from "./seal1.jpeg"
 import i_seal2 from "./seal2.jpeg"
 import i_seal3 from "./seal3.jpeg"
