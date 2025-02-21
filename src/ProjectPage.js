@@ -1,15 +1,15 @@
-import React, {useState, useEffect} from 'react';
 import './App.css';
 import './ProjectPage.css';
-import transition from './transition.js';
+
+import React, {useState, useEffect} from 'react';
+import { useLocation } from 'react-router-dom';
+
 import NavBar from './NavBar';
 import Footer from './Footer';
-import { useLocation } from 'react-router-dom';
 
 
 import Cont_Clock from './img/project/clock/Cont_Clock';
 import Cont_Footwork from './img/project/footwork/Cont_Footwork';
-
 import Cont_Squish from './img/project/squish/Cont_Squish';
 import Cont_Forting from './img/project/forting/Cont_Forting';
 import Cont_InfiniteMerch from './img/project/infinite-merch/Cont_InfiniteMerch';
@@ -17,25 +17,25 @@ import Cont_TangibleSampling from './img/project/tangible-sampling/Cont_Tangible
 import Cont_Chair from './img/project/chair/Cont_Chair';
 import Cont_Beatfarm from './img/project/beatfarm/Cont_Beatfarm';
 import Cont_21m080 from './img/project/21m080/Cont_21m080';
-import Cont_Mask from './img/project/mask/Cont_Mask';
+// import Cont_Mask from './img/project/mask/Cont_Mask';
 import Cont_Hardcell from './img/project/hardcell/Cont_Hardcell';
-import Cont_IMS from './img/project/ims/Cont_IMS';
+// import Cont_IMS from './img/project/ims/Cont_IMS';
 import Cont_AI from './img/project/ai/Cont_AI';
-import Cont_HonestType from './img/project/honest-type/Cont_HonestType';
+// import Cont_HonestType from './img/project/honest-type/Cont_HonestType';
 import Cont_AdobeHome from './img/project/adobe-home/Cont_AdobeHome';
 import Cont_BirthCertificate from './img/project/birth-certificate/Cont_BirthCertificate';
-import Cont_PecanSans from './img/project/pecan-sans/Cont_PecanSans';
+// import Cont_PecanSans from './img/project/pecan-sans/Cont_PecanSans';
 import Cont_Drift from './img/project/drift/Cont_Drift';
 import Cont_Futbot from './img/project/futbot/Cont_Futbot';
-import Cont_Pendulum from './img/project/pendulum/Cont_Pendulum';
+// import Cont_Pendulum from './img/project/pendulum/Cont_Pendulum';
 import Cont_Infinite from './img/project/infinite/Cont_Infinite';
-import Cont_Light from './img/project/light/Cont_Light';
-import Cont_Pedals from './img/project/pedals/Cont_Pedals';
-import Cont_Models from './img/project/models/Cont_Models';
-import Cont_Posters from './img/project/posters/Cont_Posters';
+// import Cont_Light from './img/project/light/Cont_Light';
+// import Cont_Pedals from './img/project/pedals/Cont_Pedals';
+// import Cont_Models from './img/project/models/Cont_Models';
+// import Cont_Posters from './img/project/posters/Cont_Posters';
 import Cont_DAD from './img/project/dad/Cont_DAD';
 import Cont_B2web from './img/project/b2web/Cont_B2web';
-import Cont_Uniforms from './img/project/uniforms/Cont_Uniforms';
+// import Cont_Uniforms from './img/project/uniforms/Cont_Uniforms';
 import Cont_TacticalType from './img/project/tactical-type/Cont_TacticalType';
 // import Cont_Def from './img/project/ddef/Cont_Def';
 
@@ -51,25 +51,25 @@ const projComponentDict = {
   "chair": [ <Cont_Chair />, "Chair"],
   "beatfarm": [ <Cont_Beatfarm />, "Beatfarm"],
   "21m080": [ <Cont_21m080 />, "21M.080 GUI"],
-  "mask": [ <Cont_Mask />, "Mask"],
+  // "mask": [ <Cont_Mask />, "Mask"],
   "hardcell": [ <Cont_Hardcell />, "HARDCELL"],
-  "ims": [ <Cont_IMS />, "Interactive Music Systems"],
+  // "ims": [ <Cont_IMS />, "Interactive Music Systems"],
   "ai": [ <Cont_AI />, "AI Experiments"],
-  "honest-type": [ <Cont_HonestType />, "Honest Type"],
+  // "honest-type": [ <Cont_HonestType />, "Honest Type"],
   "adobe-home": [ <Cont_AdobeHome />, "Adobe Home"],
   "birth-certificate": [ <Cont_BirthCertificate />, "Birth Certificate"],
-  "pecan-sans": [ <Cont_PecanSans />, "Pecan Sans"],
+  // "pecan-sans": [ <Cont_PecanSans />, "Pecan Sans"],
   "drift": [ <Cont_Drift />, "Drift"],
   "futbot": [ <Cont_Futbot />, "Futbot"],
-  "pendulum": [ <Cont_Pendulum />, "Pendulum Sculptures"],
+  // "pendulum": [ <Cont_Pendulum />, "Pendulum Sculptures"],
   "infinite": [ <Cont_Infinite />, "Infinite"],
-  "light": [ <Cont_Light />, "Wax Lamp"],
-  "pedals": [ <Cont_Pedals />, "Guitar Pedals"],
-  "models": [ <Cont_Models />, "Models"],
-  "posters": [ <Cont_Posters />, "Posters"],
+  // "light": [ <Cont_Light />, "Wax Lamp"],
+  // "pedals": [ <Cont_Pedals />, "Guitar Pedals"],
+  // "models": [ <Cont_Models />, "Models"],
+  // "posters": [ <Cont_Posters />, "Posters"],
   "dad": [ <Cont_DAD />, "D.A.D."],
   "b2web": [ <Cont_B2web />, "Burton 2 Website"],
-  "uniforms": [ <Cont_Uniforms />, "Uniforms"],
+  // "uniforms": [ <Cont_Uniforms />, "Uniforms"],
   "tactical-type": [ <Cont_TacticalType />, "Tactical Type"],
 }
 

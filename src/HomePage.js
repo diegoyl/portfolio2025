@@ -158,6 +158,9 @@ function HomePage() {
 
           <p style={{"font-size":".7em", "max-width":"500px", "margin":"0 auto", "opacity":".5"}}>
           Also, I made this website in React and haven't found any bugs yet, but there are some experiments going on, so lmk if you find one...
+          <br></br>
+          <br></br>
+          Also also, this might not work well on mobile, will get to that soon!
           </p>
 
         </p>

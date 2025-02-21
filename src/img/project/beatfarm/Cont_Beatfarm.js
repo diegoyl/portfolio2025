@@ -6,14 +6,9 @@ import Divider from '../../../components/projectPage/Divider';
 // Projects.js : update array, imports, and categories
 
 ///// PROJECT IMG/VID IMPORTS
-import i_beatfarmLogo from "./beatfarm_logo.png"
-import i_beatfarmLogo2 from "./beatfarm_logo2.png"
 import i_mainPage from "./main-page.jpg"
 import i_launchpadPage from "./launchpad-page.jpg"
-import i_logo from "./logo.png"
-import i_poster from "./poster.png"
 import i_recordPage from "./record-page.jpg"
-import i_thumb from "./thumb.jpg"
 import i_trackLabeled from "./trackLabeled.png"
 import i_kickLabeled from "./kickLabeled.png"
 import i_launchpad from "./launchpad.png"

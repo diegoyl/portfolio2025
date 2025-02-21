@@ -1,16 +1,16 @@
 import './App.css';
 import './Projects.css';
 import './Animations.css';
+
+import React, {useState, useEffect} from 'react';
+import { useLocation, useNavigate } from 'react-router-dom'
+
 import transition from './transition.js';
+
 import NavBar from './NavBar';
 import ProjectThumb from './ProjectThumb';
 import ProjectThumbRedirect from './ProjectThumbRedirect';
 import Footer from './Footer';
-import React, {useState, useEffect} from 'react';
-import { useLocation, useNavigate } from 'react-router-dom'
-
-
-import Thumb_Default from './img/project/clock/thumb.jpg';
 
 import Thumb_Clock from './img/project/clock/thumb.jpg';
 import Thumb_Footwork from './img/project/footwork/thumbspin.gif';
@@ -21,23 +21,23 @@ import Thumb_TangibleSampling from './img/project/tangible-sampling/thumb.jpg'
 import Thumb_Chair from './img/project/chair/thumb.jpg'
 import Thumb_Beatfarm from './img/project/beatfarm/thumb.jpg'
 import Thumb_21m080 from './img/project/21m080/thumb.jpg'
-import Thumb_Mask from './img/project/mask/thumb.jpg'
+// import Thumb_Mask from './img/project/mask/thumb.jpg'
 import Thumb_Hardcell from './img/project/hardcell/thumb.jpg'
-import Thumb_IMS from './img/project/ims/thumb.jpg'
+// import Thumb_IMS from './img/project/ims/thumb.jpg'
 import Thumb_AI from './img/project/ai/thumb.gif'
 import Thumb_TacticalType from './img/project/tactical-type/thumb.gif'
-import Thumb_HonestType from './img/project/honest-type/thumb.jpg'
+// import Thumb_HonestType from './img/project/honest-type/thumb.jpg'
 import Thumb_AdobeHome from './img/project/adobe-home/thumb.jpg'
 import Thumb_BirthCertificate from './img/project/birth-certificate/thumb.jpg'
-import Thumb_PecanSans from './img/project/pecan-sans/thumb.jpg'
+// import Thumb_PecanSans from './img/project/pecan-sans/thumb.jpg'
 import Thumb_Drift from './img/project/drift/thumb.jpg'
 import Thumb_Futbot from './img/project/futbot/thumb.jpg'
-import Thumb_Pendulum from './img/project/pendulum/thumb.jpg'
+// import Thumb_Pendulum from './img/project/pendulum/thumb.jpg'
 import Thumb_Infinite from './img/project/infinite/thumb.jpg'
-import Thumb_Light from './img/project/light/thumb.jpg'
-import Thumb_Pedals from './img/project/pedals/thumb.jpg'
-import Thumb_Models from './img/project/models/thumb.jpg'
-import Thumb_Posters from './img/project/posters/thumb.jpg'
+// import Thumb_Light from './img/project/light/thumb.jpg'
+// import Thumb_Pedals from './img/project/pedals/thumb.jpg'
+// import Thumb_Models from './img/project/models/thumb.jpg'
+// import Thumb_Posters from './img/project/posters/thumb.jpg'
 import Thumb_DAD from './img/project/dad/thumb.jpg'
 import Thumb_B2Web from './img/project/b2web/thumb.jpg'
 
@@ -62,21 +62,21 @@ const thumbDataDict = {
     "adobe-home": [ Thumb_AdobeHome, "Adobe Home", "", false],
     "infinite-merch": [ Thumb_InfiniteMerch, "Infinite Merch", "Hand-printed T-Shirts, stickers, and totes for Infinite Magazine", false],
     "infinite": [ Thumb_Infinite, "Infinite Magazine", "I was the Visual Design Director for MIT's fashion magazine", false],
-
-
-
     "tangible-sampling": [ Thumb_TangibleSampling, "Tangible Sampling", "Collaborative music-making installation", false],
-    "mask": [ Thumb_Mask, "Mask", "subtitle", false],
-    "hardcell": [ Thumb_Hardcell, "HARDCELL®", "subtitle", false],
-    "ims": [ Thumb_IMS, "Interactive Music Systems", "subtitle", false],
-    "honest-type": [ Thumb_HonestType, "Honest Type", "subtitle", false],
-    "pecan-sans": [ Thumb_PecanSans, "Pecan Sans", "subtitle", false],
-    "futbot": [ Thumb_Futbot, "Futbot", "subtitle", false],
-    "pendulum": [ Thumb_Pendulum, "Pendulum Sculptures", "subtitle", false],
-    "light": [ Thumb_Light, "Wax Lamp", "subtitle", false],
-    "pedals": [ Thumb_Pedals, "Guitar Pedals", "subtitle", false],
-    "models": [ Thumb_Models, "Miniatures", "subtitle", false],
-    "posters": [ Thumb_Posters, "Posters", "subtitle", false],
+
+    "hardcell": [ Thumb_Hardcell, "HARDCELL®", "", false],
+    "futbot": [ Thumb_Futbot, "Futbot", "", false],
+
+
+    // "mask": [ Thumb_Mask, "Mask", "subtitle", false],
+    // "ims": [ Thumb_IMS, "Interactive Music Systems", "subtitle", false],
+    // "honest-type": [ Thumb_HonestType, "Honest Type", "subtitle", false],
+    // "pecan-sans": [ Thumb_PecanSans, "Pecan Sans", "subtitle", false],
+    // "pendulum": [ Thumb_Pendulum, "Pendulum Sculptures", "subtitle", false],
+    // "light": [ Thumb_Light, "Wax Lamp", "subtitle", false],
+    // "pedals": [ Thumb_Pedals, "Guitar Pedals", "subtitle", false],
+    // "models": [ Thumb_Models, "Miniatures", "subtitle", false],
+    // "posters": [ Thumb_Posters, "Posters", "subtitle", false],
 }
 
 const categoryDict = {
