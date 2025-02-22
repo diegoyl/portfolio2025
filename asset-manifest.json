@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.0746b516.css",
-    "main.js": "/static/js/main.34089d40.js",
+    "main.css": "/static/css/main.00df0da8.css",
+    "main.js": "/static/js/main.53c409a9.js",
+    "static/media/big1.mov": "/static/media/big1.e6bb0a968e52c2b894f8.mov",
+    "static/media/big2.mov": "/static/media/big2.e6bb0a968e52c2b894f8.mov",
     "static/media/final.mp4": "/static/media/final.16dbf81f50a81e330411.mp4",
     "static/media/Diego_UgThesis.pdf": "/static/media/Diego_UgThesis.9b40519414c4bea3c164.pdf",
     "static/media/piezoComb.mp4": "/static/media/piezoComb.57a538f523d2a40d26ac.mp4",
@@ -21,7 +23,7 @@
     "static/media/shirtscan-back.jpg": "/static/media/shirtscan-back.cec7f4ec7c528d31feaf.jpg",
     "static/media/1.jpg": "/static/media/1.fbc2699d960e31ad7ac4.jpg",
     "static/media/topblue.jpg": "/static/media/topblue.ff986a25b120a8aa1fd6.jpg",
-    "static/media/thumb.jpg": "/static/media/thumb.fc7aa3e3094370692fa3.jpg",
+    "static/media/thumb.jpg": "/static/media/thumb.7796191ff19f6bf29d7c.jpg",
     "static/media/shirtfull.png": "/static/media/shirtfull.3f79d14a28bd46dd09c9.png",
     "static/media/assembly-gif.gif": "/static/media/assembly-gif.5433c04e40fbb1856511.gif",
     "static/media/program.png": "/static/media/program.9e1468b5ed48b1963cf5.png",
@@ -142,11 +144,11 @@
     "static/media/guppySMOL-BLUE.png": "/static/media/guppySMOL-BLUE.ed55c9550941a090e039.png",
     "static/media/rotary.jpg": "/static/media/rotary.c5b202845aea0e02f105.jpg",
     "index.html": "/index.html",
-    "main.0746b516.css.map": "/static/css/main.0746b516.css.map",
-    "main.34089d40.js.map": "/static/js/main.34089d40.js.map"
+    "main.00df0da8.css.map": "/static/css/main.00df0da8.css.map",
+    "main.53c409a9.js.map": "/static/js/main.53c409a9.js.map"
   },
   "entrypoints": [
-    "static/css/main.0746b516.css",
-    "static/js/main.34089d40.js"
+    "static/css/main.00df0da8.css",
+    "static/js/main.53c409a9.js"
   ]
 }
