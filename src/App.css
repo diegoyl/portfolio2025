@@ -10,6 +10,7 @@
   --c-blue-transparent: rgb(6,76,250,.9);
   --c-aqua: rgb(80, 220, 255);
   --c-gray: rgba(11, 11, 18, 0.35);
+  --c-grayLight: rgba(195, 196, 200, 0.25);
   --c-black: rgb(51, 52, 59);
   --content-pad: 32px;
   --content-pad-big: 96px;
@@ -43,47 +44,40 @@
   src: url(../public/PPPangramSansRounded-NarrowSemiboldItalic.otf);
 }
 
-html, body {
-  /* cursor: url("./img/crsr.png") 40 40,auto; */
-}
-.loadingCursor {
-  cursor: url("./img/crsr.png") 40 40,auto;
-}
-
 body {
   text-align: center;
   background-color: var(--c-cream);
 
   color: var(--c-black);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  /* font-family: PangramDisplay; */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Arial, sans-serif;
+
 
 }
 
 
 .PangramDisplay {
-  font-family: "PangramDisplay";
+  font-family: "PangramDisplay", Arial, sans-serif;
   letter-spacing: .03em;
 }
 .PangramCompact {
-  font-family: "PangramCompact";
+  font-family: "PangramCompact", Arial, sans-serif;
   letter-spacing: .02em;
 }
 .PangramText {
-  font-family: "PangramText";
+  font-family: "PangramText", Arial, sans-serif;
   font-weight: bold;
   letter-spacing: .02em;
 }
 .PangramTextBold {
-  font-family: "PangramTextBold";
+  font-family: "PangramTextBold", Arial, sans-serif;
   letter-spacing: .02em;
 }
 .PangramHeader {
-  font-family: "PangramHeader";
+  font-family: "PangramHeader", Arial, sans-serif;
   letter-spacing: .03em;
 }
 .PangramHeaderItalic {
-  font-family: "PangramHeaderItalic";
+  font-family: "PangramHeaderItalic", Arial, sans-serif;
   letter-spacing: .02em;
 }
 
@@ -99,7 +93,7 @@ button {
   border: none;
   cursor: pointer;
 
-  font-family: PangramHeader;
+  font-family: PangramHeader, Arial, sans-serif;
   
   background-color: var(--c-blue);
   color: var(--c-cream);
@@ -223,7 +217,7 @@ button {
 
 .transition-container p {
   font-size: 5em;
-  font-family: PangramHeader;
+  font-family: PangramHeader, Arial, sans-serif;
   color: var(--c-gray);
   margin-top: 40vh;
   opacity: 1;

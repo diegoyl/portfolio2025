@@ -1,8 +1,11 @@
 import './App.css';
 import './Projects.css';
 
+import React, {useState} from 'react';
 
 function ProjectThumb({thumbSrc, title, subtitle}) {
+  
+  const [imgLoading, setImgLoading] = useState(true);
 
   return (
     <div className="thumbContainer"> 
@@ -15,7 +18,21 @@ function ProjectThumb({thumbSrc, title, subtitle}) {
         <div className='blueOverlay bo3'>
         </div> */}
 
-        <img src={thumbSrc} />
+        {/* <img src={thumbSrc} /> */}
+
+
+        <div className="placeholderContainer" >
+            {imgLoading && <div className="placeholderThumb" />} {/* Background Placeholder */}
+            
+            <img src={thumbSrc} loading="lazy"
+              style={{
+                opacity: imgLoading ? 0 : 1, // Hide until loaded
+                transition: "opacity 0.3s ease-in-out",
+              }}
+              onLoad={() => setImgLoading(false)}
+            />
+        </div>
+
 
         <h1>{title}</h1>
         <h2>{subtitle}</h2>

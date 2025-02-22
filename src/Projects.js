@@ -4,6 +4,7 @@ import './Animations.css';
 
 import React, {useState, useEffect} from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'
+import useImagePreloader from './useImagePreloader'
 
 import transition from './transition.js';
 
@@ -41,6 +42,36 @@ import Thumb_Posters from './img/project/posters/thumb.jpg'
 import Thumb_DAD from './img/project/dad/thumb.jpg'
 import Thumb_B2Web from './img/project/b2web/thumb.jpg'
 
+const preloadSrcList = [
+    Thumb_Clock,
+    Thumb_Footwork,
+    Thumb_Squish,
+    Thumb_Forting,
+    Thumb_InfiniteMerch,
+    Thumb_TangibleSampling,
+    Thumb_Chair,
+    Thumb_Beatfarm,
+    Thumb_21m080,
+    Thumb_Mask,
+    Thumb_Hardcell,
+    Thumb_IMS,
+    Thumb_AI,
+    Thumb_TacticalType,
+    Thumb_HonestType,
+    Thumb_AdobeHome,
+    Thumb_BirthCertificate,
+    Thumb_PecanSans,
+    Thumb_Drift,
+    Thumb_Futbot,
+    Thumb_Pendulum,
+    Thumb_Infinite,
+    Thumb_Light,
+    Thumb_Pedals,
+    Thumb_Models,
+    Thumb_Posters,
+    Thumb_DAD,
+    Thumb_B2Web
+]
 
 const thumbDataDict = {
     // "defaultName": [ Thumb_DefaultImg, "Thumb Title", "Thumb Subtitle" , redirect to other site?],
@@ -161,6 +192,9 @@ const categoryDict = {
   
 function Projects() {
 
+
+
+
     var [erasing, setErasing] = useState(false)
     function redirectDelay(path) {
       setErasing(true)
@@ -168,11 +202,10 @@ function Projects() {
         window.location.href = path;
       }, 310)
     }
-
     var [category, setCategory] = useState("all")
     var [gridType, setGridType] = useState("grid1")
     
-    console.log("defCat= ",category)
+    console.log("defCatInit= ",category)
     
     const location = useLocation();
     const navigate = useNavigate();
@@ -193,23 +226,55 @@ function Projects() {
         //     setCategory("all")
         // }
 
-        var searchData = location.search + "";
-        if (searchData) {
-            categoryPassedIn = searchData.split("-")[1];
-            console.log("SD: ",searchData)
-            if (categoryPassedIn=="coding"){
+        // var searchData = location.search + "";
+        // console.log("SD1: ",window.location.hash.replace("#", "")) 
+        // var pathname = location.pathname
+        var pathnameCategory = location.pathname.split("-")[1]
+        console.log("pathnameCat: ", pathnameCategory)
+
+        if (pathnameCategory) {
+            categoryPassedIn = pathnameCategory;
+            console.log("split(-)[1]: ", categoryPassedIn)
+            
+            if (categoryPassedIn=="coding") {
                 categoryPassedIn = "coding/ux"
             }
+
             setCategory(categoryPassedIn)
+
             navigate('/projects', { replace: true });
         } else {
             setCategory("all")
         }
+        console.log("defCat_= ",category)
 
+
+
+    // const { imagesPreloaded } = useImagePreloader(preloadSrcList)
+
+        // if (!imagesPreloaded) {
+        //     console.log("Pre-Loading Images")
+        //     checkPreload()
+        // } else {
+        //     setErasing(false)
+        //     console.log("*** Images Loaded at 0 !")
+        // }
+    
     },[])
 
+    // function checkPreload() {
+    //     if (imagesPreloaded) {
+    //         console.log("*** Images Loaded !")
+    //         setErasing(false)
+    //     } else {
+    //         setTimeout(()=> {
+    //             checkPreload()
+    //         },200)
+    //     }
+
+    // }
     
-    function changeCategory(cat)  {
+    function changeCategory(cat) {
         // console.log(cat)
         window.scrollTo({top: 0, behavior: 'smooth'});
 
@@ -225,7 +290,7 @@ function Projects() {
 
     function changeGridType(gt)  {
         window.scrollTo({top: 0, behavior: 'smooth'});
-        if (gt!=gridType){
+        if (gt!=gridType) {
             const projectGrid = document.getElementById('projectGrid')
             projectGrid.classList.add('gridFade'); // start animation            
             
@@ -285,7 +350,7 @@ function Projects() {
 
                             if (thumbDataDict[projName][3]) {
                                 return (
-                                    <div className="thumbLinkContainer" key={index}>
+                                    <div className="thumbLinkContainer" key={projName}>
                                             
                                         <ProjectThumbRedirect 
                                             thumbSrc={thumbDataDict[projName][0]}
@@ -300,7 +365,7 @@ function Projects() {
                             } else {
 
                                 return (
-                                    <div onClick={() => {redirectDelay("/" + projName)}} className="thumbLinkContainer" key={index}>
+                                    <div onClick={() => {redirectDelay("/" + projName)}} className="thumbLinkContainer" key={projName}>
                                             
                                         <ProjectThumb 
                                             thumbSrc={thumbDataDict[projName][0]}

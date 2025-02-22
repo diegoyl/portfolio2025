@@ -14,7 +14,7 @@
     text-align: left;
     width: 100%;
     
-    font-family: PangramHeader;
+    font-family: PangramHeader, 'Arial Narrow', sans-serif;
     font-size: 2.7em;
 
     left: 0;
@@ -39,7 +39,7 @@
 }
 #projects-menu-inner p:hover {
     cursor: pointer;
-    /* font-family: PangramHeaderItalic; */
+
     transform: skew(-2deg, 0) scale(1.2);
     letter-spacing: .01em;
     color: var(--c-black);
@@ -50,7 +50,6 @@
 .activeCategory {
     opacity: 1;
     color: var(--c-blue);
-    /* font-family: PangramHeaderItalic; */
     transform: skew(-14deg, 0) translateX(1%);
     letter-spacing: 0em;
 }
@@ -115,7 +114,7 @@
     margin: 0;
 
     font-size: 1.4em;
-    font-family: PangramHeader;
+    font-family: PangramHeader, 'Arial Narrow', sans-serif;
     /* margin-bottom: 2em; */
     text-align: left;
     width: 100%;
@@ -145,24 +144,45 @@
 
     margin-right: .3em;
     margin-top: .4em;
+    margin-bottom: .1em;
 
 }
 .thumbContainer h2{
     margin: 0;
     
-    font-family: PangramText;
+    font-family: PangramText, Arial, sans-serif;
     font-size: .58em;
     letter-spacing: .02em;
+    margin-bottom: .15em;
 }
 .thumbContainer h1, .thumbContainer h2{
     display: inline-block;
     width: fit-content;
     vertical-align: bottom;
     margin-left: 2px;
-    margin-bottom: .1em;
 }
 .thumbContainer img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.placeholderContainer {
+    width: 100%;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.placeholderThumb {
+    background-color: var(--c-grayLight);
+    width: 100%;
+    /* height: 100%; */
+    position: absolute;
+}
+
+
+.thumbContainer img, .placeholderThumb {
     border-radius: var(--img-radius);
 }
 

@@ -1,9 +1,11 @@
 import './App.css';
 import './Projects.css';
 
+import React, {useState} from 'react';
 
 function ProjectThumbRedirect({thumbSrc, title, subtitle, redirect}) {
 
+  const [imgLoading, setImgLoading] = useState(true);
 
   return (
     <a className="thumbContainer" href={redirect} target="_blank" > 
@@ -16,7 +18,17 @@ function ProjectThumbRedirect({thumbSrc, title, subtitle, redirect}) {
         <div className='blueOverlay bo3'>
         </div> */}
 
-        <img src={thumbSrc} />
+        <div className="placeholderContainer" >
+            {imgLoading && <div className="placeholderThumb" />} {/* Background Placeholder */}
+            
+            <img src={thumbSrc} loading="lazy"
+              style={{
+                opacity: imgLoading ? 0 : 1, // Hide until loaded
+                transition: "opacity 0.3s ease-in-out",
+              }}
+              onLoad={() => setImgLoading(false)}
+            />
+        </div>
 
         <h1>{title}</h1>
         <h2>{subtitle}</h2>

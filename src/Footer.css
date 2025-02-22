@@ -3,7 +3,7 @@
 }
 #footer {
     text-align: center;
-    font-family: PangramHeader;
+    font-family: PangramHeader, Arial, sans-serif;
     color: var(--c-gray);
     padding: 10em 0 3em;
     background: linear-gradient(180deg, rgba(246, 246, 243,0) 0%, rgb(215, 212, 195) 100%);

@@ -43,7 +43,7 @@ function ProjectHeader({title, subtitle, description, metaLists, projKey, h2marg
 
 
         <div id="" className='splitDiv rightSplit' >
-            <div className={'headerImg phi-'+projKey}></div>
+            <div rel="preload" className={'headerImg phi-'+projKey}></div>
         </div>
 
     </div>

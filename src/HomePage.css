@@ -30,7 +30,7 @@
     margin: 0 auto;
     margin-bottom: 1.5em;
     font-size: 1.7em;
-    font-family: PangramHeader;
+    font-family: PangramHeader, Arial, sans-serif;
     /* color: var(--c-blue); */
     animation: paragraphWave 5s ease infinite;
 }
@@ -44,7 +44,7 @@
     cursor: pointer;
     z-index: 710;
 
-    font-family: PangramDisplay;
+    font-family: PangramDisplay, Arial, sans-serif;
     font-size: 3em;
 
     border-radius: .5em;

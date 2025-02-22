@@ -12,10 +12,9 @@
     margin: 0 auto;
     height: var(--navHeight);
 
-    font-family: PangramDisplay;
-    font-family: PangramHeader;
+    font-family: PangramDisplay, Arial, sans-serif;
+    font-family: PangramHeader, Arial, sans-serif;
     font-weight: bold;
-    /* font-family: PangramCompact; */
     font-size: .9em;
     font-size: 1em;
     padding: var(--navbar-pad) 0;
@@ -186,7 +185,7 @@
     transform: scale(1.64) translateY(-7%);
     /* outline: red 1px solid; */
     margin-right: .1em;
-    font-family: PangramCompact;
+    font-family: PangramCompact, Arial, sans-serif;
     display: inline-block;
 }
 

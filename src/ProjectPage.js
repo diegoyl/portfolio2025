@@ -37,7 +37,7 @@ import Cont_DAD from './img/project/dad/Cont_DAD';
 import Cont_B2web from './img/project/b2web/Cont_B2web';
 import Cont_Uniforms from './img/project/uniforms/Cont_Uniforms';
 import Cont_TacticalType from './img/project/tactical-type/Cont_TacticalType';
-import Cont_Def from './img/project/ddef/Cont_Def';
+// import Cont_Def from './img/project/ddef/Cont_Def';
 
 
 

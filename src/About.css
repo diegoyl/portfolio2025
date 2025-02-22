@@ -8,9 +8,8 @@
 .aboutPage .splitGrid {
     margin-bottom: calc(var(--content-pad)*8);
     margin-top: calc(var(--content-pad)*.5);
-    font-family: PangramText;
+    font-family: PangramText, Arial, sans-serif;
     font-weight: bold;
-    /* font-family: PangramCompact; */
 }
 .aboutPage .rightSplit p {
     font-size: .9em;
@@ -22,7 +21,7 @@
 }
 
 .aboutPage h1 {
-    font-family: PangramHeader;
+    font-family: PangramHeader, Arial, sans-serif;
     font-size: 2em;
     margin: 0;
     margin-bottom: .4em;
@@ -31,7 +30,7 @@
 }
 
 .aboutPage h2 {
-    font-family: PangramHeader;
+    font-family: PangramHeader, Arial, sans-serif;
     font-size: 3em;
     color: var(--c-blue);
     margin: 0;
@@ -41,7 +40,7 @@
 }
 
 .aboutPage h3 {
-    font-family: PangramHeader;
+    font-family: PangramHeader, Arial, sans-serif;
     font-size: 3em;
     color: var(--c-black);
     margin: 0;
@@ -54,27 +53,25 @@
 }
 
 .aboutPage strong{
-    font-family: PangramHeader;
+    font-family: PangramHeader, Arial, sans-serif;
 }
 
 
 .aboutPage p{
     letter-spacing: .04em;
-    /* font-family: PangramCompact; */
     line-height: 1.4em;
 }
 
 .aboutPage a{
     /* color: var(--c-blue); */
     text-decoration: underline;
-    /* font-family: PangramTextBold; */
     /* display: inline-block; */
     transition: 300ms ease-out;
 }
 .aboutPage a:hover {
     /* transform: skew(1.2deg,0); */
     color: var(--c-blue);
-    font-family: PangramTextBold;
+    font-family: PangramTextBold, Arial, sans-serif;
 
     /* letter-spacing: .03em; */
 }

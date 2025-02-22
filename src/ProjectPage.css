@@ -18,7 +18,7 @@
 #projectPage {
     min-height: 100vh;
     /* width: 100%; */
-    font-family: PangramCompact;
+    font-family: PangramCompact, Arial, sans-serif;
     font-weight: bold;
 }
 #projectPage img{
@@ -32,9 +32,8 @@
 #projectPage .splitGrid {
     margin-bottom: calc(var(--content-pad));
     margin-top: calc(var(--content-pad)*.5);
-    font-family: PangramCompact;
+    font-family: PangramCompact, Arial, sans-serif;
     font-weight: bold;
-    /* font-family: PangramCompact; */
     grid-template-columns: minmax(300px, 1fr) minmax(0, 2.6fr);
     gap: var(--split-grid-gap);
 }
@@ -61,7 +60,7 @@
 }
 
 #projectPage h1 {
-    font-family: PangramHeader;
+    font-family: PangramHeader, Arial, sans-serif;
     font-size: 1.5em;
     margin: 0;
     margin-bottom: .6em;
@@ -71,7 +70,7 @@
 }
 
 #projectPage h2 {
-    font-family: PangramHeader;
+    font-family: PangramHeader, Arial, sans-serif;
     font-size: 3.2em;
     color: var(--c-blue);
     margin: 0;
@@ -80,7 +79,7 @@
 }
 
 #projectPage h3 {
-    font-family: PangramHeader;
+    font-family: PangramHeader, Arial, sans-serif;
     font-size: 3em;
     color: var(--c-black);
     margin: 0;
@@ -89,7 +88,7 @@
 }
 
 #projectPage h4 {
-    font-family: PangramCompact;
+    font-family: PangramCompact, Arial, sans-serif;
     font-size: 1.6em;
     color: var(--c-black);
     margin: 0;
@@ -97,7 +96,7 @@
     letter-spacing: .02em;
 }
 #projectPage h5 {
-    font-family: PangramHeader;
+    font-family: PangramHeader, Arial, sans-serif;
     font-size: 1em;
     margin: 0;
     line-height: 1.8em;
@@ -105,11 +104,11 @@
 }
 #projectPage strong {
     /* font-weight: bolder; */
-    font-family: PangramHeader;
+    font-family: PangramHeader, Arial, sans-serif;
 }
 #projectPage .gray {
     color: var(--c-gray);
-    font-family: PangramCompact;
+    font-family: PangramCompact, Arial, sans-serif;
     font-size: 2.5em;
 
 }
@@ -130,7 +129,7 @@
     display: inline-block;
     vertical-align: top;
 
-    font-family: PangramTextBold;
+    font-family: PangramTextBold, Arial, sans-serif;
     font-size: .95em;
 
     width: 50%;
@@ -147,7 +146,7 @@
 }
 
 .metaList .metaHeader {
-    font-family: PangramText;
+    font-family: PangramText, Arial, sans-serif;
     font-size: .7em;
     margin-bottom: .8em;
     letter-spacing: .07em;
@@ -189,23 +188,23 @@
 .phi-chair { background-image: url("./img/project/chair/thumbwide.jpg")}
 .phi-beatfarm { background-image: url("./img/project/beatfarm/thumb2.jpg")}
 .phi-21m080 { background-image: url("./img/project/21m080/thumbwide.jpg")}
-.phi-mask { background-image: url("./img/project/mask/thumb.jpg")} */
+.phi-mask { background-image: url("./img/project/mask/thumb.jpg")}
 .phi-hardcell { background-image: url("./img/project/hardcell/thumb.jpg")}
 .phi-ims { background-image: url("./img/project/ims/thumb.jpg")}
 .phi-ai { background-image: url("./img/project/ai/thumb.jpg")}
 .phi-tactical-type { background-image: url("./img/project/tactical-type/thumb.jpg")}
-.phi-honest-type { background-image: url("./img/project/honest-type/thumb.jpg")} */
+.phi-honest-type { background-image: url("./img/project/honest-type/thumb.jpg")}
 .phi-adobe-home { background-image: url("./img/project/adobe-home/thumbwide.jpg")}
 .phi-birth-certificate { background-image: url("./img/project/birth-certificate/thumbwide.jpg")}
-.phi-pecan-sans { background-image: url("./img/project/pecan-sans/thumb.jpg")} */
+.phi-pecan-sans { background-image: url("./img/project/pecan-sans/thumb.jpg")}
 .phi-drift { background-image: url("./img/project/drift/thumb.jpg")}
 .phi-futbot { background-image: url("./img/project/futbot/thumb.jpg")}
-.phi-pendulum { background-image: url("./img/project/pendulum/thumb.jpg")} */
+.phi-pendulum { background-image: url("./img/project/pendulum/thumb.jpg")}
 .phi-infinite { background-image: url("./img/project/infinite/thumb.jpg")}
-.phi-light { background-image: url("./img/project/light/thumb.jpg")} */
-.phi-pedals { background-image: url("./img/project/pedals/thumb.jpg")} */
-.phi-models { background-image: url("./img/project/models/thumb.jpg")} */
-.phi-posters { background-image: url("./img/project/posters/thumb.jpg")} */
+.phi-light { background-image: url("./img/project/light/thumb.jpg")}
+.phi-pedals { background-image: url("./img/project/pedals/thumb.jpg")}
+.phi-models { background-image: url("./img/project/models/thumb.jpg")}
+.phi-posters { background-image: url("./img/project/posters/thumb.jpg")}
 .phi-dad { background-image: url("./img/project/dad/thumb.jpg")}
 .phi-b2web { background-image: url("./img/project/b2web/thumbwide.jpg")}
 
@@ -280,7 +279,7 @@
     cursor: pointer;
     transition: 200ms ease-out;
     background-color: var(--c-black);
-    font-family: PangramDisplay;
+    font-family: PangramDisplay, Arial, sans-serif;
     font-size: 1.1em;
 }
 #thesisBtn:hover {
@@ -302,6 +301,7 @@
 }
 
 .codeText {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace, Arial, sans-serif;
     color: rgb(0, 164, 74);
 }
+
