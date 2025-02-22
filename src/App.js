@@ -8,10 +8,8 @@ import {AnimatePresence} from 'framer-motion';
 import TestingPage from './TestingPage';
 
 import {useLocation} from "react-router-dom"
-import {  HashRouter as Router, Routes, Route } from "react-router-dom";
+import {  BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
-//   <Link to={to} onClick={delayAndGo}>
 
 
 function App({page}) {
