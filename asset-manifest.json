@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f6936256.css",
-    "main.js": "/static/js/main.4e4da2d6.js",
+    "main.css": "/static/css/main.2ea79bbb.css",
+    "main.js": "/static/js/main.18d8b71b.js",
     "static/media/final.mp4": "/static/media/final.16dbf81f50a81e330411.mp4",
     "static/media/Diego_UgThesis.pdf": "/static/media/Diego_UgThesis.9b40519414c4bea3c164.pdf",
     "static/media/piezoComb.mp4": "/static/media/piezoComb.57a538f523d2a40d26ac.mp4",
@@ -142,11 +142,11 @@
     "static/media/guppySMOL-BLUE.png": "/static/media/guppySMOL-BLUE.ed55c9550941a090e039.png",
     "static/media/rotary.jpg": "/static/media/rotary.c5b202845aea0e02f105.jpg",
     "index.html": "/index.html",
-    "main.f6936256.css.map": "/static/css/main.f6936256.css.map",
-    "main.4e4da2d6.js.map": "/static/js/main.4e4da2d6.js.map"
+    "main.2ea79bbb.css.map": "/static/css/main.2ea79bbb.css.map",
+    "main.18d8b71b.js.map": "/static/js/main.18d8b71b.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6936256.css",
-    "static/js/main.4e4da2d6.js"
+    "static/css/main.2ea79bbb.css",
+    "static/js/main.18d8b71b.js"
   ]
 }
