@@ -23,7 +23,7 @@ import Thumb_Beatfarm from './img/project/beatfarm/thumb.jpg'
 import Thumb_21m080 from './img/project/21m080/thumb.jpg'
 // import Thumb_Mask from './img/project/mask/thumb.jpg'
 import Thumb_Hardcell from './img/project/hardcell/thumb.jpg'
-// import Thumb_IMS from './img/project/ims/thumb.jpg'
+import Thumb_IMS from './img/project/ims/thumb.jpg'
 import Thumb_AI from './img/project/ai/thumb.gif'
 import Thumb_TacticalType from './img/project/tactical-type/thumb.gif'
 // import Thumb_HonestType from './img/project/honest-type/thumb.jpg'
@@ -67,9 +67,9 @@ const thumbDataDict = {
     "hardcell": [ Thumb_Hardcell, "HARDCELL®", "", false],
     "futbot": [ Thumb_Futbot, "Futbot", "", false],
 
+    "ims": [ Thumb_IMS, "Interactive Music Systems", "subtitle", false],
 
     // "mask": [ Thumb_Mask, "Mask", "subtitle", false],
-    // "ims": [ Thumb_IMS, "Interactive Music Systems", "subtitle", false],
     // "honest-type": [ Thumb_HonestType, "Honest Type", "subtitle", false],
     // "pecan-sans": [ Thumb_PecanSans, "Pecan Sans", "subtitle", false],
     // "pendulum": [ Thumb_Pendulum, "Pendulum Sculptures", "subtitle", false],
@@ -100,6 +100,7 @@ const categoryDict = {
         "futbot",
 
         "b2web",
+        "ims",
 
 
 

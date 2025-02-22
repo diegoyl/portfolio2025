@@ -19,7 +19,7 @@ import Cont_Beatfarm from './img/project/beatfarm/Cont_Beatfarm';
 import Cont_21m080 from './img/project/21m080/Cont_21m080';
 // import Cont_Mask from './img/project/mask/Cont_Mask';
 import Cont_Hardcell from './img/project/hardcell/Cont_Hardcell';
-// import Cont_IMS from './img/project/ims/Cont_IMS';
+import Cont_IMS from './img/project/ims/Cont_IMS';
 import Cont_AI from './img/project/ai/Cont_AI';
 // import Cont_HonestType from './img/project/honest-type/Cont_HonestType';
 import Cont_AdobeHome from './img/project/adobe-home/Cont_AdobeHome';
@@ -53,7 +53,7 @@ const projComponentDict = {
   "21m080": [ <Cont_21m080 />, "21M.080 GUI"],
   // "mask": [ <Cont_Mask />, "Mask"],
   "hardcell": [ <Cont_Hardcell />, "HARDCELL"],
-  // "ims": [ <Cont_IMS />, "Interactive Music Systems"],
+  "ims": [ <Cont_IMS />, "Interactive Music Systems"],
   "ai": [ <Cont_AI />, "AI Experiments"],
   // "honest-type": [ <Cont_HonestType />, "Honest Type"],
   "adobe-home": [ <Cont_AdobeHome />, "Adobe Home"],
