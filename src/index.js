@@ -7,7 +7,7 @@ import ProjectPage from './ProjectPage';
 import About from './About';
 import TestingPage from './TestingPage';
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 // import { AnimatePresence } from 'framer-motion';
 
 

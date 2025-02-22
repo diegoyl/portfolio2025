@@ -18,7 +18,6 @@ function App({page}) {
 
   return (
     <>
-        {/* <AnimatePresence>
             <Routes>
                 <Route index element={<HomePage />} />
                 <Route path="/projects" element={<Projects />} />
@@ -26,7 +25,6 @@ function App({page}) {
                 <Route path="/about" element={ <About /> } />
                 <Route path="/testing" element={ <TestingPage /> } />
             </Routes>
-        </AnimatePresence> */}
     </>
   );
 }
