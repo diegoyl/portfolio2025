@@ -12,7 +12,8 @@ function HomePage() {
   function redirectDelay(path, category) {
     setErasing(true)
     setTimeout(() => {
-      window.location.href = path+"?categ="+category;
+      // window.location.href = path+"?categ="+category;
+      window.location.href = path+"-"+category;
     }, 310)
   }
 

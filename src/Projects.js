@@ -21,23 +21,23 @@ import Thumb_TangibleSampling from './img/project/tangible-sampling/thumb.jpg'
 import Thumb_Chair from './img/project/chair/thumb.jpg'
 import Thumb_Beatfarm from './img/project/beatfarm/thumb.jpg'
 import Thumb_21m080 from './img/project/21m080/thumb.jpg'
-// import Thumb_Mask from './img/project/mask/thumb.jpg'
+import Thumb_Mask from './img/project/mask/thumb.jpg'
 import Thumb_Hardcell from './img/project/hardcell/thumb.jpg'
 import Thumb_IMS from './img/project/ims/thumb.jpg'
 import Thumb_AI from './img/project/ai/thumb.gif'
 import Thumb_TacticalType from './img/project/tactical-type/thumb.gif'
-// import Thumb_HonestType from './img/project/honest-type/thumb.jpg'
+import Thumb_HonestType from './img/project/honest-type/thumb.jpg'
 import Thumb_AdobeHome from './img/project/adobe-home/thumb.jpg'
 import Thumb_BirthCertificate from './img/project/birth-certificate/thumb.jpg'
-// import Thumb_PecanSans from './img/project/pecan-sans/thumb.jpg'
+import Thumb_PecanSans from './img/project/pecan-sans/thumb.jpg'
 import Thumb_Drift from './img/project/drift/thumb.jpg'
 import Thumb_Futbot from './img/project/futbot/thumb.jpg'
-// import Thumb_Pendulum from './img/project/pendulum/thumb.jpg'
+import Thumb_Pendulum from './img/project/pendulum/thumb.jpg'
 import Thumb_Infinite from './img/project/infinite/thumb.jpg'
-// import Thumb_Light from './img/project/light/thumb.jpg'
-// import Thumb_Pedals from './img/project/pedals/thumb.jpg'
-// import Thumb_Models from './img/project/models/thumb.jpg'
-// import Thumb_Posters from './img/project/posters/thumb.jpg'
+import Thumb_Light from './img/project/light/thumb.jpg'
+import Thumb_Pedals from './img/project/pedals/thumb.jpg'
+import Thumb_Models from './img/project/models/thumb.jpg'
+import Thumb_Posters from './img/project/posters/thumb.jpg'
 import Thumb_DAD from './img/project/dad/thumb.jpg'
 import Thumb_B2Web from './img/project/b2web/thumb.jpg'
 
@@ -67,7 +67,7 @@ const thumbDataDict = {
     "hardcell": [ Thumb_Hardcell, "HARDCELL®", "", false],
     "futbot": [ Thumb_Futbot, "Futbot", "", false],
 
-    "ims": [ Thumb_IMS, "Interactive Music Systems", "subtitle", false],
+    // "ims": [ Thumb_IMS, "Interactive Music Systems", "subtitle", false],
 
     // "mask": [ Thumb_Mask, "Mask", "subtitle", false],
     // "honest-type": [ Thumb_HonestType, "Honest Type", "subtitle", false],
@@ -100,7 +100,6 @@ const categoryDict = {
         "futbot",
 
         "b2web",
-        "ims",
 
 
 
@@ -181,11 +180,24 @@ function Projects() {
     useEffect(() => {
         document.title = "Projects"
         
+        // var searchData = location.search + "";
+        // if (searchData) {
+        //     categoryPassedIn = searchData.split("=")[1];
+        //     console.log("SD: ",searchData)
+        //     if (categoryPassedIn="coding"){
+        //         categoryPassedIn = "coding/ux"
+        //     }
+        //     setCategory(categoryPassedIn)
+        //     navigate('/projects', { replace: true });
+        // } else {
+        //     setCategory("all")
+        // }
+
         var searchData = location.search + "";
         if (searchData) {
-            categoryPassedIn = searchData.split("=")[1];
+            categoryPassedIn = searchData.split("-")[1];
             console.log("SD: ",searchData)
-            if (categoryPassedIn="coding"){
+            if (categoryPassedIn=="coding"){
                 categoryPassedIn = "coding/ux"
             }
             setCategory(categoryPassedIn)
@@ -193,6 +205,7 @@ function Projects() {
         } else {
             setCategory("all")
         }
+
     },[])
 
     

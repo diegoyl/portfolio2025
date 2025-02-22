@@ -6,8 +6,6 @@ import Divider from '../../../components/projectPage/Divider';
 // Projects.js : update array, imports, and categories
 
 ///// PROJECT IMG/VID IMPORTS
-import i_big1 from './big1.mov';
-import i_big2 from './big2.mov';
 // import i_XXX from "./XXX.jpg"
 
 function Cont_IMS() {
@@ -51,10 +49,6 @@ function Cont_IMS() {
             right={<>
                 <p>
 
-                    <video  src={i_big1} width="90%" controls  ></video>
-                    <video  src={i_big2} width="90%" controls  ></video>
-
-                    
                 </p>
                 
             </>} 
