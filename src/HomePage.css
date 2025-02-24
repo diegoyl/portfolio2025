@@ -270,3 +270,15 @@
     opacity: 0;
     /* transform: scaleY(0%) */
 }
+
+
+
+@media only screen and (max-width: 768px) {
+
+    #home-bio {
+        width: 86%;
+        font-size: 1.4em;
+        margin-bottom: .5em;
+    }
+    .hplC {margin-bottom:2em;}
+}

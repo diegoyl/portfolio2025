@@ -22,6 +22,8 @@ function About(props) {
         <div id="" className="aboutPage content-left content-margintop content-padding">
 
             <div className="splitGrid">
+              <img id="profHideOnPC" src={profilePic} style={{"width":"100%"}} alt="diego's face"/>
+
               <div className='splitDiv leftSplit'>
                 <h2>Hi, I'm Diego!</h2>
 
@@ -75,7 +77,7 @@ function About(props) {
 
 
               <div className='splitDiv rightSplit'>
-                  <img src={profilePic} style={{"width":"100%"}} alt="diego's face"/>
+                  <img id="profHideOnMobile" src={profilePic} style={{"width":"100%"}} alt="diego's face"/>
                   <br></br>
                   <br></br>
                   <br></br>

@@ -27,7 +27,7 @@ function Cont_Forting() {
     <div id="projectPage" className="content-left content-margintop content-padding">
         <ProjectHeader
 
-            title={<img src={wordmarkLogo} style={{height:"1.2em"}}/>}
+            title={<img src={wordmarkLogo} style={{height:"1.2em", margin:0,borderRadius:0,marginBottom:".3em"}}/>}
             subtitle="A kit for pillow forting outdoors"
             
             metaLists={[

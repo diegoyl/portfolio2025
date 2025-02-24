@@ -34,7 +34,7 @@
 
 .stLine {
     color:var(--c-blue);
-    color: rgba(0, 59, 235, 0.68);
+    color: rgba(0, 59, 235, 0.9);
     text-decoration:line-through wavy;
 }
 .stText {
@@ -55,12 +55,11 @@
 }
 
 #footer-links {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     /* height: 3em; */
 }
 
 #footer-links p, #footer-links a{
+    font-family: PangramDisplay;
     display: block;
     height: 100%;
     vertical-align: middle;
@@ -68,6 +67,7 @@
     font-size: 1.4em;
     padding: 0 2em;
     margin-top: .33em;
+    mix-blend-mode: multiply;
 }
 
 #footerGuppy {
@@ -97,4 +97,26 @@
 #allProjects:hover {
     transform: scale(1.2);
     color: var(--c-blue);
+}
+#createdwith {
+    mix-blend-mode: multiply;
+    font-size: .8em;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    #footer-links {
+        display: block;
+        /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+        /* height: 3em; */
+    }
+    #footer-links  .bigFooterText {
+        font-size: 9vw;
+        margin-bottom: 9vw;
+    }
+    #createdwith {
+        font-size: 4vw;
+    }
+
 }

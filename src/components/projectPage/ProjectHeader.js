@@ -12,6 +12,11 @@ function ProjectHeader({title, subtitle, description, metaLists, projKey, h2marg
   return (
     <>
     <div className="splitGrid projectHeaderDiv">
+
+        <div id="thumbShowMobile" className='' >
+            <div rel="preload" className={'headerImg phi-'+projKey}></div>
+        </div>
+        
         <div className='splitDivIndent splitDiv leftSplit'>
             <div style={{height:"2.8em"}}></div>
 
@@ -42,7 +47,7 @@ function ProjectHeader({title, subtitle, description, metaLists, projKey, h2marg
         </div>
 
 
-        <div id="" className='splitDiv rightSplit' >
+        <div id="thumbShowPC" className='splitDiv rightSplit' >
             <div rel="preload" className={'headerImg phi-'+projKey}></div>
         </div>
 

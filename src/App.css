@@ -16,7 +16,7 @@
   --c-black: rgb(51, 52, 59);
   --content-pad: 32px;
   --content-pad-big: 96px;
-  --split-grid-gap: 24px;
+  --split-grid-gap: 32px;
   --img-radius: 2%;
 
 }
@@ -49,14 +49,12 @@
 
 body {
   text-align: center;
-  background-color: var(--c-cream);
+  background-color: var(--c-cream)!important;
 
   color: var(--c-black);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Arial, sans-serif;
 
-
 }
-
 
 .PangramDisplay {
   font-family: "PangramDisplay", Arial, sans-serif;
@@ -68,7 +66,7 @@ body {
 }
 .PangramText {
   font-family: "PangramText", Arial, sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: .02em;
 }
 .PangramTextBold {
@@ -283,26 +281,25 @@ button {
 
 @media only screen and (max-width: 768px) {
   #mobileWarning {
-    display: block;
+    /* display: block; */
   }
   
   .splitGrid {
     display: block;
     width: 100%;
+
     /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
     /* gap: var(--split-grid-gap); */
-    /* background-color: rgba(34, 0, 255, 0.07); */
     /* height: min-content; */
 
   }
   .splitDiv {
     width: 100%;
     vertical-align: top;
-    /* outline: yellow 2px solid; */
   
   }
   .content-padding {
-    padding: 0 12px;
+    padding: 0 24px;
   }
   .leftSplit {
     /* background-color: rgb a(34, 0, 255, 0.07); */

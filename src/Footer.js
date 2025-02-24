@@ -36,17 +36,8 @@ function NavBar({page}) {
         {/* <Bubbles active={activeBubbles} resetBubbles={resetBubbles}></Bubbles> */}
 
         <div id="footer-links">
-            <p><br></br><br></br>hi.diegoyl@gmail.com</p>
-            {/* <img id="footerGuppy" src={Guppy}/> */}
+        <p onClick={() => toTop()} id="toTop" className='bigFooterText'>⌃<br></br>SWIM TO TOP</p>
 
-            <p onClick={() => toTop()} id="toTop" className='bigFooterText'>⌃<br></br>Swim to Surface</p>
-
-              <a target="_blank" href="https://www.linkedin.com/in/diego-yanez-laguna/" 
-                  className="">
-            <br></br><br></br>
-
-                  LinkedIn
-              </a>
 
         </div>
         
@@ -57,7 +48,7 @@ function NavBar({page}) {
           <div></div>
 
           <div onClick={() => {redirectDelay("/projects")}} >
-                <p className="bigFooterText" id="allProjects" >All Projects</p>
+                <p className="bigFooterText" id="allProjects" >ALL PROJECTS</p>
           </div>
 
           <div></div>
@@ -68,7 +59,9 @@ function NavBar({page}) {
         <br></br>
         <br></br>
 
-      <div style={{fontSize:".8em"}}>
+        <br></br>
+            <br></br>
+      <div id="createdwith">
               <span>Created with </span>
 
               <span className='stLine' >
@@ -78,9 +71,13 @@ function NavBar({page}) {
               <span> lots of love &lt;3</span>
               {/* TODO: heart bubbles */}
 
-
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
       </div>
-            
+
     
 
     </footer>
