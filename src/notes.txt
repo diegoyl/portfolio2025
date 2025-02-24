@@ -8,6 +8,9 @@ Z_INDEXES
 900
     #erase-container 
 
+800
+    ?navbar 
+
 710 homeProjLink
 700
     #animateDiv 

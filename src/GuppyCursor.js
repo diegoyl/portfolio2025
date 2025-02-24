@@ -13,11 +13,13 @@ function GuppyCursor() {
     const y = useValue(initY*.43)
     const angle = useValue(0)
     const iAc = -5 // initial accel
+    const flipBufferAcc = .02
     const xAcc = useValue(iAc)
     const yAcc = useValue(iAc)
     var xAccPrev = [iAc,iAc,iAc,iAc,iAc,iAc,iAc,iAc,iAc,iAc,iAc,iAc,iAc]
     var yAccPrev = [iAc,iAc,iAc,iAc,iAc,iAc,iAc,iAc,iAc,iAc,iAc,iAc,iAc]
     var angPrev = [0,0,0,0]
+    var cycleJumps = 0
     const flip = useValue("100%")
     const maxAcc = 7
     const minDist = 30
@@ -55,15 +57,57 @@ function GuppyCursor() {
         //REGULAR
       if ((deltaX**2 + deltaY**2)**.5 > 60) {
         var angRaw = Math.atan(deltaY/deltaX) * 180/Math.PI
+        var angAdjust = 0 // for normalizing to 0-360 instead of -90 to 90 on both halves
+        flip.value = "100%"
+
+        if (deltaX < 0)  {  // LEFT +180
+          angAdjust = 180 + (360 * cycleJumps)
+          flip.value = "-100%"
+        } else {            // RIGHT +0 or +360
+          if (deltaY < 0)  { // UP +360
+            angAdjust = 360 + (360 *  cycleJumps)
+          }
+        } // if right down leave it at 0
+
+        angRaw += angAdjust
+
+        // 0 TO 360 BREAK
+        var lastAng = angPrev[angPrev.length - 1]
+        var lastDif = Math.abs(lastAng - angRaw)
+        if (lastDif >= 300) {
+          console.log("\nJUMP <><><><><><><><\n")
+          if (angRaw < lastAng) {
+            angRaw += 360
+          } else if (angRaw > lastAng) {
+            angRaw += -360
+          }
+        }
+
+
+        // console.log(angRaw.toFixed(0), " <= ",lastAng, "  cjbase: ",360*cycleJumps)
+
+  
         angPrev.shift();
         angPrev.push(angRaw);
-  
-        angle.value = average(angPrev)
+        var regressedVal = average(angPrev)
+        angle.value = regressedVal
+        
+        cycleJumps = Math.floor((regressedVal) / 360)
 
-        flip.value = "100%"
-        if (deltaX < 0) {
-          flip.value = "-100%"
-        }
+        //// buffers so it doesnt flip back and forth super rapidly
+        // if (deltaX < 0) {
+
+        //   if (xAcc.value.value < -flipBufferAcc ){
+        //     flip.value = "-100%"
+        //   }
+          
+        // } else {
+          
+        //   if (xAcc.value.value > flipBufferAcc ){
+        //     flip.value = "100%"
+        //   }
+        // }
+
       } 
         //CLOSE
       else {
@@ -104,7 +148,7 @@ function GuppyCursor() {
         translateX: x.value,
         translateY: y.value,
         rotate: angle.value,
-        scaleX: flip.value,
+        scaleY: flip.value,
         zIndex: 700,
     }}
   >

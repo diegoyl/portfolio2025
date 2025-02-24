@@ -6,20 +6,23 @@
 }
   
 #navbar {
+    width: 100vw;
     position: sticky;
     top: 0;
-    z-index: 20;
+    z-index: 800;
     margin: 0 auto;
     height: var(--navHeight);
 
-    font-family: PangramDisplay, Arial, sans-serif;
     font-family: PangramHeader, Arial, sans-serif;
-    font-weight: bold;
+    letter-spacing: .01em;
+    font-family: PangramDisplay, Arial, sans-serif;
+    letter-spacing: .03em;
+
+    /* font-weight: bold; */
     font-size: .9em;
     font-size: 1em;
     padding: var(--navbar-pad) 0;
 
-    letter-spacing: .01em;
     background-color: var(--c-cream-zero);
 
     transition:  300ms ease-out;
@@ -48,10 +51,10 @@
     position: absolute;
     top: 0;
 
+
 }
 .navLeft {
     text-align: left;
-    /* background-color: rgba(0, 255, 255, 0.409); */
     left: 0;
 }
 .navRight {
@@ -190,7 +193,6 @@
 }
 
 #centerTitle {
-    /* background-color: rgba(252, 5, 5, 0.467); */
     position: absolute;
     top: 0;
     /* margin: auto; */
@@ -208,4 +210,87 @@
 }
 .hideCt {
     opacity: 0;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --navHeight: 1.7em;
+        --navHeightGrow: 2em;
+        --navbar-pad: .7em;
+        --navbar-padGrow: .7em;
+    }
+    
+    #navName, #centerTitle{
+        display: none;
+    }
+    #navbar {
+        /* text-align: left; */
+        /* white-space: nowrap; */
+        width: 100vw;
+        /* outline: red 2px solid; */
+        background-color: var(--c-cream);
+        right: 0;
+        left: auto;
+
+    }
+    .navHalf {
+        display: inline-block;
+        /* height: 100%; */
+        margin-top: var(--navbar-pad);
+        width: 100%;
+        vertical-align: top;
+        text-align: left;
+        position: absolute;
+        top: 0;
+        /* outline: rgb(255, 196, 0) 2px solid; */
+
+    }
+    .navLeft {
+        text-align: left;
+        left: 0;
+        width: min-content;
+    }
+    .navRight {
+        text-align: right;
+        right: 18px;
+        /* background-color: pink; */
+        width: 82%;
+        
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #navGuppy {
+    
+        height: 4.8em;
+        margin-left: -6.4em;
+        margin-top: -1.25em;
+    
+        transition: 1000ms ease-out;
+        rotate: 4deg;
+    }    
+    
+    .navlink p {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 7vw;
+        margin: 0 0;
+        line-height: var(--navHeight);
+        line-height: 7.8vw;
+        font-size: 1.3em;
+        font-size: 4vw;
+        /* outline: blue 1px solid; */
+        white-space: nowrap;
+
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (hover: none) {
+
 }

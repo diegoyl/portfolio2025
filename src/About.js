@@ -28,8 +28,8 @@ function About(props) {
                 <p>
                     I recently graduated from MIT, where I studied Art & Design and Computer Science and a bit of Mechanical Engineering. I'm originally from Austin, TX 🤠.
                     Recently, I've been most interested in interaction design and creative technology.
-                    I am also interested/experienced 
-                    in any kind of coding, graphic design, music, and  using ML/AI in actually interesting ways.
+                    I am also interested and experienced 
+                    in programming, 3D modeling/rendering, graphic design, music, and  using ML/AI in actually interesting ways.
                     <br></br>
                     <br></br>
 
@@ -66,7 +66,7 @@ function About(props) {
                 <div style={{"opacity":".5"}}>
                   <p className='PangramHeader'>OBESSIONS ARCHIVE...</p>
                   <p>
-                      mango sticky rice, Conductor Williams instrumentals, Dune, the olympics, cooking, mummy_joe (instagram page), mango sticky rice, jookin (dance style), Attack on Titan, Pocket Operators, Denzel Curry, sports betting models, Kendrick, orange chicken, Julian DeGuzman, MPC drum machine, Formula 1, buffalo wings, Avatar TLA, collaging, Rosalia, NCT 127, Hamilton
+                      mango sticky rice, Conductor Williams instrumentals, Dune, the olympics, cooking, mummy_joe (instagram page), jookin (dance style), Attack on Titan, Pocket Operators, Denzel Curry, sports betting models, Kendrick, orange chicken, Julian DeGuzman, MPC drum machine, Formula 1, buffalo wings, Avatar TLA, collaging, Rosalia, NCT 127, Hamilton
                   </p>
 
                 </div>

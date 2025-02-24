@@ -2,7 +2,6 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    /* background-color: rgba(99, 182, 182, 0.95); */
     z-index: 200;
     pointer-events: none;
 
@@ -53,12 +52,10 @@
         opacity: 1;
         /* transform: scale(0); */
         outline: 6px var(--c-blue) solid;
-        /* outline: 6px rgba(247, 244, 240, 1) solid; */
     }
     2% {
         transform: translateY(0%) translateX(0%) scale(1);
         outline: 4px var(--c-blue) solid;
-        /* outline: 4px rgba(247, 244, 240, 1) solid; */
     }
     25% {
         transform: translateY(calc(var(--riseSpeed) * .25)) translateX(30%);
@@ -76,7 +73,6 @@
         transform: translateY(calc(var(--riseSpeed) * 1)) translateX(-33%);
         opacity: .9;
         outline: 4px var(--c-blue) solid;
-        /* outline: 4px rgba(247, 244, 240, 1) solid; */
     }
 }
 
@@ -86,5 +82,4 @@
 .bubbleContainer span {
     background-color: var(--c-blue-transparent);
     background-color: var(--c-cream-transparent);
-    /* outline: 1px rgba(247, 244, 240, 1) solid; */
 }

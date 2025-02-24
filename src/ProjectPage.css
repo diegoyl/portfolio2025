@@ -124,7 +124,6 @@
 }
 
 .metaList {
-    /* background-color: rgba(0, 255, 255, 0.483); */
 
     display: inline-block;
     vertical-align: top;
@@ -137,7 +136,6 @@
 }
 
 .metaList p{
-    /* background-color: rgba(0, 190, 190, 0.534); */
 
     display: block;
     vertical-align: top;

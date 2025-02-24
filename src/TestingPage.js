@@ -17,6 +17,13 @@ function TestingPage(props) {
       <Bubbles resetBubbles={() => console.log()}></Bubbles>
       <div className="homeBg"></div>
 
+      <div style={{display:"inline-block",height:"200px",width:"200px", backgroundColor:"var(--c-gray)"}}></div>
+      <div style={{display:"inline-block",height:"200px",width:"200px", backgroundColor:"var(--c-gray1b)"}}></div>
+      <br></br>
+      <div style={{display:"inline-block",height:"200px",width:"200px", backgroundColor:"var(--c-grayLight)"}}></div>
+      <div style={{display:"inline-block",height:"200px",width:"200px", backgroundColor:"var(--c-gray2b)"}}></div>
+
+
       <p className='PangramDisplay' id="home-name">
         DIEGO YAÑEZ-LAGUNA
       </p>

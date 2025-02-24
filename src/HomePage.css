@@ -9,7 +9,7 @@
     mask-size: 20em;
     mask-repeat: repeat;
     opacity: .9; */
-    background-color: var(--c-gray);
+    background-color: var(--c-cream);
 }
 #home-name {
     color: var(--c-blue);

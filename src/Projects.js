@@ -301,14 +301,20 @@ function Projects() {
         }
     }
 
+
+  function toCategoriesTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+
   return (
-    <div>
+    <div style={{width:"100%"}}>
       <NavBar page={"projects"}></NavBar>
       <div id="erase-container" className={erasing ? "beginErase transition-container":"transition-container"}>
             {/* <p>...</p> */}
       </div>
 
-        <div className="content-padding splitGrid projectsMarginTop">
+        <div id="projects" className="content-padding splitGrid projectsMarginTop">
 
             <div className='splitDiv leftSplit'>
                 <div id="projects-menu-fixed">
@@ -384,6 +390,11 @@ function Projects() {
                 </div>
             </div>
         </div>
+
+        <div id="toCategoriesDiv">
+            <p onClick={() => toCategoriesTop()} >⌃<br></br>CATEGORIES</p>
+        </div>
+
 
         <Footer></Footer>
 

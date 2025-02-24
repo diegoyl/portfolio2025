@@ -9,13 +9,16 @@
   --c-blue: rgb(6,76,250);
   --c-blue-transparent: rgb(6,76,250,.9);
   --c-aqua: rgb(80, 220, 255);
-  --c-gray: rgba(11, 11, 18, 0.35);
-  --c-grayLight: rgba(195, 196, 200, 0.25);
+  /* --c-gray: rgba(11, 11, 18, 0.35); */
+  --c-gray: rgb(165, 165, 160);
+  /* --c-grayLight: rgba(195, 196, 200, 0.25); */
+  --c-grayLight: rgb(232, 232, 228, 1);
   --c-black: rgb(51, 52, 59);
   --content-pad: 32px;
   --content-pad-big: 96px;
   --split-grid-gap: 24px;
   --img-radius: 2%;
+
 }
 
 
@@ -202,9 +205,12 @@ button {
 }
 #erase-container {
   opacity: 0;
+  width: 100%;
 }
 #load-container {
   opacity: 1;
+  width: 100%;
+
 }
 
 
@@ -264,4 +270,45 @@ button {
   z-index: 200;
   pointer-events: none;
   /* background-color: rgba(255, 0, 0, 0.255); */
+}
+
+#animateDiv {
+  pointer-events: none;
+}
+
+#mobileWarning {
+  display: none;
+  color: rgb(248, 71, 107);
+}
+
+@media only screen and (max-width: 768px) {
+  #mobileWarning {
+    display: block;
+  }
+  
+  .splitGrid {
+    display: block;
+    width: 100%;
+    /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+    /* gap: var(--split-grid-gap); */
+    /* background-color: rgba(34, 0, 255, 0.07); */
+    /* height: min-content; */
+
+  }
+  .splitDiv {
+    width: 100%;
+    vertical-align: top;
+    /* outline: yellow 2px solid; */
+  
+  }
+  .content-padding {
+    padding: 0 12px;
+  }
+  .leftSplit {
+    /* background-color: rgb a(34, 0, 255, 0.07); */
+  }
+  
+  .rightSplit {
+    /* background-color: rgba(255, 0, 0, 0.07); */
+  }
 }
