@@ -348,5 +348,15 @@
         margin-top: 50px;
         margin-bottom: 50px;
     }
+    #projectPage .rightSplit p {
+        letter-spacing: .02em;
+    }
+    #projectPage h2, #projectPage h3 {
+        letter-spacing: 0;
+    }
+
+    #projectPage h4 {
+        letter-spacing: 0.01em;
+    }
 
 }

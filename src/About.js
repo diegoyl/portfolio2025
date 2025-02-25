@@ -28,15 +28,20 @@ function About(props) {
                 <h2>Hi, I'm Diego!</h2>
 
                 <p>
-                    I recently graduated from MIT, where I studied Art & Design and Computer Science and a bit of Mechanical Engineering. I'm originally from Austin, TX 🤠.
-                    Recently, I've been most interested in interaction design and creative technology.
+                    I'm a designer/programmer/engineer raised in Austin, TX. I recently graduated from MIT, where I majored in Art & Design and took classes at the intersection of design, computer science, and mechanical engineering. 
+                    I am interested in using technology to create meaningful user experiences that are playful and immersive.
                     I am also interested and experienced 
-                    in programming, 3D modeling/rendering, graphic design, music, and  using ML/AI in actually interesting ways.
+                    in web design, 3D modeling/rendering, graphic design, music, and  using ML/AI in actually interesting ways. Most recently I finished working
+                    
+                    on <a href="/squish">
+                        <i>Squish</i>
+                    </a>, an instrument controlled by foam blocks!
+
                     <br></br>
                     <br></br>
 
-                    In my free time I like making music, 
-                    dancing, playing soccer and tennis, 
+                    In my free time I like making music (hip-hop + rock), 
+                    dancing (hip-hop + house), playing soccer and tennis, 
                     and making random stuff on photoshop. 
                     You can follow me at <a target="_blank" href="https://www.instagram.com/tryingtryiing/" rel="noreferrer">@tryingtryiing</a> if you want to see any of that. 
                     <br></br>
@@ -52,6 +57,7 @@ function About(props) {
                     <br></br>
                 </p>
                 <br></br>
+                <br></br>
 
                 <p className='PangramHeader'>CURRENT OBSESSIONS...</p>
                 <p>
@@ -66,7 +72,7 @@ function About(props) {
                 </p>
 
                 <div style={{"opacity":".5"}}>
-                  <p className='PangramHeader'>OBESSIONS ARCHIVE...</p>
+                  <p className='PangramHeader'>OBSESSIONS ARCHIVE...</p>
                   <p>
                       mango sticky rice, Conductor Williams instrumentals, Dune, the olympics, cooking, mummy_joe (instagram page), jookin (dance style), Attack on Titan, Pocket Operators, Denzel Curry, sports betting models, Kendrick, orange chicken, Julian DeGuzman, MPC drum machine, Formula 1, buffalo wings, Avatar TLA, collaging, Rosalia, NCT 127, Hamilton
                   </p>

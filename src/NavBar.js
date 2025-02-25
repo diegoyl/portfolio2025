@@ -44,18 +44,18 @@ function NavBar({page, centerTitle, ctShow}) {
 
             <div onClick={() => {redirectDelay("/projects")}} 
                 className={activePage=="projects" ? "activeNavLink navlink pagelink":"navlink pagelink"}>
-                <p><span>›</span> PROJECTS</p>
+                <p><span className='nbArrow'>›</span> PROJECTS</p>
             </div>
             <div onClick={() => {redirectDelay("/about")}} 
                 className={activePage=="about" ? "activeNavLink navlink pagelink":"navlink pagelink"}>
-                <p><span>›</span> ABOUT</p>
+                <p><span className='nbArrow'>›</span> ABOUT</p>
             </div>
 
 
             <a target="_blank" href="https://www.instagram.com/tryingtryiing/" 
                 className={activePage=="insta" ? "activeNavLink navlink pagelink pagelink-last":"navlink pagelink pagelink-last"}>
                 {/* <img src="./img/menu4.png" id="m4" class="menuimg"> */}
-                <p><span>›</span> INSTA</p>
+                <p><span className='nbArrow'>›</span> INSTA</p>
             </a>
         </div>
         

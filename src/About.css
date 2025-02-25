@@ -8,7 +8,7 @@
 .aboutPage .splitGrid {
     margin-bottom: calc(var(--content-pad)*8);
     margin-top: calc(var(--content-pad)*.5);
-    font-family: PangramText, Arial, sans-serif;
+    font-family: PangramCompact, Arial, sans-serif;
     font-weight: 600;
 }
 .aboutPage .rightSplit p {
