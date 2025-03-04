@@ -59,7 +59,7 @@ function About(props) {
                 <br></br>
                 <br></br>
 
-                <p className='PangramHeader'>CURRENT OBSESSIONS...</p>
+                <p className='PangramCompact'>CURRENT OBSESSIONS...</p>
                 <p>
                   <a target="_blank" href="https://www.https://www.youtube.com/@blaccmassxx" rel="noreferrer">blaccmass remixes</a> 
 
@@ -72,7 +72,7 @@ function About(props) {
                 </p>
 
                 <div style={{"opacity":".5"}}>
-                  <p className='PangramHeader'>OBSESSIONS ARCHIVE...</p>
+                  <p className='PangramCompact'>OBSESSIONS ARCHIVE...</p>
                   <p>
                       mango sticky rice, Conductor Williams instrumentals, Dune, the olympics, cooking, mummy_joe (instagram page), jookin (dance style), Attack on Titan, Pocket Operators, Denzel Curry, sports betting models, Kendrick, orange chicken, Julian DeGuzman, MPC drum machine, Formula 1, buffalo wings, Avatar TLA, collaging, Rosalia, NCT 127, Hamilton
                   </p>

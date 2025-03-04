@@ -50,6 +50,19 @@ function Cont_Beatfarm() {
 
 
         <ProjectSection
+            left={"Try It Out!"} leftType=""
+            right={<>
+                <p>
+                    The original app was made in Kivy/Python, so I remade a web version in JavaScript. I used an existing <a href="https://github.com/cwilso/MIDIDrums" target="_blank">step-sequencer library</a> that already had many of the functionalities we made for the original app. If there are any bugs in this version, I blame it on the library...
+                </p>
+                <a href="https://diegoyl.github.io/beatfarm-web/" target="_blank"><button id="bfwaLink">WEBAPP LINK</button></a>
+                <br></br>
+                <br></br>
+            </>} 
+        ></ProjectSection>
+        <Divider />
+            
+        <ProjectSection
             left={"How It Works"} leftType=""
             right={<>
                 <p>
@@ -73,7 +86,6 @@ function Cont_Beatfarm() {
                 x.......x.......x...x.......x... A#,A#,F#,F#,F
                 <br></br>
                 x...x...x.......x...x.......x... A#,C,A#,F#,A,F
-                <br></br>
                 <br></br>
 
 
@@ -138,7 +150,9 @@ function Cont_Beatfarm() {
         ></ProjectSection>
 
 
-
+        <div className='centerText'>
+            <a href="https://diegoyl.github.io/beatfarm-web/" target="_blank"><button id="bfwaLink" style={{fontSize:"4em", marginTop:"2em"}}>TRY IT OUT!</button></a>
+        </div>
 
     </div> //* END PROJECT CONTENT *//////////////////////////
   );
