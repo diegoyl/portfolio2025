@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import ProjectHeader from '../../../components/projectPage/ProjectHeader';
 import ProjectSection from '../../../components/projectPage/ProjectSection';
 // import Divider from '../../../components/projectPage/Divider';
@@ -10,6 +11,10 @@ import ProjectSection from '../../../components/projectPage/ProjectSection';
 
 function Cont_TacticalType() {
   const projKey = "tactical-type"
+
+  useEffect(() => {
+    window.location.href = "https://diegoyl.github.io/tactical-type/"
+  },[])
 
 
   return (

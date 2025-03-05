@@ -274,15 +274,8 @@ button {
   pointer-events: none;
 }
 
-#mobileWarning {
-  display: none;
-  color: rgb(248, 71, 107);
-}
-
 @media only screen and (max-width: 768px) {
-  #mobileWarning {
-    /* display: block; */
-  }
+
   
   .splitGrid {
     display: block;

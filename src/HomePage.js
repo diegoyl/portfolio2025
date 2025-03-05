@@ -153,16 +153,6 @@ function HomePage() {
 
         <p id="home-bio" >
 
-
-          <p id="mobileWarning" style={{"font-size":".7em", "max-width":"500px", "margin":"0 auto"}}>
-            *** My site is detecting that you are on a mobile device and unfortunately this is not optimized for mobile yet, but I will get to that soon!
-            <br></br>
-            <br></br>
-            If you aren't on mobile, it might help to increase the window size a little bit!
-            <br></br>
-            <br></br>
-          </p>
-
           Hi, I’m Diego! I love making things, experimenting, and learning new things along the way. I recently graduated from MIT, where I took classes on design, computer science, mechanical engineering, and music!
           <br></br>
           <br></br>
