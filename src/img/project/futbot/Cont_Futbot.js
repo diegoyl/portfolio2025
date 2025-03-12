@@ -47,10 +47,10 @@ function Cont_Futbot() {
 
 
         <ProjectSection
-            left={"hi :P"} leftType=""
+            left={"..."} leftType=""
             right={<>
                 <p>
-                ... very soon
+                ... soon
                     
                 </p>
                 

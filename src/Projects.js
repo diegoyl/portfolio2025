@@ -112,8 +112,9 @@ const thumbDataDict = {
 
 const categoryDict = {
     "all": [
-        "clock",
         "squish",
+        "clock",
+        "beatfarm",
         "forting", // TODO: add forting process
         "tangible-sampling", 
         "footwork",
@@ -121,13 +122,12 @@ const categoryDict = {
         "infinite-merch",
         "chair",
         "ai",
-        "beatfarm",
         "infinite", //  TODO: infinite unfinished
+        "hardcell",
         "birth-certificate",
         "tactical-type",
         "drift",
         "adobe-home",
-        "hardcell",
         "futbot",
 
         "b2web",
@@ -149,8 +149,8 @@ const categoryDict = {
     ],
     "design": [
         
-        "clock",
         "squish",
+        "clock",
         "forting",
         "tangible-sampling", 
         "chair",
@@ -182,10 +182,10 @@ const categoryDict = {
     "graphic design": [
         "footwork",
         "infinite-merch",
+        "infinite",
         "tactical-type",
         "drift",
         "birth-certificate",
-        
     ],
 }  
 
