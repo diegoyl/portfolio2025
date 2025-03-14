@@ -18,6 +18,7 @@ import Thumb_Footwork from './img/project/footwork/thumbspin.gif';
 import Thumb_Squish from './img/project/squish/thumb.jpg'
 import Thumb_Forting from './img/project/forting/thumb.jpg'
 import Thumb_InfiniteMerch from './img/project/infinite-merch/thumb.jpg'
+import Thumb_Mitgala from './img/project/mitgala/thumb.jpg'
 import Thumb_TangibleSampling from './img/project/tangible-sampling/thumb.jpg'
 import Thumb_Chair from './img/project/chair/thumb.jpg'
 import Thumb_Beatfarm from './img/project/beatfarm/thumb.jpg'
@@ -41,6 +42,8 @@ import Thumb_Models from './img/project/models/thumb.jpg'
 import Thumb_Posters from './img/project/posters/thumb.jpg'
 import Thumb_DAD from './img/project/dad/thumb.jpg'
 import Thumb_B2Web from './img/project/b2web/thumb.jpg'
+import Thumb_HTMAA from './img/project/htmaa/thumb.gif'
+// import Thumb_NEWPROJ from './img/project/NEWPROJ/thumb.jpg'
 
 const preloadSrcList = [
     Thumb_Clock,
@@ -48,10 +51,12 @@ const preloadSrcList = [
     Thumb_Squish,
     Thumb_Forting,
     Thumb_InfiniteMerch,
+    Thumb_Mitgala,
     Thumb_TangibleSampling,
     Thumb_Chair,
     Thumb_Beatfarm,
     Thumb_21m080,
+    Thumb_Mitgala,
     Thumb_Mask,
     Thumb_Hardcell,
     Thumb_IMS,
@@ -70,7 +75,9 @@ const preloadSrcList = [
     Thumb_Models,
     Thumb_Posters,
     Thumb_DAD,
-    Thumb_B2Web
+    Thumb_B2Web,
+    Thumb_HTMAA,
+    // Thumb_NEWPROJ,
 ]
 
 const thumbDataDict = {
@@ -85,6 +92,8 @@ const thumbDataDict = {
     "beatfarm": [ Thumb_Beatfarm, "Beatfarm", "Hip-hop beat-making game", false],
     "birth-certificate": [ Thumb_BirthCertificate, "My Birth Certificate??", "kinda", "https://diegoyl.github.io/newspaper-birth-certificate/", false],
     "tactical-type": [ Thumb_TacticalType, "Tactical Type", "A typeface made from a socccer game", "https://diegoyl.github.io/tactical-type/"],
+    "htmaa": [ Thumb_HTMAA, "How To Make (Almost) Anything", "", "https://fab.cba.mit.edu/classes/863.22/Architecture/people/Diego/"],
+    
     "chair": [ Thumb_Chair, "Pair Chair", "Re-assembleable chair made of two identical parts", false],
     "dad": [ Thumb_DAD, "D.A.D.", "A band I am a part of!", false],
     "drift": [ Thumb_Drift, "Drift", "Intentional error in machine-aided drawings", false],
@@ -92,22 +101,27 @@ const thumbDataDict = {
     "21m080": [ Thumb_21m080, "21M.080 Interface", "Making music with live-coding", false],
     "adobe-home": [ Thumb_AdobeHome, "Adobe Home", "", false],
     "infinite-merch": [ Thumb_InfiniteMerch, "Infinite Merch", "Hand-printed T-Shirts, stickers, and totes for Infinite Magazine", false],
+    "mitgala": [ Thumb_Mitgala, "MIT Gala", "Branding for Infinite's innaugural fashion show", false],
     "infinite": [ Thumb_Infinite, "Infinite Magazine", "I was the Visual Design Director for MIT's fashion magazine", false],
     "tangible-sampling": [ Thumb_TangibleSampling, "Tangible Sampling", "Collaborative music-making installation", false],
 
     "hardcell": [ Thumb_Hardcell, "HARDCELL®", "", false],
-    "futbot": [ Thumb_Futbot, "Futbot", "", false],
+    "futbot": [ Thumb_Futbot, "Futbot", "Robot for 2.007 competition ", false],
+    
+    // "NEWPROJ": [ Thumb_NEWPROJ, "NEWPROJ", "", false],
 
     // "ims": [ Thumb_IMS, "Interactive Music Systems", "subtitle", false],
+    
+    "honest-type": [ Thumb_HonestType, "Honest Type", "Exploring our trust in the words of the digital world", false],
+    "pecan-sans": [ Thumb_PecanSans, "Pecan Sans", "An alphabet made from pecans", false],
+    
+    // "posters": [ Thumb_Posters, "Posters", "subtitle", false],
 
     // "mask": [ Thumb_Mask, "Mask", "subtitle", false],
-    // "honest-type": [ Thumb_HonestType, "Honest Type", "subtitle", false],
-    // "pecan-sans": [ Thumb_PecanSans, "Pecan Sans", "subtitle", false],
     // "pendulum": [ Thumb_Pendulum, "Pendulum Sculptures", "subtitle", false],
     // "light": [ Thumb_Light, "Wax Lamp", "subtitle", false],
     // "pedals": [ Thumb_Pedals, "Guitar Pedals", "subtitle", false],
     // "models": [ Thumb_Models, "Miniatures", "subtitle", false],
-    // "posters": [ Thumb_Posters, "Posters", "subtitle", false],
 }
 
 const categoryDict = {
@@ -120,17 +134,23 @@ const categoryDict = {
         "footwork",
         "21m080",
         "infinite-merch",
+        "mitgala",
+        "htmaa",
         "chair",
         "ai",
         "infinite", //  TODO: infinite unfinished
         "hardcell",
         "birth-certificate",
         "tactical-type",
+        "honest-type",
+        "pecan-sans",
         "drift",
         "adobe-home",
         "futbot",
 
         "b2web",
+        
+        // "NEWPROJ",
 
 
 
@@ -168,6 +188,7 @@ const categoryDict = {
     "engineering": [
         "futbot",
         "hardcell",
+        "htmaa",
     ],
     "interactive": [
         "clock",
@@ -182,8 +203,11 @@ const categoryDict = {
     "graphic design": [
         "footwork",
         "infinite-merch",
+        "mitgala",
         "infinite",
         "tactical-type",
+        "honest-type",
+        "pecan-sans",
         "drift",
         "birth-certificate",
     ],

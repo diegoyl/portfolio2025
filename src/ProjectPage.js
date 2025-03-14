@@ -29,6 +29,7 @@ import Cont_Drift from './img/project/drift/Cont_Drift';
 import Cont_Futbot from './img/project/futbot/Cont_Futbot';
 import Cont_Pendulum from './img/project/pendulum/Cont_Pendulum';
 import Cont_Infinite from './img/project/infinite/Cont_Infinite';
+import Cont_Mitgala from './img/project/mitgala/Cont_Mitgala';
 import Cont_Light from './img/project/light/Cont_Light';
 import Cont_Pedals from './img/project/pedals/Cont_Pedals';
 import Cont_Models from './img/project/models/Cont_Models';
@@ -37,6 +38,8 @@ import Cont_DAD from './img/project/dad/Cont_DAD';
 import Cont_B2web from './img/project/b2web/Cont_B2web';
 import Cont_Uniforms from './img/project/uniforms/Cont_Uniforms';
 import Cont_TacticalType from './img/project/tactical-type/Cont_TacticalType';
+import Cont_HTMAA from './img/project/htmaa/Cont_HTMAA';
+// import Cont_NEWPROJ from './img/project/NEWPROJ/Cont_NEWPROJ';
 // import Cont_Def from './img/project/ddef/Cont_Def';
 
 
@@ -47,7 +50,9 @@ const projComponentDict = {
   "squish": [ <Cont_Squish />, "Squish"],
   "forting": [ <Cont_Forting />, "Forting"],
   "infinite-merch": [ <Cont_InfiniteMerch />, "Infinite Merch"],
+  "mitgala": [ <Cont_Mitgala />, "MIT Gala"],
   "tangible-sampling": [ <Cont_TangibleSampling />, "Tangible Sampling"],
+  "htmaa": [ <Cont_HTMAA />, "How To Make (Almost) Anything"],
   "chair": [ <Cont_Chair />, "Chair"],
   "beatfarm": [ <Cont_Beatfarm />, "Beatfarm"],
   "21m080": [ <Cont_21m080 />, "21M.080 GUI"],
@@ -71,6 +76,7 @@ const projComponentDict = {
   "b2web": [ <Cont_B2web />, "Burton 2 Website"],
   "uniforms": [ <Cont_Uniforms />, "Uniforms"],
   "tactical-type": [ <Cont_TacticalType />, "Tactical Type"],
+  // "NEWPROJ": [ <Cont_NEWPROJ />, "NEWPROJ"],
 }
 
 

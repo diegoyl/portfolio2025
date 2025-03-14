@@ -1,72 +1,42 @@
 import ProjectHeader from '../../../components/projectPage/ProjectHeader';
-import thumbSrc from './thumb.jpg';
+import ProjectSection from '../../../components/projectPage/ProjectSection';
+import Divider from '../../../components/projectPage/Divider';
+
+// 1: Cont_XXX   2: projKey  3: title,subtitle,lists  
+// Projects.js : update array, imports, and categories
 
 ///// PROJECT IMG/VID IMPORTS
-import i from './thumb.jpg';
+import i_ from './thumb.jpg';
+import i_page1 from "./page1.jpg"
+import i_page2 from "./page2.jpg"
 
+function Cont_PecanSans() {
+  const projKey = "pecan-sans"
 
-function Cont_() {
-    
   return (
     <div id="projectPage" className="content-left content-margintop content-padding">
         <ProjectHeader
-            title="Default"
-            subtitle="subtitle"
+
+
+            title="Pecan Sans"
+            subtitle="An alphabet made from pecans "
+            
             metaLists={[
-                {"title":"SKILLS",
+                {"title":"",
                     "items":[
-                        "skill1",
-                        "skill2",
-                        "skill3"
-                ]},
-                {"title":"TOOLS",
-                    "items":[
-                        "tool1",
-                        "tool2",
-                        "tool3",
-                        "tool4"
+                        "Fall 2020"
                 ]},
             ]}
-            thumbSrc={thumbSrc}
+            projKey={projKey}
+            h2margBot={""} // 2.2em default , type Xem
         ></ProjectHeader>
 
+        <img src={i_page1} />
+        <img src={i_page2} />
 
-        {/* PROJECT CONTENT */}
-
-        <div className="splitGrid">
-            <div className='splitDiv leftSplit'><h3>
-                Section Title
-            </h3></div>
-
-            <div className='splitDiv rightSplit'>
-
-                <p>Words words words...</p>
-                <img src={thumbSrc} style={{"width":"100%"}}/>
-
-            </div>
-        </div><div className="divider dividerTop"></div>
-
-
-
-        <div className="splitGrid">
-            <div className='splitDiv leftSplit'><h3>
-                Section Title #2
-            </h3></div>
-
-            <div className='splitDiv rightSplit'>
-
-                <p>Palabras words palabras...</p>
-                <img src={thumbSrc} style={{"width":"100%"}}/>
-
-            </div>
-        </div><div className="divider dividerTop"></div>
-
-
-
-
-
+        
     </div> //* END PROJECT CONTENT *//////////////////////////
   );
 }
 
-export default Cont_;
+export default Cont_PecanSans;

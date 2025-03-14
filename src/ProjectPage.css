@@ -181,6 +181,7 @@
 .phi-squish { background-image: url("./img/project/squish/main.jpg")}
 .phi-forting { background-image: url("./img/project/forting/layout2.jpg")}
 .phi-infinite-merch { background-image: url("./img/project/infinite-merch/thumb.jpg")}
+.phi-mitgala { background-image: url("./img/project/mitgala/thumb.jpg")}
 .phi-tangible-sampling { background-image: url("./img/project/tangible-sampling/thumb.jpg")}
 .phi-chair { background-image: url("./img/project/chair/thumbwide.jpg")}
 .phi-beatfarm { background-image: url("./img/project/beatfarm/thumb2.jpg")}
@@ -204,6 +205,8 @@
 .phi-posters { background-image: url("./img/project/posters/thumb.jpg")}
 .phi-dad { background-image: url("./img/project/dad/thumb.jpg")}
 .phi-b2web { background-image: url("./img/project/b2web/thumbwide.jpg")}
+.phi-htmaa { background-image: url("./img/project/htmaa/thumb.jpg")}
+/* .phi-NEWPROJ { background-image: url("./img/project/NEWPROJ/thumb.jpg")} */
 
 
 #projectPage .rightSplit img {
@@ -294,11 +297,20 @@
 .imgShadow {
     filter: drop-shadow(0px 0px 10px rgba(0,0,0,.3));
 }
+.imgShadowLight {
+    filter: drop-shadow(0px 0px 8px rgba(0,0,0,.2));
+}
 .imgFitHeight {
     height:85vh !important;
     width: auto !important;
     margin:0 auto;
     display:block;
+}
+.sharpCorners {
+    border-radius: 0 !important;
+}
+video {
+    border-radius: 10px;
 }
 
 .centerMargin {
