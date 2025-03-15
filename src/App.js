@@ -34,6 +34,7 @@ function App({page}) {
               <Route path="/beatfarm-web" element={ <ExternalRedirectPage /> } />
               <Route path="/tactical-type" element={ <ExternalRedirectPage /> } />
               <Route path="/birth-certificate" element={ <ExternalRedirectPage /> } />
+              <Route path="/htmaa" element={ <ExternalRedirectPage /> } />
           </Routes>
       </ Router>
     

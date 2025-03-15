@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 const redirects = {
     "beatfarm-web" : "https://diegoyl.github.io/beatfarm-web/",
     "birth-certificate" : "https://diegoyl.github.io/newspaper-birth-certificate/",
-    "tactical-type" : "https://diegoyl.github.io/tactical-type/"
+    "tactical-type" : "https://diegoyl.github.io/tactical-type/",
+    "htmaa" : "https://fab.cba.mit.edu/classes/863.22/Architecture/people/Diego/",
 }
 
 function ExternalRedirectPage() {
