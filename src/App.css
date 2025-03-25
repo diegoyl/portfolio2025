@@ -166,6 +166,9 @@ button {
   /* stroke-width: 5;
   stroke: red; */
 }
+.fishSVG {
+  width: var(--size_param);
+}
 
 
 /* ///////////////////////////////////////////// */

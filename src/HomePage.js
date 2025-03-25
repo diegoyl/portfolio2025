@@ -3,6 +3,7 @@ import './HomePage.css';
 import transition from './transition.js';
 import Guppy from './svg/Guppy';
 import GuppyCursor from './GuppyCursor';
+import SharkAnimHP from './fish/SharkAnimHP';
 import BubbleCursor from './BubbleCursor';
 import React, {useState, useEffect} from 'react';
 
@@ -198,6 +199,7 @@ function HomePage() {
       {/* <Guppy classProp={"defaultGuppy homeGuppy"}></Guppy> */}
       <BubbleCursor></BubbleCursor>
       <GuppyCursor></GuppyCursor>
+      <SharkAnimHP speed_param={4} size_param={"20em"} />
 
 
     </div>

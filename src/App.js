@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import Projects from './Projects';
 import ProjectPage from './ProjectPage';
 import About from './About';
+import Ocean from './Ocean';
 import {AnimatePresence} from 'framer-motion';
 import TestingPage from './TestingPage';
 import ExternalRedirectPage from './ExternalRedirectPage';
@@ -29,6 +30,7 @@ function App({page}) {
               <Route path="/:projectName" element={<ProjectPage />} />
               <Route path="/about" element={ <About /> } />
               <Route path="/testing" element={ <TestingPage /> } />
+              <Route path="/ocean" element={ <Ocean /> } />
               
               {/* REDIRECTS */}
               <Route path="/beatfarm-web" element={ <ExternalRedirectPage /> } />

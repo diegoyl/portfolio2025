@@ -58,7 +58,7 @@
 
 
 .aboutPage p{
-    letter-spacing: .02em;
+    letter-spacing: .04em;
     line-height: 1.4em;
 }
 
@@ -66,14 +66,13 @@
     /* color: var(--c-blue); */
     text-decoration: underline;
     /* display: inline-block; */
-    transition: 300ms ease-out;
+    transition: 0ms ease-out;
 }
 .aboutPage a:hover {
-    /* transform: skew(1.2deg,0); */
     color: var(--c-blue);
     font-family: PangramTextBold, Arial, sans-serif;
 
-    /* letter-spacing: .03em; */
+    letter-spacing: -.01em;
 }
 
 

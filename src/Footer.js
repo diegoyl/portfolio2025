@@ -1,12 +1,9 @@
 import './App.css';
 import './Footer.css';
-import {NavLink} from "react-router-dom"
 import React, {useState, useEffect} from 'react';
 
-import Guppy from "./img/guppySMOL-BLUE.png"
-import Bubbles from './Bubbles.js';
 
-function NavBar({page}) {
+function Footer({page}) {
   var [activeBubbles, setActiveBubbles] = useState(false)
   var [erasing, setErasing] = useState(false)
 
@@ -35,25 +32,29 @@ function NavBar({page}) {
         </div>
         {/* <Bubbles active={activeBubbles} resetBubbles={resetBubbles}></Bubbles> */}
 
-        <div id="footer-links">
-        <p onClick={() => toTop()} id="toTop" className='bigFooterText'>⌃<br></br>SWIM TO TOP</p>
-
-
+        <div className="footer-links">
+          <p onClick={() => toTop()} id="toTop" className='bigFooterText'>⌃<br></br>SWIM TO TOP</p>
         </div>
         
-        <br></br>
-        <br></br>
-
-        <div id="footer-links">
-          <div></div>
-
+        <div className="footer-links">
           <div onClick={() => {redirectDelay("/projects")}} >
                 <p className="bigFooterText" id="allProjects" >ALL PROJECTS</p>
           </div>
-
-          <div></div>
-
         </div>
+
+        <div className="footer-links footer-grid3">
+            <a className='bigFooterText' target="_blank" href="https://www.instagram.com/tryingtryiing/" >
+                INSTAGRAM
+            </a>
+
+            <a className='bigFooterText' target="_blank" href="https://www.github.com/diegoyl/" >
+                GITHUB
+            </a>
+            <a className='bigFooterText' target="_blank" href="https://www.linkedin.com/in/diego-yanez-laguna/" >
+                LINKEDIN
+            </a>
+        </div>
+
 
         <br></br>
         <br></br>
@@ -71,17 +72,21 @@ function NavBar({page}) {
               <span> lots of love &lt;3</span>
               {/* TODO: heart bubbles */}
 
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
       </div>
 
+      <br></br>
+
+        <div className="footer-links">
+          <div onClick={() => {redirectDelay("/ocean")}} >
+                <p className="bigFooterText" id="swimInOcean" >🌊 OCEAN 🌊</p>
+          </div>
+        </div>
     
+        <br></br>
+        <br></br>
 
     </footer>
   );
 }
 
-export default NavBar;
+export default Footer;
