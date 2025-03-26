@@ -45,14 +45,11 @@ function SharkAnim({speed_param, size_param}) {
       if (outsideX || outsideY) {
         ySinPath.value = Math.random()*2 - 1
         if (xAcc.value.value < 0) { //going left, siwtch to right
-          console.log("switch to right")
           xAcc.value = fishSpeed // positive direction
           x.value = leftBound + initOffset // SET INIT POS
           y.value = initY * (Math.random()*0.6 + 0.2) // set to middle
           flip.value = "-100%"
         } else {
-          console.log("switch to left")
-          //going left, siwtch to right
            xAcc.value = -fishSpeed // positive direction
            x.value = rightBound - initOffset // SET INIT POS
            y.value = initY * (Math.random()*0.6 + 0.2) // set to middle
@@ -82,7 +79,8 @@ function SharkAnim({speed_param, size_param}) {
     
   return (
     <animate.div
-    id="animateDiv"
+    id="animateDivShark"
+    className="animateDiv"
     style={{
         width: "min-content",
         aspectRatio: "4001.12/1446.24",

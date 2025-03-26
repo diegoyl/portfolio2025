@@ -1,11 +1,11 @@
 
-function SharkSVG({size_param}) {
+function SharkSVG({size_param, class_param}) {
 
     const viewBoxW = 4001.12;
     const viewBoxH = 1446.24;
     
   return (
-    <div style={{"--size_param":size_param}} className={"fishSVG guppyContainer"}>
+    <div style={{"--size_param":size_param}} className={class_param+" fishSVG guppyContainer"}>
 
 
         <svg

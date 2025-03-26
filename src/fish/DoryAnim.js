@@ -84,7 +84,8 @@ function DoryAnim({speed_param, size_param}) {
     
   return (
     <animate.div
-    id="animateDiv"
+    id="animateDivDory"
+    className="animateDiv"
     style={{
         width: width_output,
         aspectRatio: "1006.91/601.54",

@@ -4,10 +4,12 @@ import transition from './transition.js';
 import Guppy from './svg/Guppy';
 import GuppyCursor from './GuppyCursor';
 import SharkAnimHP from './fish/SharkAnimHP';
+import NemoAnimHP from './fish/NemoAnimHP';
 import BubbleCursor from './BubbleCursor';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 
 function HomePage() {
+  console.log("**** HOME RE-RENDER")
 
   var [erasing, setErasing] = useState(false)
   function redirectDelay(path, category) {
@@ -62,7 +64,61 @@ function HomePage() {
 
   // }
   
+
+  //////////////////////////////////////
+  // SHARK TRACKING //////////////////
+  //////////////////////////////////////
+  const sharkXY = useRef([0,0]); // Stores position without triggering re-renders
+  const guppyXY = useRef([1000,1000]); // Stores position without triggering re-renders
+  const guppyAlive = useRef(true); // Stores position without triggering re-renders
   
+  const [triggerCollisionUpdate, setTriggerCollisionUpdate] = useState(false); // Controls re-render when needed
+  // let [guppyAlive, setGuppyAlive] = useState(true)
+  let [guppyTransitionClass, setGuppyTransitionClass] = useState("")
+
+  const updateSharkPosition = (newPosArr) => {
+    sharkXY.current = newPosArr;
+    if (guppyAlive.current){
+      checkSharkCollision(newPosArr);
+    }
+  };
+  const updateGuppyPosition = (newPosArr) => {
+    guppyXY.current = newPosArr;
+  };
+
+  var COLLISION_THRESHOLD = 100;
+  function checkSharkCollision(posArr) {
+    const sharkX = posArr[0]
+    const sharkY = posArr[1]
+    const guppyX = guppyXY.current[0]
+    const guppyY = guppyXY.current[1]
+
+    var deltaX = sharkX - guppyX;
+    var deltaY = sharkY - guppyY;
+    var dist = (deltaX**2 + deltaY**2)**.5
+    
+    // console.log("dist: ",dist, "  < ",COLLISION_THRESHOLD.toFixed(0))
+    if (dist < COLLISION_THRESHOLD) {
+      guppyAlive.current = false
+      setGuppyTransitionClass("initRipTransition ripTransition")
+
+      setTimeout(() => {
+        setGuppyTransitionClass(" ripTransition")
+      },100)
+
+      setTimeout(() => {
+        setGuppyTransitionClass("")
+        setTimeout(() => {
+          guppyAlive.current = true
+          setTriggerCollisionUpdate(prev => !prev); // Toggle state to trigger re-render
+        },300)
+      },2500)
+      
+    }
+    // if (newPos.x > 500 || newPos.y > 500) {
+    // }
+  }
+
 
   function createBubbleHome () {
     const container = document.getElementById("initBubbleGenerator")
@@ -197,9 +253,10 @@ function HomePage() {
 
 
       {/* <Guppy classProp={"defaultGuppy homeGuppy"}></Guppy> */}
-      <BubbleCursor></BubbleCursor>
-      <GuppyCursor></GuppyCursor>
-      <SharkAnimHP speed_param={4} size_param={"20em"} />
+      <BubbleCursor />
+      <GuppyCursor updateGuppyPosition={updateGuppyPosition} guppyAlive={guppyAlive.current} guppyTransitionClass={guppyTransitionClass}/>
+      <SharkAnimHP speed_param={5} size_param={"35em"} updateSharkPosition={updateSharkPosition}/>
+      <NemoAnimHP speed_param={7} size_param={"6em"} />
 
 
     </div>

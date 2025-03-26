@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import HomePage from './HomePage';
-import Projects from './Projects';
-import ProjectPage from './ProjectPage';
-import About from './About';
-import TestingPage from './TestingPage';
+// import HomePage from './HomePage';
+// import Projects from './Projects';
+// import ProjectPage from './ProjectPage';
+// import About from './About';
+// import TestingPage from './TestingPage';
 
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+// import { HashRouter as Router, Routes, Route } from "react-router-dom";
 // import { AnimatePresence } from 'framer-motion';
 
 

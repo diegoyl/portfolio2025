@@ -1,17 +1,16 @@
-import { useMouseMove, animate, useValue } from "react-ui-animate"
+import { animate, useValue } from "react-ui-animate"
+import React, {useState} from 'react';
 
-import SharkSVG from "../svg/SharkSVG.js"
+import NemoSVG from "../svg/NemoSVG.js"
 
-function SharkAnimHP({speed_param, size_param, updateSharkPosition}) {  
-
-
+function NemoAnimHP({speed_param, size_param}) {  
     const initW = window.innerWidth
     const initY = window.innerHeight
-    const x = useValue(initW*2) // SET INIT POS
+    const x = useValue(initW*-2) // SET INIT POS
     const y = useValue(initY*2) // SET INIT POS
 
     const fishSpeed = speed_param // x speed constant, just flips direction
-    const xAcc = useValue(fishSpeed)
+    const xAcc = useValue(-fishSpeed)
     const yAcc = useValue(0)
     const ySinPath = useValue(-3)
 
@@ -25,18 +24,29 @@ function SharkAnimHP({speed_param, size_param, updateSharkPosition}) {
     // ANIMATION RATE
     setInterval (animateFish, 100);
 
-    const outsideOffset = 1300
+    const outsideOffset = 800
     const leftBound = -outsideOffset
     const rightBound = initW+outsideOffset
     const topBound = -outsideOffset
     const bottomBound = initY+outsideOffset
     const initOffset = 20
 
+    let [nemoPopupActive, setNemoPopupActive] = useState(false)
+    let [nemoPopupClass, setNemoPopupClass] = useState("")
+    function showNemoPopup(show) {
+        if (show) {
+            setNemoPopupActive(true)
+            setTimeout(() => {
+                showNemoPopup(false)
+            },2500)
+        } else {
+            setNemoPopupClass("startNPfade")
+            setTimeout(() => {
+              setNemoPopupActive(false)
+              setNemoPopupClass("")
+            },600)
 
-    function redirectDelay(path) {
-        setTimeout(() => {
-          window.location.href = path;
-        }, 310)
+        }
     }
 
 
@@ -83,46 +93,47 @@ function SharkAnimHP({speed_param, size_param, updateSharkPosition}) {
       x.value = x.value.value + xAcc.value.value;
       y.value = y.value.value + yAcc.value.value;
 
-      
-      let xCenter;
-      let yCenter;
-      if(flip.value.value == "100%") { // going left
-        xCenter = x.value.value + (document.getElementById("animateDivSharkHP").clientHeight) * .25
-        yCenter = y.value.value + (document.getElementById("animateDivSharkHP").clientHeight) * .64
-      } else { // going right
-        xCenter = x.value.value + (document.getElementById("animateDivSharkHP").clientWidth) * .91
-        yCenter = y.value.value + (document.getElementById("animateDivSharkHP").clientHeight) * .41
-      }
-      updateSharkPosition([xCenter, yCenter])
   };
     
   return (
+    <>
+    
+    
+    
+        <animate.div
+            id="animateDivNemoHP"
+          className="animateDiv"
+            style={{
+                width: size_param,
+                aspectRatio: "4001.12/1446.24",
+                position: "fixed",
+                top: 0,
+                left: 0,
+                translateX: x.value,
+                translateY: y.value,
+                rotate: angle.value,
+                scaleX: flip.value,
+                zIndex: 800,
+                pointerEvents: "all"
+            }}
+            onClick={() => {showNemoPopup(true)}}
+        >
 
-    <animate.div
-    id="animateDivSharkHP"
-    className="animateDiv"
-    style={{
-        width: size_param,
-        aspectRatio: "4001.12/1446.24",
-        position: "fixed",
-        top: 0,
-        left: 0,
-        translateX: x.value,
-        translateY: y.value,
-        rotate: angle.value,
-        scaleX: flip.value,
-        zIndex: 700,
-        pointerEvents: "all"
-    }}
-    onClick={() => {redirectDelay("/ocean")}}
-  >
+            <NemoSVG size_param={size_param} class_param={"clickableFish"} />
 
-
-    <SharkSVG size_param={size_param} class_param={"clickableFish"} />
-
-  </animate.div>
+        </animate.div>
+            
+        <div className={nemoPopupActive ? nemoPopupClass+" nemoPopupActive nemoPopupContainer" : "nemoPopupContainer"}>
+            
+            <div className="nemoPopup">
+                <p id="fntxt">YOU FOUND NEMO!</p>
+                <NemoSVG size_param={"95%"} class_param="foundNemo" />
+            </div>
+        </div>
+    </>
+  
   
   )
 }
 
-export default SharkAnimHP;
+export default NemoAnimHP;

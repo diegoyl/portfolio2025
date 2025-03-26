@@ -1,9 +1,15 @@
 import { useMouseMove, animate, useValue } from "react-ui-animate"
+import React, {useState, useEffect} from 'react';
 
 import Guppy from "./svg/Guppy.js"
+import GuppyDeadSVG from "./svg/GuppyDeadSVG.js"
 
-function GuppyCursor() {
-  
+function GuppyCursor({updateGuppyPosition, guppyAlive, guppyTransitionClass}) {
+    
+    const xDot = useValue(0)
+    const yDot = useValue(0)
+    // console.log("\trerender")
+
     const initW = window.innerWidth
     const initY = window.innerHeight
     const mx = useValue(initW*.5)
@@ -46,8 +52,8 @@ function GuppyCursor() {
         FLOATATE = FLOATATE*-1
       }
 
-      var centerW = document.getElementById("animateDiv").clientWidth;
-      var centerH = document.getElementById("animateDiv").clientHeight;
+      var centerW = document.getElementById("animateDivGC").clientWidth;
+      var centerH = document.getElementById("animateDivGC").clientHeight;
       var deltaX = mx.value.value - x.value.value - centerW/2;
       var deltaY = my.value.value - y.value.value - centerH/2;;
 
@@ -75,7 +81,6 @@ function GuppyCursor() {
         var lastAng = angPrev[angPrev.length - 1]
         var lastDif = Math.abs(lastAng - angRaw)
         if (lastDif >= 300) {
-          console.log("\nJUMP <><><><><><><><\n")
           if (angRaw < lastAng) {
             angRaw += 360
           } else if (angRaw > lastAng) {
@@ -133,15 +138,22 @@ function GuppyCursor() {
       x.value = x.value.value + xAcc.value.value;
       y.value = y.value.value + yAcc.value.value;
 
+      let xCenter = x.value.value + (document.getElementById("animateDivGC").clientWidth)/2
+      let yCenter = y.value.value + (document.getElementById("animateDivGC").clientHeight)/2
+      xDot.value = xCenter
+      yDot.value = yCenter
+      updateGuppyPosition([xCenter, yCenter])
   };
     
   return (
+    
+    
     <animate.div
-    id="animateDiv"
+    id="animateDivGC"
+    className={guppyTransitionClass+" animateDiv"}
     style={{
         width: "10em",
         aspectRatio: "1261/652",
-        // border: "red 2px solid",
         position: "fixed",
         top: 0,
         left: 0,
@@ -149,12 +161,12 @@ function GuppyCursor() {
         translateY: y.value,
         rotate: angle.value,
         scaleY: flip.value,
-        zIndex: 700,
+        zIndex: 800,
     }}
   >
 
-    <Guppy />
-
+    {guppyAlive ? <Guppy /> : <GuppyDeadSVG />}
+    
   </animate.div>
   
   

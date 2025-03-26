@@ -84,7 +84,8 @@ function NemoAnim({speed_param, size_param}) {
     
   return (
     <animate.div
-    id="animateDiv"
+    id="animateDivNemo"
+    className="animateDiv"
     style={{
         width: {width_output},
         aspectRatio: "1006.91/562.03",

@@ -1,11 +1,10 @@
-
-function NemoSVG({size_param}) {
+function NemoSVG({size_param, class_param}) {
 
     const viewBoxW = 1006.91;
     const viewBoxH = 562.03;
     
   return (
-    <div style={{"--size_param":size_param}} className={"fishSVG guppyContainer"}>
+    <div style={{"--size_param":size_param}} className={class_param+" fishSVG guppyContainer"}>
 
         <svg
             xmlns="http://www.w3.org/2000/svg" 

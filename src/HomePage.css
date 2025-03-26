@@ -282,3 +282,79 @@
     }
     .hplC {margin-bottom:2em;}
 }
+
+
+.nemoPopupContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 44, 177, 0.75);
+    z-index: 999;
+    pointer-events: none;
+    transition: 1s ease-in-out;
+    opacity: 0;
+  }
+  
+  .nemoPopupActive {
+    opacity: 1;
+  }
+  .nemoPopup {
+    font-family: PangramDisplay;
+    font-size: 5vh;
+    margin: 0 auto;
+    margin-top: 25vh;
+    background-color:rgb(255, 108, 29);
+    color: var(--c-cream);
+    width:max-content;
+    padding: 1.3em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 80px rgb(255, 140, 0);
+  
+    transform: scale(0);
+    transition: 800ms ease-in-out;
+  }
+  .nemoPopupActive .nemoPopup{ 
+    transform: scale(1);
+    animation: nemoPopupFloat 2s infinite;
+  }
+  .startNPfade .nemoPopup{ 
+    animation: nemoPopupFadeOut 800ms forwards;
+    /* transition: 500ms ease-in-out; */
+  }
+  #fntxt{
+    margin: .15em 0;
+    margin-top: .8em;
+  }
+  .foundNemo {
+    position: relative;
+    margin: 0 auto;
+  }
+  .foundNemo .guppySVGfill{
+    fill:rgb(255, 108, 29);
+  }
+  
+@keyframes nemoPopupFloat {
+    0% , 100% {
+        transform: scale(0.97);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+}
+  
+@keyframes nemoPopupFadeOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    33% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}

@@ -160,17 +160,34 @@ button {
 }
 .guppySVGfill {
   fill: var(--c-blue);
+  transition: 500ms ease-in-out;
 }
 .guppySVGbg {
   fill: var(--c-cream);
-  /* stroke-width: 5;
-  stroke: red; */
+  transition: 400ms;
 }
 .fishSVG {
   width: var(--size_param);
+  transition: 500ms;
+}
+.clickableFish:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
-
+.clickableFish:hover .guppySVGfill {
+  /* fill:red; */
+  /* fill: rgb(6,76,250); */
+}
+.clickableFish:hover .guppySVGbg {
+  fill:rgb(118, 222, 224);
+}
+.ripTransition .guppySVGfill {
+  fill: rgb(216, 25, 86) ;
+}
+.initRipTransition .guppySVGfill {
+  fill: rgb(255, 70, 95) ;
+}
 /* ///////////////////////////////////////////// */
 .erase-transition {
   z-index: 1000;
@@ -273,7 +290,7 @@ button {
   /* background-color: rgba(255, 0, 0, 0.255); */
 }
 
-#animateDiv {
+.animateDiv {
   pointer-events: none;
 }
 

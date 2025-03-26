@@ -1,11 +1,11 @@
 
-function NemoSVG({size_param}) {
+function DorySVG({size_param, class_param}) {
 
     const viewBoxW = 1006.91;
     const viewBoxH = 601.54;
 
   return (
-    <div style={{"--size_param":size_param}} className={"fishSVG guppyContainer"}>
+    <div style={{"--size_param":size_param}} className={class_param+" fishSVG guppyContainer"}>
 
         <svg
             xmlns="http://www.w3.org/2000/svg" 
@@ -34,4 +34,4 @@ function NemoSVG({size_param}) {
     );
 }
 
-export default NemoSVG;
+export default DorySVG;
