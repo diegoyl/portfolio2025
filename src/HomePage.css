@@ -136,7 +136,7 @@
     /* border: yellow 2px solid; */
     position: absolute;
     height: min-content;
-    transform: translateY(12.2%) translateX(0%); 
+    transform: translateY(-6%) translateX(0%); 
 
     animation: none;
     animation-delay: 0;
@@ -152,14 +152,19 @@
     animation: tildeWave 2.6s ease-in-out infinite;
     animation-delay: 0;
 }
+#wavy-name #hyphen {
+    transform: scale(.9);
+    margin-left: -.07em;
+    margin-right: -.01em;
+}
 
 @keyframes tildeWave {
     0% , 100% {
-        transform: translateY(-37%) translateX(8%);
+        transform: translateY(-53.4%) translateX(8%);
         rotate: 0;
     }
     50% {
-        transform: translateY(-32%) translateX(8%);
+        transform: translateY(-51.4%) translateX(8%);
         rotate: 0;
     }
 

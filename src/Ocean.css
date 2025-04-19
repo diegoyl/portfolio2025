@@ -1,4 +1,4 @@
-.homeBg {
+#oceanContainer .homeBg {
     position: fixed;
     z-index: -10;
     height: 100vh;
@@ -16,17 +16,16 @@
 
 
 
-
-.floatUp {
+#oceanContainer .floatUp {
     transform: translateY(500%);
     opacity: 0;
-    animation: floatUp 6s ease-in-out;
+    animation: floatUpOcean 6s ease-in-out;
     animation-iteration-count: 1;
     animation-delay: calc(500ms * var(--j) + var(--globalDelay));
     animation-fill-mode: forwards;
 }
 
-@keyframes floatUp {
+@keyframes floatUpOcean {
     0% {
         transform: translateY(250%);
         opacity: 0;
@@ -49,12 +48,8 @@
     }
 }
 
-#initBubbleGenerator span{
+#oceanContainer #initBubbleGenerator span{
     animation: bubbleRise 6s linear;
 }
 
 
-
-
-
-/* OCEAN MODE */

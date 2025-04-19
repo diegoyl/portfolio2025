@@ -118,7 +118,7 @@ function Ocean() {
   }
 
   return (
-    <div className="" id="homeContainer">
+    <div className="" id="oceanContainer">
 
       <div id="load-container" className={loaded ? "removeErase transition-container":"transition-container"}>
             <p></p>

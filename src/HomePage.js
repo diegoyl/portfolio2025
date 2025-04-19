@@ -185,7 +185,7 @@ function HomePage() {
         <span style={{"--i":3}}>E</span>
         <span style={{"--i":4}}>G</span>
         <span style={{"--i":5}}>O</span>
-        <span style={{"--i":6}}> </span>
+        <span style={{"--i":6, width:".1em"}}> </span>
         <span style={{"--i":7}}>Y</span>
         <span style={{"--i":8, "margin-left":"-.08em"}}>A</span>
         
@@ -196,7 +196,7 @@ function HomePage() {
 
         <span style={{"--i":10, "margin-left":"-.033em"}}>E</span>
         <span style={{"--i":11, "margin-left":".03em"}}>Z</span>
-        <span style={{"--i":12,"transform":"scaleY(.5)"}}>-</span>
+        <span id="hyphen" style={{"--i":12}}>-</span>
         <span style={{"--i":13}}>L</span>
         <span style={{"--i":14}}>A</span>
         <span style={{"--i":15}}>G</span>
