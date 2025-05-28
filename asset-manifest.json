@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.54317724.css",
-    "main.js": "/static/js/main.811f304e.js",
+    "main.css": "/static/css/main.75122612.css",
+    "main.js": "/static/js/main.25ab863e.js",
     "static/media/robot.mp4": "/static/media/robot.164ceb7e225b7eae5982.mp4",
     "static/media/logoMorph.mp4": "/static/media/logoMorph.8f73f0e5b3a41607ecd4.mp4",
     "static/media/final.mp4": "/static/media/final.16dbf81f50a81e330411.mp4",
@@ -189,6 +189,7 @@
     "static/media/still.png": "/static/media/still.0bfdc610ae9a33095f8d.png",
     "static/media/section.jpg": "/static/media/section.cd55978c02807726628a.jpg",
     "static/media/logo-alt1.png": "/static/media/logo-alt1.2f8dfc6281fee92af0d0.png",
+    "static/media/thumb.png": "/static/media/thumb.0784a23463efa5b4cf83.png",
     "static/media/process.png": "/static/media/process.3db040848a92fce1a9a1.png",
     "static/media/elevation.jpg": "/static/media/elevation.2e3879a22036247d2c3a.jpg",
     "static/media/tofsensor.png": "/static/media/tofsensor.871c2b7f28336407b2d0.png",
@@ -204,11 +205,11 @@
     "static/media/guppySMOL-BLUE.png": "/static/media/guppySMOL-BLUE.ed55c9550941a090e039.png",
     "static/media/rotary.jpg": "/static/media/rotary.c5b202845aea0e02f105.jpg",
     "index.html": "/index.html",
-    "main.54317724.css.map": "/static/css/main.54317724.css.map",
-    "main.811f304e.js.map": "/static/js/main.811f304e.js.map"
+    "main.75122612.css.map": "/static/css/main.75122612.css.map",
+    "main.25ab863e.js.map": "/static/js/main.25ab863e.js.map"
   },
   "entrypoints": [
-    "static/css/main.54317724.css",
-    "static/js/main.811f304e.js"
+    "static/css/main.75122612.css",
+    "static/js/main.25ab863e.js"
   ]
 }
