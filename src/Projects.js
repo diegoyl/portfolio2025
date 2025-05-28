@@ -43,6 +43,7 @@ import Thumb_Posters from './img/project/posters/thumb.jpg'
 import Thumb_DAD from './img/project/dad/thumb.jpg'
 import Thumb_B2Web from './img/project/b2web/thumb.jpg'
 import Thumb_HTMAA from './img/project/htmaa/thumb.gif'
+import Thumb_Golf from './img/project/golf/thumb.png'
 // import Thumb_NEWPROJ from './img/project/NEWPROJ/thumb.jpg'
 
 const preloadSrcList = [
@@ -77,6 +78,7 @@ const preloadSrcList = [
     Thumb_DAD,
     Thumb_B2Web,
     Thumb_HTMAA,
+    Thumb_Golf,
     // Thumb_NEWPROJ,
 ]
 
@@ -90,7 +92,7 @@ const thumbDataDict = {
     "ai": [ Thumb_AI, "AI Experiments", "", false],
     "b2web": [ Thumb_B2Web, "Burton 2 Website", "", false],
     "beatfarm": [ Thumb_Beatfarm, "Beatfarm", "Hip-hop beat-making game", false],
-    "birth-certificate": [ Thumb_BirthCertificate, "My Birth Certificate??", "kinda", "https://diegoyl.github.io/newspaper-birth-certificate/", false],
+    "birth-certificate": [ Thumb_BirthCertificate, "My Birth Certificate??", "kinda", "https://diegoyl.github.io/newspaper-birth-certificate/"],
     "tactical-type": [ Thumb_TacticalType, "Tactical Type", "A typeface made from a socccer game", "https://diegoyl.github.io/tactical-type/"],
     "htmaa": [ Thumb_HTMAA, "How To Make (Almost) Anything", "", "https://fab.cba.mit.edu/classes/863.22/Architecture/people/Diego/"],
     
@@ -108,6 +110,7 @@ const thumbDataDict = {
     "hardcell": [ Thumb_Hardcell, "HARDCELL®", "", false],
     "futbot": [ Thumb_Futbot, "Futbot", "Robot for 2.007 competition ", false],
     
+    "golf": [ Thumb_Golf, "Golf", " [🚧Under Construction]", "https://diegoyl.github.io/golf/"],
     // "NEWPROJ": [ Thumb_NEWPROJ, "NEWPROJ", "", false],
 
     // "ims": [ Thumb_IMS, "Interactive Music Systems", "subtitle", false],
@@ -126,9 +129,9 @@ const thumbDataDict = {
 
 const categoryDict = {
     "all": [
+        "beatfarm",
         "squish",
         "clock",
-        "beatfarm",
         "forting", // TODO: add forting process
         "tangible-sampling", 
         "footwork",
@@ -140,9 +143,10 @@ const categoryDict = {
         "ai",
         "infinite", //  TODO: infinite unfinished
         "hardcell",
-        "birth-certificate",
         "tactical-type",
+        "birth-certificate",
         "honest-type",
+        "golf",
         "pecan-sans",
         "drift",
         "adobe-home",
@@ -181,9 +185,10 @@ const categoryDict = {
     "coding/ux": [
         "beatfarm",
         "21m080",
-        "b2web",
+        "golf",
         "ai",
-        
+        "b2web",
+        // TODO: add this website
     ],
     "engineering": [
         "futbot",
@@ -198,6 +203,7 @@ const categoryDict = {
         "beatfarm",
         "tactical-type",
         "birth-certificate",
+        "golf",
         
     ],
     "graphic design": [

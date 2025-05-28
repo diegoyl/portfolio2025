@@ -8,23 +8,24 @@ import ProjectSection from '../../../components/projectPage/ProjectSection';
 ///// PROJECT IMG/VID IMPORTS
 
 
-function Cont_BirthCertificate() {
-  const projKey = "birth-certificate"
+function Cont_Golf() {
+  const projKey = "golf"
 
 
   return (
     <div id="projectPage" className="content-left content-margintop content-padding">
         <ProjectHeader
 
-            title="My Birth Certificate??"
-            subtitle=":0"
+            title="Golf game.."
+            subtitle="learning threeJS by making a Wii Sports inspired golf game"
             
             metaLists={[
                 {"title":"SKILLS",
                     "items":[
-                        "Web Design",
-                        "Collaging",
-                        "Javascript"
+                        "threeJS",
+                        "Game Design",
+                        "Blender",
+                        "React"
                 ]},
             ]}
             projKey={projKey}
@@ -38,7 +39,7 @@ function Cont_BirthCertificate() {
             {/* TODO: UPDATE External site */}
             <h2>
                 <a style={{}}
-                href="https://diegoyl.github.io/newspaper-birth-certificate/" target="_blank">
+                href="https://diegoyl.github.io/golf/" target="_blank">
                     
                 </a>
             </h2>
@@ -49,9 +50,8 @@ function Cont_BirthCertificate() {
 
 
 
-
     </div> //* END PROJECT CONTENT *//////////////////////////
   );
 }
 
-export default Cont_BirthCertificate;
+export default Cont_Golf;

@@ -39,6 +39,7 @@ import Cont_B2web from './img/project/b2web/Cont_B2web';
 import Cont_Uniforms from './img/project/uniforms/Cont_Uniforms';
 import Cont_TacticalType from './img/project/tactical-type/Cont_TacticalType';
 import Cont_HTMAA from './img/project/htmaa/Cont_HTMAA';
+import Cont_Golf from './img/project/golf/Cont_Golf';
 // import Cont_NEWPROJ from './img/project/NEWPROJ/Cont_NEWPROJ';
 // import Cont_Def from './img/project/ddef/Cont_Def';
 
@@ -76,6 +77,7 @@ const projComponentDict = {
   "b2web": [ <Cont_B2web />, "Burton 2 Website"],
   "uniforms": [ <Cont_Uniforms />, "Uniforms"],
   "tactical-type": [ <Cont_TacticalType />, "Tactical Type"],
+  "golf": [ <Cont_Golf />, "Golf [🚧Under Construction]"],
   // "NEWPROJ": [ <Cont_NEWPROJ />, "NEWPROJ"],
 }
 
