@@ -53,6 +53,8 @@ function About(props) {
                     <br></br>
                     <a target="_blank" href="https://www.instagram.com/mitridonkulous/" rel="noreferrer">Donk 🕺</a>
                     <br></br>
+                    <a target="_blank" href="https://infinitemagazine.mit.edu/" rel="noreferrer">Infinite Magazine ♾️👕</a>
+                    <br></br>
                     <a target="_blank" href="https://www.instagram.com/diegoatethedrummer/" rel="noreferrer">D.A.D. 🎸🥁</a>
                     <br></br>
                 </p>
@@ -88,13 +90,16 @@ function About(props) {
                   <br></br>
                   <br></br>
                   <h3>Contact Me!</h3>
+                  <br></br>
+
                   <p><strong>EMAIL / </strong>hi.diegoyl@gmail.com</p>
                   <p><strong>LINKEDIN / </strong><a href="https://www.linkedin.com/in/diego-yanez-laguna/" target="_blank">linkedin.com/in/diego-yanez-laguna/</a></p>
                   <p><strong>INSTA / </strong><a href="https://www.instagram.com/tryingtryiing/" target="_blank">@tryingtryiing</a></p>
-                  <p><strong>PHONE # / </strong>...maybe if you email me I'll give it to you</p>
+                  <p><strong>GITHUB / </strong><a href="https://github.com/diegoyl/" target="_blank">@diegoyl</a></p>
+                  <p><strong>FIVERR / </strong><a href="https://www.fiverr.com/diegoyl" target="_blank">@diegoyl</a></p>
               
               </div>
-
+            
             </div>
 
         </div>
