@@ -37,6 +37,7 @@ function App({page}) {
               <Route path="/tactical-type" element={ <ExternalRedirectPage /> } />
               <Route path="/birth-certificate" element={ <ExternalRedirectPage /> } />
               <Route path="/htmaa" element={ <ExternalRedirectPage /> } />
+              <Route path="/golf" element={ <ExternalRedirectPage /> } />
           </Routes>
       </ Router>
     

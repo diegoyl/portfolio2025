@@ -5,6 +5,7 @@ const redirects = {
     "birth-certificate" : "https://diegoyl.github.io/newspaper-birth-certificate/",
     "tactical-type" : "https://diegoyl.github.io/tactical-type/",
     "htmaa" : "https://fab.cba.mit.edu/classes/863.22/Architecture/people/Diego/",
+    "golf" : "https://diegoyl.github.io/golf",
 }
 
 function ExternalRedirectPage() {
