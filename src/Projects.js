@@ -182,7 +182,7 @@ const categoryDict = {
         "drift",
 
     ],
-    "coding/ux": [
+    "ux/coding": [
         "beatfarm",
         "21m080",
         "golf",
@@ -248,7 +248,7 @@ function Projects() {
         //     categoryPassedIn = searchData.split("=")[1];
         //     console.log("SD: ",searchData)
         //     if (categoryPassedIn="coding"){
-        //         categoryPassedIn = "coding/ux"
+        //         categoryPassedIn = "ux/coding"
         //     }
         //     setCategory(categoryPassedIn)
         //     navigate('/projects', { replace: true });
@@ -267,7 +267,7 @@ function Projects() {
             console.log("split(-)[1]: ", categoryPassedIn)
             
             if (categoryPassedIn=="coding") {
-                categoryPassedIn = "coding/ux"
+                categoryPassedIn = "ux/coding"
             }
 
             setCategory(categoryPassedIn)
