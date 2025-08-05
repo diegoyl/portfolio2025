@@ -40,6 +40,7 @@ import Cont_Uniforms from './img/project/uniforms/Cont_Uniforms';
 import Cont_TacticalType from './img/project/tactical-type/Cont_TacticalType';
 import Cont_HTMAA from './img/project/htmaa/Cont_HTMAA';
 import Cont_Golf from './img/project/golf/Cont_Golf';
+import Cont_SplashCourse from './img/project/splash-course/Cont_SplashCourse';
 // import Cont_NEWPROJ from './img/project/NEWPROJ/Cont_NEWPROJ';
 // import Cont_Def from './img/project/ddef/Cont_Def';
 
@@ -78,6 +79,7 @@ const projComponentDict = {
   "uniforms": [ <Cont_Uniforms />, "Uniforms"],
   "tactical-type": [ <Cont_TacticalType />, "Tactical Type"],
   "golf": [ <Cont_Golf />, "Golf [🚧Under Construction]"],
+  "splash-course": [ <Cont_SplashCourse />, "Splash Course"],
   // "NEWPROJ": [ <Cont_NEWPROJ />, "NEWPROJ"],
 }
 

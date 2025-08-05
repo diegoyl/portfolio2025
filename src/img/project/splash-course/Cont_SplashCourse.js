@@ -9,27 +9,27 @@ import ProjectSection from '../../../components/projectPage/ProjectSection';
 ///// PROJECT IMG/VID IMPORTS
 
 
-function Cont_TacticalType() {
-  const projKey = "tactical-type"
+function Cont_SplashCourse() {
+  const projKey = "splash-course"
 
   useEffect(() => {
-    window.location.href = "https://diegoyl.github.io/tactical-type/"
+    window.location.href = "https://github.com/diegoyl/splash-course/blob/main/README.md"
   },[])
-
+  
 
   return (
     <div id="projectPage" className="content-left content-margintop content-padding">
         <ProjectHeader
 
-            title="Tactical Type"
+            title="Splash Course"
             subtitle="click the link below...."
             
             metaLists={[
                 {"title":"SKILLS",
                     "items":[
                         "Web Design",
-                        "Collaging",
-                        "Javascript"
+                        "UI/UX",
+                        "Backend Integration"
                 ]},
             ]}
             projKey={projKey}
@@ -43,8 +43,8 @@ function Cont_TacticalType() {
             {/* TODO: UPDATE External site */}
             <h2>
                 <a style={{}}
-                href="https://diegoyl.github.io/tactical-type/" target="_blank">
-                    https://diegoyl.github.io/tactical-type/                    
+                href="https://github.com/diegoyl/splash-course/blob/main/README.md" target="_blank">
+                    https://github.com/diegoyl/splash-course/blob/main/README.md                    
                 </a>
             </h2>
             </>} 
@@ -58,4 +58,4 @@ function Cont_TacticalType() {
   );
 }
 
-export default Cont_TacticalType;
+export default Cont_SplashCourse;

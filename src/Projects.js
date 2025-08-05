@@ -44,6 +44,7 @@ import Thumb_DAD from './img/project/dad/thumb.jpg'
 import Thumb_B2Web from './img/project/b2web/thumb.jpg'
 import Thumb_HTMAA from './img/project/htmaa/thumb.gif'
 import Thumb_Golf from './img/project/golf/thumb.png'
+import Thumb_SplashCourse from './img/project/splash-course/thumb.png'
 // import Thumb_NEWPROJ from './img/project/NEWPROJ/thumb.jpg'
 
 const preloadSrcList = [
@@ -79,6 +80,7 @@ const preloadSrcList = [
     Thumb_B2Web,
     Thumb_HTMAA,
     Thumb_Golf,
+    Thumb_SplashCourse,
     // Thumb_NEWPROJ,
 ]
 
@@ -117,6 +119,7 @@ const thumbDataDict = {
     
     "honest-type": [ Thumb_HonestType, "Honest Type", "Exploring our trust in the words of the digital world", false],
     "pecan-sans": [ Thumb_PecanSans, "Pecan Sans", "An alphabet made from pecans", false],
+    "splash-course": [ Thumb_SplashCourse, "Splash Course", "Prototype for an ed-tech website", "https://github.com/diegoyl/splash-course/blob/main/README.md"],
     
     // "posters": [ Thumb_Posters, "Posters", "subtitle", false],
 
@@ -133,6 +136,7 @@ const categoryDict = {
         "squish",
         "clock",
         "forting", // TODO: add forting process
+        "splash-course",
         "tangible-sampling", 
         "footwork",
         "21m080",
@@ -184,6 +188,7 @@ const categoryDict = {
     ],
     "ux/coding": [
         "beatfarm",
+        "splash-course",
         "21m080",
         "golf",
         "ai",
