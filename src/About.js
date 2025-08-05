@@ -28,15 +28,22 @@ function About(props) {
                 <h2>Hi, I'm Diego!</h2>
 
                 <p>
-                    I'm a designer/programmer/engineer raised in Austin, TX. I recently graduated from MIT, where I majored in Art & Design and took classes at the intersection of design, computer science, and mechanical engineering. 
+                    I'm a designer/programmer/engineer from Austin, TX. I graduated from MIT, where I majored in Art & Design and took classes at the intersection of design, computer science, and mechanical engineering. 
                     I am interested in using technology to create meaningful user experiences that are playful and immersive.
                     I am also interested and experienced 
-                    in web design, 3D modeling/rendering, graphic design, music, and  using ML/AI in actually interesting ways. Most recently I finished working
-                    
-                    on <a href="/squish">
-                        <i>Squish</i>
-                    </a>, an instrument controlled by foam blocks!
+                    in web design, 3D modeling/rendering, making cool stuff with code, graphic design, music, and ML/AI tools. 
 
+                    <br></br>
+                    Currently, I doing a UI/UX internship at Next Play Games, where I am helping build mobile apps focused on sports education. 
+                    I am also contributing to 
+                    <a target="_blank" 
+                      href="https://github.com/theloni-monk/VitalVault/tree/main"
+                      rel="noreferrer"
+                      >VitalVault</a>
+                    , an open-source app for faciliating medical document retrieval and organization.
+                    
+                    <br></br>
+                    I love to collaborate and work on various types of projects. Feel free to reach out if there's anything I might be able to help you with! I am open to doing freelance work in the following areas: branding/logo design, merch design, web design, 3D modeling/rendering. I also like to work on physical products, but currently have limited access to shops.
                     <br></br>
                     <br></br>
 
@@ -63,11 +70,11 @@ function About(props) {
 
                 <p className='PangramCompact'>CURRENT OBSESSIONS...</p>
                 <p>
-                  <a target="_blank" href="https://www.https://www.youtube.com/@blaccmassxx" rel="noreferrer">blaccmass remixes</a> 
+                  threejs, <a target="_blank" href="https://www.https://www.youtube.com/@blaccmassxx" rel="noreferrer">blaccmass remixes</a> 
 
                     
-                    , 
-                    Three Body Problem, Dr. K, watermelon, Overcooked
+                    ,
+                    Three Body Problem, Wii Golf, Dr. K, watermelon, Overcooked
                     <br></br>
                     <br></br>
 
@@ -76,7 +83,7 @@ function About(props) {
                 <div style={{"opacity":".5"}}>
                   <p className='PangramCompact'>OBSESSIONS ARCHIVE...</p>
                   <p>
-                      mango sticky rice, Conductor Williams instrumentals, Dune, the olympics, cooking, mummy_joe (instagram page), jookin (dance style), Attack on Titan, Pocket Operators, Denzel Curry, sports betting models, Kendrick, orange chicken, Julian DeGuzman, MPC drum machine, Formula 1, buffalo wings, Avatar TLA, collaging, Rosalia, NCT 127, Hamilton
+                      mango sticky rice, Conductor Williams instrumentals, puzzles, Dune, the olympics, cooking, mummy_joe (instagram page), jookin (dance style), Attack on Titan, Pocket Operators, Denzel Curry, sports betting models, Kendrick, orange chicken, Julian DeGuzman, MPC drum machine, Formula 1, buffalo wings, Avatar TLA, collaging, Rosalia, NCT 127, Hamilton
                   </p>
 
                 </div>
