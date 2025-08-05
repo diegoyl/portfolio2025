@@ -210,19 +210,15 @@ function HomePage() {
 
         <p id="home-bio" >
 
-          Hi, I’m Diego! I love making things, experimenting, and learning new things along the way. I recently graduated from MIT, where I took classes on design, computer science, mechanical engineering, and music!
+          Hi, I’m Diego! I love making things, experimenting, and learning new things along the way. I graduated from MIT, where I took classes on design, computer science, mechanical engineering, and music!
+          <br></br>
+          <br></br>
+          I am currently doing a UI/UX internship at Next Play Games along with some UX/webdev side projects.
           <br></br>
           <br></br>
           My projects are roughly categorized below (most of them overlap). Feel free to reach out if you want to work together on anything! 
           <br></br>
           <br></br>
-
-          <p style={{fontSize:".7em",  maxWidth:"500px", "margin":"0 auto", "opacity":".5"}}>
-          Also, I made this website in React and haven't found any bugs yet, but there are some experiments going on, so lmk if you find one...
-          <br></br>
-          <br></br>
-          </p>
-
 
         </p>
       </div>
@@ -246,7 +242,7 @@ function HomePage() {
       
       <div className="floatUp hplC" style={{"--j":5}}>
         <div onClick={() => {redirectDelay("/projects","coding")}} className="homeProjLink" style={{"--i":3}}>
-            <p>CODING</p>
+            <p>UX + CODING</p>
         </div>
       </div>
 
