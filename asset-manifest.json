@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.75122612.css",
-    "main.js": "/static/js/main.25ab863e.js",
+    "main.css": "/static/css/main.7c590791.css",
+    "main.js": "/static/js/main.aaa3cca9.js",
     "static/media/robot.mp4": "/static/media/robot.164ceb7e225b7eae5982.mp4",
     "static/media/logoMorph.mp4": "/static/media/logoMorph.8f73f0e5b3a41607ecd4.mp4",
     "static/media/final.mp4": "/static/media/final.16dbf81f50a81e330411.mp4",
@@ -16,7 +16,7 @@
     "static/media/anim.gif": "/static/media/anim.5dfdf06e3d4ed8e9b6d0.gif",
     "static/media/ticketTable1.jpg": "/static/media/ticketTable1.13e173580a7a421e6964.jpg",
     "static/media/issueXcover.png": "/static/media/issueXcover.aac7831ab268e3d70a64.png",
-    "static/media/thumb.jpg": "/static/media/thumb.7796191ff19f6bf29d7c.jpg",
+    "static/media/thumb.jpg": "/static/media/thumb.a769f94a36280e2f09cf.jpg",
     "static/media/kicking-mechanism.gif": "/static/media/kicking-mechanism.215ff93b61684c9ca138.gif",
     "static/media/side.JPG": "/static/media/side.5c59ab224e6e9fa6a648.JPG",
     "static/media/keyboard-front.mp4": "/static/media/keyboard-front.97db1a190de9ead735f9.mp4",
@@ -189,7 +189,6 @@
     "static/media/still.png": "/static/media/still.0bfdc610ae9a33095f8d.png",
     "static/media/section.jpg": "/static/media/section.cd55978c02807726628a.jpg",
     "static/media/logo-alt1.png": "/static/media/logo-alt1.2f8dfc6281fee92af0d0.png",
-    "static/media/thumb.png": "/static/media/thumb.0784a23463efa5b4cf83.png",
     "static/media/process.png": "/static/media/process.3db040848a92fce1a9a1.png",
     "static/media/elevation.jpg": "/static/media/elevation.2e3879a22036247d2c3a.jpg",
     "static/media/tofsensor.png": "/static/media/tofsensor.871c2b7f28336407b2d0.png",
@@ -204,12 +203,13 @@
     "static/media/diagram2.png": "/static/media/diagram2.c4d8e522c6d44e0577fd.png",
     "static/media/guppySMOL-BLUE.png": "/static/media/guppySMOL-BLUE.ed55c9550941a090e039.png",
     "static/media/rotary.jpg": "/static/media/rotary.c5b202845aea0e02f105.jpg",
+    "static/media/thumb.png": "/static/media/thumb.b43635c603382dc36ab8.png",
     "index.html": "/index.html",
-    "main.75122612.css.map": "/static/css/main.75122612.css.map",
-    "main.25ab863e.js.map": "/static/js/main.25ab863e.js.map"
+    "main.7c590791.css.map": "/static/css/main.7c590791.css.map",
+    "main.aaa3cca9.js.map": "/static/js/main.aaa3cca9.js.map"
   },
   "entrypoints": [
-    "static/css/main.75122612.css",
-    "static/js/main.25ab863e.js"
+    "static/css/main.7c590791.css",
+    "static/js/main.aaa3cca9.js"
   ]
 }
