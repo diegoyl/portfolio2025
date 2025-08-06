@@ -5,6 +5,7 @@ const redirects = {
     "birth-certificate" : "https://diegoyl.github.io/newspaper-birth-certificate/",
     "tactical-type" : "https://diegoyl.github.io/tactical-type/",
     "htmaa" : "https://fab.cba.mit.edu/classes/863.22/Architecture/people/Diego/",
+    "splash-course" : "https://github.com/diegoyl/splash-course/blob/main/README.md",
     "golf" : "https://diegoyl.github.io/golf",
 }
 

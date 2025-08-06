@@ -44,7 +44,7 @@ import Thumb_DAD from './img/project/dad/thumb.jpg'
 import Thumb_B2Web from './img/project/b2web/thumb.jpg'
 import Thumb_HTMAA from './img/project/htmaa/thumb.gif'
 import Thumb_Golf from './img/project/golf/thumb.png'
-import Thumb_SplashCourse from './img/project/splash-course/thumb.png'
+import Thumb_SplashCourse from './img/project/splash-course/thumb.jpg'
 // import Thumb_NEWPROJ from './img/project/NEWPROJ/thumb.jpg'
 
 const preloadSrcList = [

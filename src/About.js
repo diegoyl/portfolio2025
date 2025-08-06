@@ -34,6 +34,7 @@ function About(props) {
                     in web design, 3D modeling/rendering, making cool stuff with code, graphic design, music, and ML/AI tools. 
 
                     <br></br>
+                    <br></br>
                     Currently, I doing a UI/UX internship at Next Play Games, where I am helping build mobile apps focused on sports education. 
                     I am also contributing to 
                     <a target="_blank" 
@@ -42,6 +43,7 @@ function About(props) {
                       >VitalVault</a>
                     , an open-source app for faciliating medical document retrieval and organization.
                     
+                    <br></br>
                     <br></br>
                     I love to collaborate and work on various types of projects. Feel free to reach out if there's anything I might be able to help you with! I am open to doing freelance work in the following areas: branding/logo design, merch design, web design, 3D modeling/rendering. I also like to work on physical products, but currently have limited access to shops.
                     <br></br>

@@ -38,6 +38,7 @@ function App({page}) {
               <Route path="/birth-certificate" element={ <ExternalRedirectPage /> } />
               <Route path="/htmaa" element={ <ExternalRedirectPage /> } />
               <Route path="/golf" element={ <ExternalRedirectPage /> } />
+              <Route path="/splash-course" element={ <ExternalRedirectPage /> } />
           </Routes>
       </ Router>
     

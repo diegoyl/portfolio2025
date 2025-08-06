@@ -286,8 +286,14 @@
         margin-bottom: .5em;
     }
     .hplC {margin-bottom:2em;}
-}
 
+
+    /* #wavy-name  #ene {
+        transform: translateY(0%) translateX(0%); 
+    }
+    #wavy-name  #tilde {
+    } */
+}
 
 .nemoPopupContainer {
     position: fixed;

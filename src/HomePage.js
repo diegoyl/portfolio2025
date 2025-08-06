@@ -187,15 +187,15 @@ function HomePage() {
         <span style={{"--i":5}}>O</span>
         <span style={{"--i":6, width:".1em"}}> </span>
         <span style={{"--i":7}}>Y</span>
-        <span style={{"--i":8, "margin-left":"-.08em"}}>A</span>
+        <span style={{"--i":8, "marginLeft":"-.08em"}}>A</span>
         
-        <span style={{"--i":9, "margin-left":"-.01em"}} id="enye">
+        <span style={{"--i":9, "marginLeft":"-.01em"}} id="enye">
             <span id="ene">N</span>
             <span id="tilde">~</span>
         </span>
 
-        <span style={{"--i":10, "margin-left":"-.033em"}}>E</span>
-        <span style={{"--i":11, "margin-left":".03em"}}>Z</span>
+        <span style={{"--i":10, "marginLeft":"-.033em"}}>E</span>
+        <span style={{"--i":11, "marginLeft":".03em"}}>Z</span>
         <span id="hyphen" style={{"--i":12}}>-</span>
         <span style={{"--i":13}}>L</span>
         <span style={{"--i":14}}>A</span>
@@ -213,7 +213,7 @@ function HomePage() {
           Hi, I’m Diego! I love making things, experimenting, and learning new things along the way. I graduated from MIT, where I took classes on design, computer science, mechanical engineering, and music!
           <br></br>
           <br></br>
-          I am currently doing a UI/UX internship at Next Play Games along with some UX/webdev side projects.
+          I am currently working as a UI/UX Intern at Next Play Games along with some UX/webdev side projects.
           <br></br>
           <br></br>
           My projects are roughly categorized below (most of them overlap). Feel free to reach out if you want to work together on anything! 
@@ -225,7 +225,6 @@ function HomePage() {
 
       
       
-      <br></br>
 
       
       <div className="floatUp hplC" style={{"--j":3}}>
@@ -234,15 +233,15 @@ function HomePage() {
         </div>
       </div>
       
-      <div className="floatUp hplC" style={{"--j":4}}>
-        <div onClick={() => {redirectDelay("/projects","engineering")}} className="homeProjLink" style={{"--i":2}}>
-            <p>ENGINEERING</p>
-        </div>
-      </div>
-      
       <div className="floatUp hplC" style={{"--j":5}}>
         <div onClick={() => {redirectDelay("/projects","coding")}} className="homeProjLink" style={{"--i":3}}>
             <p>UX + CODING</p>
+        </div>
+      </div>
+      
+      <div className="floatUp hplC" style={{"--j":4}}>
+        <div onClick={() => {redirectDelay("/projects","engineering")}} className="homeProjLink" style={{"--i":2}}>
+            <p>ENGINEERING</p>
         </div>
       </div>
 
