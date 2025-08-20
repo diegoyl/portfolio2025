@@ -35,7 +35,7 @@ function About(props) {
 
                     <br></br>
                     <br></br>
-                    Currently, I doing a UI/UX internship at Next Play Games, where I am helping build mobile apps focused on sports education. 
+                    Currently, I am doing a UI/UX internship at Next Play Games, where I am helping build mobile apps focused on sports education. 
                     I am also contributing to 
                     <a target="_blank" 
                       href="https://github.com/theloni-monk/VitalVault/tree/main"
@@ -72,7 +72,7 @@ function About(props) {
 
                 <p className='PangramCompact'>CURRENT OBSESSIONS...</p>
                 <p>
-                  threejs, <a target="_blank" href="https://www.https://www.youtube.com/@blaccmassxx" rel="noreferrer">blaccmass remixes</a> 
+                  threejs, <a target="_blank" href="https://www.youtube.com/@blaccmassxx" rel="noreferrer">blaccmass remixes</a> 
 
                     
                     ,

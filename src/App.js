@@ -26,7 +26,6 @@ function App({page}) {
               <Route path="/projects-design" element={<Projects />} />
               <Route path="/projects-coding" element={<Projects />} />
               <Route path="/projects-engineering" element={<Projects />} />
-              <Route path="/projects" element={<Projects />} />
               <Route path="/:projectName" element={<ProjectPage />} />
               <Route path="/about" element={ <About /> } />
               <Route path="/testing" element={ <TestingPage /> } />

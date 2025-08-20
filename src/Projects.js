@@ -45,6 +45,7 @@ import Thumb_B2Web from './img/project/b2web/thumb.jpg'
 import Thumb_HTMAA from './img/project/htmaa/thumb.gif'
 import Thumb_Golf from './img/project/golf/thumb.png'
 import Thumb_SplashCourse from './img/project/splash-course/thumb.jpg'
+import Thumb_RejisRave from './img/project/rejisrave/thumb.jpg'
 // import Thumb_NEWPROJ from './img/project/NEWPROJ/thumb.jpg'
 
 const preloadSrcList = [
@@ -81,6 +82,7 @@ const preloadSrcList = [
     Thumb_HTMAA,
     Thumb_Golf,
     Thumb_SplashCourse,
+    Thumb_RejisRave,
     // Thumb_NEWPROJ,
 ]
 
@@ -113,6 +115,7 @@ const thumbDataDict = {
     "futbot": [ Thumb_Futbot, "Futbot", "Robot for 2.007 competition ", false],
     
     "golf": [ Thumb_Golf, "Golf", " [🚧Under Construction]", "https://diegoyl.github.io/golf/"],
+    "rejisrave": [ Thumb_RejisRave, "Reji's Rave", "A game about a crab who loves to dance", false],
     // "NEWPROJ": [ Thumb_NEWPROJ, "NEWPROJ", "", false],
 
     // "ims": [ Thumb_IMS, "Interactive Music Systems", "subtitle", false],
@@ -147,6 +150,7 @@ const categoryDict = {
         "ai",
         "infinite", //  TODO: infinite unfinished
         "hardcell",
+        "rejisrave",
         "tactical-type",
         "birth-certificate",
         "honest-type",
@@ -190,6 +194,7 @@ const categoryDict = {
         "beatfarm",
         "splash-course",
         "21m080",
+        "rejisrave",
         "golf",
         "ai",
         "b2web",
@@ -204,6 +209,7 @@ const categoryDict = {
         "clock",
         "squish",
         "forting",
+        "rejisrave",
         "tangible-sampling", 
         "beatfarm",
         "tactical-type",
