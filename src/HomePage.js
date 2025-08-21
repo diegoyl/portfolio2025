@@ -7,27 +7,91 @@ import SharkAnimHP from './fish/SharkAnimHP';
 import NemoAnimHP from './fish/NemoAnimHP';
 import BubbleCursor from './BubbleCursor';
 import React, {useState, useRef, useEffect} from 'react';
+import profSquare from './img/prof-square.jpg';
+import workThumb1 from './img/project/footwork/thumb.jpg';
+import workThumb2 from './img/project/clock/thumb.jpg';
+import workThumb3 from './img/project/squish/thumb.jpg';
+import workThumb4 from './img/project/mitgala/thumb.jpg';
+import workThumb5 from './img/project/forting/thumb.jpg';
+import workThumb6 from './img/project/beatfarm/thumb.jpg';
+import workThumb7 from './img/project/tactical-type/thumb.jpg';
+import workThumb8 from './img/project/tangible-sampling/thumb.jpg';
+import workThumb9 from './img/project/21m080/thumb.jpg';
+import workThumb10 from './img/project/infinite-merch/thumb.jpg';
+import workThumb11 from './img/project/honest-type/thumb.jpg';
 
 function HomePage() {
-  console.log("**** HOME RE-RENDER")
 
   var [erasing, setErasing] = useState(false)
+  var [hoverImage, setHoverImage] = useState(null)
+  var [hoverType, setHoverType] = useState(null)
+  var [workImageIndex, setWorkImageIndex] = useState(0)
+  var [imagesLoaded, setImagesLoaded] = useState(false)
+  
+  // Work images to cycle through
+  const workImages = [
+    workThumb1,
+    workThumb2,
+    workThumb3,
+    workThumb4,
+    workThumb5,
+    workThumb6,
+    workThumb7,
+    workThumb8,
+    workThumb9,
+    workThumb10,
+    workThumb11
+  ]
+  
   function redirectDelay(path, category) {
     setErasing(true)
     setTimeout(() => {
-      // window.location.href = path+"?categ="+category;
-      window.location.href = path+"-"+category;
+      window.location.href = path;
     }, 310)
+  }
+  
+  function handleWorkHover() {
+    setHoverType('work')
+    setHoverImage(workImages[0])
+    setWorkImageIndex(0)
+  }
+  
+  function handleAboutHover() {
+    setHoverType('about')
+    setHoverImage(profSquare)
+  }
+  
+  function handleHoverEnd() {
+    setHoverImage(null)
+    setHoverType(null)
+  }
+  
+  // Preload all work images
+  function preloadImages() {
+    const imagePromises = workImages.map(src => {
+      return new Promise((resolve, reject) => {
+        const img = new Image()
+        img.onload = () => resolve(src)
+        img.onerror = () => reject(src)
+        img.src = src
+      })
+    })
+    
+    Promise.all(imagePromises)
+      .then(() => setImagesLoaded(true))
+      .catch(() => setImagesLoaded(true)) // Continue even if some fail
   }
 
   var [loaded, setLoaded] = useState(false)
 
 
-  useEffect(() => {
+    useEffect(() => {
     document.title = "Diego Yañez-Laguna"
     setLoaded(true)
     
-  
+    // Preload work images
+    preloadImages()
+    
     var bubbleGenInterval = setInterval(createBubbleHome, 100)
     setTimeout(() => {
       clearInterval(bubbleGenInterval)
@@ -42,6 +106,21 @@ function HomePage() {
     //   }, 4000)
     // } 
   },[])
+  
+  // Cycle through work images when hovering
+  useEffect(() => {
+    if (hoverType === 'work' && imagesLoaded) {
+      const interval = setInterval(() => {
+        setWorkImageIndex(prev => {
+          const nextIndex = (prev + 1) % workImages.length
+          setHoverImage(workImages[nextIndex])
+          return nextIndex
+        })
+      }, 400) // Change image every 400ms
+      
+      return () => clearInterval(interval)
+    }
+  }, [hoverType, imagesLoaded])
 
   
   // var [rotatingWord, setRotatingWord] = useState(["designer",4])
@@ -175,9 +254,19 @@ function HomePage() {
       <div id="erase-container" className={erasing ? "beginErase":""}>
         <p>...</p>
       </div>
-      <div id="initBubbleGenerator" className='bubbleContainer'></div>
-     
-     
+             <div id="initBubbleGenerator" className='bubbleContainer'></div>
+      
+      {/* Hover Image Display */}
+      {hoverImage && (
+        <div className="hoverImageContainer">
+          <img 
+            src={hoverImage} 
+            alt="Hover preview" 
+            className="hoverImage"
+          />
+        </div>
+      )}
+           
 
       <p className='PangramDisplay floatUp' id="wavy-name" style={{"--j":1}}>
         <span style={{"--i":1}}>D</span>
@@ -213,13 +302,9 @@ function HomePage() {
           Hi, I’m Diego! I love making things, experimenting, and learning new things along the way. I graduated from MIT, where I took classes on design, computer science, mechanical engineering, and music!
           <br></br>
           <br></br>
-          I am currently working as a UI/UX Intern at Next Play Games along with some UX/webdev side projects.
+          I am currently a UI/UX Intern at Next Play Games and also working on some UX/webdev side projects.
+           Feel free to reach out if you want to work together on anything! 
           <br></br>
-          <br></br>
-          My projects are roughly categorized below (most of them overlap). Feel free to reach out if you want to work together on anything! 
-          <br></br>
-          <br></br>
-
         </p>
       </div>
 
@@ -228,20 +313,26 @@ function HomePage() {
 
       
       <div className="floatUp hplC" style={{"--j":3}}>
-        <div onClick={() => {redirectDelay("/projects","design")}} className="homeProjLink" style={{"--i":1}}>
-            <p>DESIGN</p>
-        </div>
-      </div>
-      
-      <div className="floatUp hplC" style={{"--j":5}}>
-        <div onClick={() => {redirectDelay("/projects","coding")}} className="homeProjLink" style={{"--i":3}}>
-            <p>UX + CODING</p>
+        <div 
+          onClick={() => {redirectDelay("/work","")}} 
+          onMouseEnter={handleWorkHover}
+          onMouseLeave={handleHoverEnd}
+          className="homeProjLink" 
+          style={{"--i":1}}
+        >
+            <p>WORK</p>
         </div>
       </div>
       
       <div className="floatUp hplC" style={{"--j":4}}>
-        <div onClick={() => {redirectDelay("/projects","engineering")}} className="homeProjLink" style={{"--i":2}}>
-            <p>ENGINEERING</p>
+        <div 
+          onClick={() => {redirectDelay("/about","")}} 
+          onMouseEnter={handleAboutHover}
+          onMouseLeave={handleHoverEnd}
+          className="homeProjLink" 
+          style={{"--i":2}}
+        >
+            <p>ABOUT</p>
         </div>
       </div>
 

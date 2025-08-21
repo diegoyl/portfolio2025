@@ -1,5 +1,5 @@
 import './App.css';
-import './Projects.css';
+import './Work.css';
 import './Animations.css';
 
 import React, {useState, useEffect} from 'react';
@@ -133,15 +133,15 @@ const thumbDataDict = {
     // "models": [ Thumb_Models, "Miniatures", "subtitle", false],
 }
 
-const categoryDict = {
+const tagProjects = {
     "all": [
         "beatfarm",
         "squish",
         "clock",
         "forting", // TODO: add forting process
+        "footwork",
         "splash-course",
         "tangible-sampling", 
-        "footwork",
         "21m080",
         "infinite-merch",
         "mitgala",
@@ -159,79 +159,101 @@ const categoryDict = {
         "drift",
         "adobe-home",
         "futbot",
-
         "b2web",
-        
+        "dad",
         // "NEWPROJ",
-
-
-
-        // "hardcell",
-
-        // "ims",
-
-        // "mask",
-        // "honest-type",
-        // "pecan-sans",
-        // "pendulum",
-        // "light",
-        // "pedals",
-        // "models",
-        // "posters",
     ],
-    "design": [
-        
-        "squish",
-        "clock",
-        "forting",
-        "tangible-sampling", 
-        "chair",
-        "adobe-home",
-        "drift",
-
-    ],
-    "ux/coding": [
+    "UI/UX": [
         "beatfarm",
         "splash-course",
         "21m080",
-        "rejisrave",
-        "golf",
-        "ai",
         "b2web",
-        // TODO: add this website
     ],
-    "engineering": [
-        "futbot",
-        "hardcell",
-        "htmaa",
-    ],
-    "interactive": [
+    "Product Design": [
         "clock",
         "squish",
         "forting",
-        "rejisrave",
         "tangible-sampling", 
-        "beatfarm",
-        "tactical-type",
-        "birth-certificate",
-        "golf",
-        
+        "hardcell",
+        "chair",
     ],
-    "graphic design": [
+    "Graphic Design": [
+        "footwork",
+        "mitgala",
+        "infinite",
+        "infinite-merch",
+        "tactical-type",
+        "honest-type",
+        "birth-certificate",
+        "pecan-sans",
+        "drift",
+    ],
+    "Web Dev": [
+        "beatfarm",
+        "splash-course",
+        "rejisrave",
+        "21m080",
+        "tactical-type",
+        "b2web",
+        "birth-certificate",
+    ],
+    "Game Dev": [
+        "beatfarm",
+        "rejisrave",
+        "golf",
+    ],
+    "Programming": [
+        "beatfarm",
+        "rejisrave",
+        "splash-course",
+        "ai",
+        "hardcell",
+        "clock",
+        "squish",
+        "tactical-type",
+        "21m080",
+        "futbot",
+        "htmaa",
+        "birth-certificate",
+        "b2web",
+        "golf",
+    ],
+    "Physical": [
+        "clock",
+        "squish",
+        "forting",
+        "tangible-sampling", 
+        "chair",
+        "hardcell",
+        "htmaa",
+        "futbot",
         "footwork",
         "infinite-merch",
         "mitgala",
+    ],
+    "3D Design": [
+        "forting",
+        "clock",
+        "tangible-sampling",
+        "footwork",
+        "squish",
+        "rejisrave",
+        "hardcell",
+        "htmaa",
+        "futbot",
+        "adobe-home",
+    ],
+    "Branding": [
+        "footwork",
+        "mitgala",
+        "infinite-merch",
         "infinite",
-        "tactical-type",
-        "honest-type",
-        "pecan-sans",
-        "drift",
-        "birth-certificate",
+        "forting"
     ],
 }  
 
   
-function Projects() {
+function Work() {
 
 
 
@@ -243,51 +265,126 @@ function Projects() {
         window.location.href = path;
       }, 310)
     }
-    var [category, setCategory] = useState("all")
+    var [selectedTags, setSelectedTags] = useState([]) // Empty = show all
     var [gridType, setGridType] = useState("grid1")
+    var [showToTop, setShowToTop] = useState(false)
     
-    console.log("defCatInit= ",category)
+    console.log("defCatInit= ",selectedTags)
+    
+    // Filtering logic
+    function getProjectsToShow() {
+        if (selectedTags.length === 0) {
+            return tagProjects["all"]; // Show all projects
+        }
+        
+        if (selectedTags.length === 1) {
+            // Use the specific tag's ordering when only one tag is selected
+            return tagProjects[selectedTags[0]];
+        }
+        
+        // Check if only Graphic Design and/or Branding are selected
+        const onlyDesignTags = selectedTags.every(tag => 
+            tag === "Graphic Design" || tag === "Branding"
+        );
+        
+        if (onlyDesignTags) {
+            // Concatenate Graphic Design and Branding lists, remove duplicates
+            const concatenatedProjects = [];
+            const seenProjects = new Set();
+            
+            selectedTags.forEach(tag => {
+                tagProjects[tag].forEach(project => {
+                    if (!seenProjects.has(project)) {
+                        concatenatedProjects.push(project);
+                        seenProjects.add(project);
+                    }
+                });
+            });
+            
+            return concatenatedProjects;
+        }
+        
+        // Multiple tags selected (including non-design tags): use "all" ordering and filter
+        return tagProjects["all"].filter(project => 
+            selectedTags.some(tag => tagProjects[tag].includes(project))
+        );
+    }
+    
+    function toggleTag(tagName) {
+        setSelectedTags(prev => {
+            if (prev.includes(tagName)) {
+                return prev.filter(tag => tag !== tagName);
+            } else {
+                return [...prev, tagName];
+            }
+        });
+        
+        // Auto scroll to top when selecting a tag
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    
+    function deselectAll() {
+        setSelectedTags([]);
+    }
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY
+            const windowHeight = window.innerHeight
+            setShowToTop(scrollY > windowHeight)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
     
     const location = useLocation();
     const navigate = useNavigate();
     var categoryPassedIn = false;
     useEffect(() => {
-        document.title = "Projects"
+        document.title = "Work"
         
-        // var searchData = location.search + "";
-        // if (searchData) {
-        //     categoryPassedIn = searchData.split("=")[1];
-        //     console.log("SD: ",searchData)
-        //     if (categoryPassedIn="coding"){
+        // // var searchData = location.search + "";
+        // // if (searchData) {
+        // //     categoryPassedIn = searchData.split("=")[1];
+        // //     console.log("SD: ",searchData)
+        // //     if (categoryPassedIn="coding"){
+        // //         categoryPassedIn = "ux/coding"
+        // //     }
+        // //     setCategory(categoryPassedIn)
+        // //     navigate('/projects', { replace: true });
+        // // } else {
+        // //     setCategory("all")
+        // // }
+
+        // // var searchData = location.search + "";
+        // // console.log("SD1: ",window.location.hash.replace("#", "")) 
+        // // var pathname = location.pathname
+        // var pathnameCategory = location.pathname.split("-")[1]
+        // console.log("pathnameCat: ", pathnameCategory)
+
+        // if (pathnameCategory) {
+        //     categoryPassedIn = pathnameCategory;
+        //     console.log("split(-)[1]: ", categoryPassedIn)
+            
+        //     if (categoryPassedIn=="coding") {
         //         categoryPassedIn = "ux/coding"
         //     }
+
         //     setCategory(categoryPassedIn)
+
         //     navigate('/projects', { replace: true });
         // } else {
         //     setCategory("all")
         // }
-
-        // var searchData = location.search + "";
-        // console.log("SD1: ",window.location.hash.replace("#", "")) 
-        // var pathname = location.pathname
-        var pathnameCategory = location.pathname.split("-")[1]
-        console.log("pathnameCat: ", pathnameCategory)
-
-        if (pathnameCategory) {
-            categoryPassedIn = pathnameCategory;
-            console.log("split(-)[1]: ", categoryPassedIn)
-            
-            if (categoryPassedIn=="coding") {
-                categoryPassedIn = "ux/coding"
-            }
-
-            setCategory(categoryPassedIn)
-
-            navigate('/projects', { replace: true });
-        } else {
-            setCategory("all")
-        }
-        console.log("defCat_= ",category)
+        // console.log("defCat_= ",category)
 
 
 
@@ -315,19 +412,7 @@ function Projects() {
 
     // }
     
-    function changeCategory(cat) {
-        // console.log(cat)
-        window.scrollTo({top: 0, behavior: 'smooth'});
 
-        const projectGrid = document.getElementById('projectGrid')
-        projectGrid.classList.add('gridFade'); // start animation            
-
-        setTimeout(() => {
-
-            setCategory(cat)
-            projectGrid.classList.remove('gridFade'); // reset animation
-        },700)
-    }
 
     function changeGridType(gt)  {
         window.scrollTo({top: 0, behavior: 'smooth'});
@@ -350,7 +435,7 @@ function Projects() {
 
   return (
     <div style={{width:"100%"}}>
-      <NavBar page={"projects"}></NavBar>
+             <NavBar page={"work"}></NavBar>
       <div id="erase-container" className={erasing ? "beginErase transition-container":"transition-container"}>
             {/* <p>...</p> */}
       </div>
@@ -362,13 +447,31 @@ function Projects() {
                     
                     <div id="projects-menu-inner">
 
-                        {Object.keys(categoryDict).map(function(categoryName,index) {
-                            return (
-                                <p key={index} className={category===categoryName ? "activeCategory":"inactiveCategory"} 
-                                onClick={() => changeCategory(categoryName)}
-                                >{categoryName.toUpperCase()}</p>
-                            )
-                        })}
+                        <div className="tagsContainer">
+                            <span className="tagsLabel">Tags</span>
+                                                        <button
+                                className={`deselectAllButton ${selectedTags.length > 0 ? 'visible' : ''}`}
+                                onClick={deselectAll}
+                            >
+                                DESELECT ALL
+                            </button>
+                        </div>
+
+                        <div className="tagsWrapper">
+                            {Object.keys(tagProjects).filter(tag => tag !== "all").map(function(tagName,index) {
+                                const isSelected =   selectedTags.includes(tagName);
+                                return (
+                                    <button 
+                                        key={index} 
+                                        className={`tagButton ${isSelected ? 'tagButtonActive' : 'tagButtonInactive'}`}
+                                        onClick={() => toggleTag(tagName)}
+                                    >
+                                        {tagName.toUpperCase()}
+                                    </button>
+                                )
+                            })}
+                        </div>
+                        
 
                         <div id="gridBtnContainer">
                             <button id="gridBtn1" className={gridType==="grid1" ? "gridBtnActive gridButton":"gridButton"} onClick={() => changeGridType("grid1")}></button>
@@ -376,7 +479,6 @@ function Projects() {
                             <button id="gridBtn3" className={gridType==="grid3" ? "gridBtnActive gridButton":"gridButton"} onClick={() => changeGridType("grid3")}></button>
                         </div>
 
-                        <br></br>
 
                         {/* TODO LINK THIS */}
                         {/* <p className="inactiveCategory" id="archiveLink" onClick={() => changeCategory("archive")}>ARCHIVE</p> */}
@@ -391,9 +493,11 @@ function Projects() {
             <div className='splitDiv rightSplit content-left'>
                 <div id="projectGrid" className={gridType}>
 
-                    {category ? (
+                                                                                         {(() => {
+                        const projectsToShow = getProjectsToShow();
+                        return (
                         <>
-                        {categoryDict[category].map(function(projName,index) {
+                        {projectsToShow.map(function(projName,index) {
 
                             if (thumbDataDict[projName][3]) {
                                 return (
@@ -426,8 +530,8 @@ function Projects() {
 
                         })}
                         </>
-                    ) : (<></>)
-                    }   
+                        );
+                    })()}
                 </div>
             </div>
         </div>
@@ -436,6 +540,16 @@ function Projects() {
             <p onClick={() => toCategoriesTop()} >⌃<br></br>CATEGORIES</p>
         </div>
 
+        {/* Mobile To Top Button */}
+        {showToTop && (
+            <button 
+                className="mobileToTopButton"
+                onClick={scrollToTop}
+                aria-label="Scroll to top"
+            >
+                ↑
+            </button>
+        )}
 
         <Footer></Footer>
 
@@ -443,4 +557,4 @@ function Projects() {
   );
 }
 
-export default transition(Projects);
+export default transition(Work);

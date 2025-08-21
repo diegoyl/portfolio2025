@@ -5,7 +5,7 @@ import SharkSVG from "../svg/SharkSVG.js"
 function SharkAnim({speed_param, size_param}) {  
     const initW = window.innerWidth
     const initY = window.innerHeight
-    const x = useValue(initW*2) // SET INIT POS
+    const x = useValue(initW*3) // SET INIT POS
     const y = useValue(initY*2) // SET INIT POS
 
     const fishSpeed = speed_param // x speed constant, just flips direction

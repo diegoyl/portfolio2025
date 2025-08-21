@@ -1,5 +1,5 @@
 import './App.css';
-import './Projects.css';
+import './Work.css';
 
 import React, {useState} from 'react';
 

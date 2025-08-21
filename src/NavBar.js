@@ -42,9 +42,9 @@ function NavBar({page, centerTitle, ctShow}) {
 
         <div className="navRight navHalf">
 
-            <div onClick={() => {redirectDelay("/projects")}} 
-                className={activePage=="projects" ? "activeNavLink navlink pagelink":"navlink pagelink"}>
-                <p><span className='nbArrow'>›</span> PROJECTS</p>
+            <div onClick={() => {redirectDelay("/work")}} 
+                className={activePage=="work" ? "activeNavLink navlink pagelink":"navlink pagelink"}>
+                <p><span className='nbArrow'>›</span> WORK</p>
             </div>
             <div onClick={() => {redirectDelay("/about")}} 
                 className={activePage=="about" ? "activeNavLink navlink pagelink":"navlink pagelink"}>

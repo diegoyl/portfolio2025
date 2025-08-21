@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
 import HomePage from './HomePage';
-import Projects from './Projects';
+import Work from './Work';
 import ProjectPage from './ProjectPage';
 import About from './About';
 import Ocean from './Ocean';
@@ -22,10 +22,11 @@ function App({page}) {
       <Router>
           <Routes>
               <Route index element={<HomePage />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/projects-design" element={<Projects />} />
-              <Route path="/projects-coding" element={<Projects />} />
-              <Route path="/projects-engineering" element={<Projects />} />
+              <Route path="/work" element={<Work />} />
+              <Route path="/projects" element={<Work />} />
+              <Route path="/projects-design" element={<Work />} />
+              <Route path="/projects-coding" element={<Work />} />
+              <Route path="/projects-engineering" element={<Work />} />
               <Route path="/:projectName" element={<ProjectPage />} />
               <Route path="/about" element={ <About /> } />
               <Route path="/testing" element={ <TestingPage /> } />

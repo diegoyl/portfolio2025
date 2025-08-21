@@ -161,7 +161,7 @@ function GuppyCursor({updateGuppyPosition, guppyAlive, guppyTransitionClass}) {
         translateY: y.value,
         rotate: angle.value,
         scaleY: flip.value,
-        zIndex: 800,
+        zIndex: 900,
     }}
   >
 

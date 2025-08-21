@@ -24,6 +24,7 @@
 
 
 #home-bio {
+    max-width: 800px;
     width: 70%;
     text-align: center;
     letter-spacing: -.01em;
@@ -33,14 +34,19 @@
     font-family: PangramHeader, Arial, sans-serif;
     /* color: var(--c-blue); */
     animation: paragraphWave 5s ease infinite;
+    line-height: 1.3;
 }
 
-.hplC {display: inline-block;margin-bottom:6em;}
+.hplC {
+    display: inline-block;
+    margin-bottom:6em;
+    z-index: 710;
+}
 
 .homeProjLink {
     display: inline-block;
-    margin: 0;
-    padding: .2em .8em;
+    margin: 0 1.6em;
+    padding: .2em .4em;
     cursor: pointer;
     z-index: 710;
 
@@ -82,6 +88,8 @@
     --waveFreq: .3s;
     --waveSpeed: 3s;
     --globalDelay: 1s;
+    --tilde-top-offset: -0.23em;
+    --tilde-size: 0.85em;
 
 }
 #wavy-name {
@@ -92,7 +100,6 @@
     /* border: red 2px solid; */
     margin: 0;
     margin-bottom: 40px;
-    margin-top: .1em;
     margin-top: 20px;
 }
 #wavy-name span {
@@ -122,34 +129,28 @@
 }
 
 #enye {
-    position: absolute;
-    width: .45em;
+    position: relative;
+    display: inline-block;
+    width: 0.46em;
     height: 1em;
     /* border: red 2px solid; */
-    display:inline-block; 
-    transform: translateX(-1%); 
 }
 #wavy-name  #ene {
-    display:block; 
-    top: 0;
-    left: 0;
+    position: relative;
+    display: block;
     /* border: yellow 2px solid; */
-    position: absolute;
-    height: min-content;
-    transform: translateY(-6%) translateX(0%); 
-
     animation: none;
     animation-delay: 0;
+    margin-left: -0.02em;
+    transform: translateY(-.007em);
 }
 #wavy-name  #tilde {
-    display:block; 
-    top: 0;
-    left: 0;
     position: absolute;
+    top: var(--tilde-top-offset);
+    left: 0.08em;
     /* border: aqua 2px solid; */
-    height: min-content;
-    
-    animation: tildeWave 2.6s ease-in-out infinite;
+    font-size: var(--tilde-size);
+    animation: tildeWave 2.8s ease-in infinite;
     animation-delay: 0;
 }
 #wavy-name #hyphen {
@@ -160,19 +161,19 @@
 
 @keyframes tildeWave {
     0% , 100% {
-        transform: translateY(-53.4%) translateX(8%);
+        transform: translateY(var(--tilde-top-offset));
         rotate: 0;
     }
     50% {
-        transform: translateY(-51.4%) translateX(8%);
+        transform: translateY(calc(var(--tilde-top-offset) - 0.1em));
         rotate: 0;
     }
 
     25% {
-        rotate: calc(var(--rotAmplitude) * 1);
+        transform: translateY(calc(var(--tilde-top-offset) - 0.05em)) rotate(calc(var(--rotAmplitude) * 1));
     }
     75% {
-        rotate: calc(var(--rotAmplitude) * -1);
+        transform: translateY(calc(var(--tilde-top-offset) - 0.05em)) rotate(calc(var(--rotAmplitude) * -1));
     }
 }
 
@@ -287,12 +288,7 @@
     }
     .hplC {margin-bottom:2em;}
 
-
-    /* #wavy-name  #ene {
-        transform: translateY(0%) translateX(0%); 
-    }
-    #wavy-name  #tilde {
-    } */
+    /* The tilde positioning now works consistently across all screen sizes */
 }
 
 .nemoPopupContainer {
@@ -368,4 +364,30 @@
         transform: scale(0);
         opacity: 0;
     }
+}
+
+/* Hover Image Styles */
+.hoverImageContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 800;
+    pointer-events: none;
+    transition: opacity 300ms ease-in-out;
+}
+
+.hoverImage {
+    max-width: 360px;
+    max-height: 360px;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(240, 255, 252, 0.4), 0 0 40px rgba(11, 20, 43, 0.8);
+    object-fit: cover;
+    transition: transform 300ms ease-in-out;
+}
+
+.hoverImage:hover {
+    transform: scale(1.05);
 }

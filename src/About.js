@@ -36,8 +36,7 @@ function About(props) {
                     <br></br>
                     <br></br>
                     Currently, I am doing a UI/UX internship at Next Play Games, where I am helping build mobile apps focused on sports education. 
-                    I am also contributing to 
-                    <a target="_blank" 
+                    I am also contributing to <a target="_blank" 
                       href="https://github.com/theloni-monk/VitalVault/tree/main"
                       rel="noreferrer"
                       >VitalVault</a>
