@@ -47,10 +47,5 @@
     <priority>0.5</priority>
   </url>
 
-  <url>
-    <loc>https://www.diegoyl.com/#ocean</loc>
-    <priority>0.3</priority>
-  </url>
 
-  <!-- Add more pages here -->
 </urlset>
