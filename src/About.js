@@ -28,14 +28,13 @@ function About(props) {
                 <h2>Hi, I'm Diego!</h2>
 
                 <p>
-                    I'm a designer/programmer/engineer from Austin, TX. I graduated from MIT, where I majored in Art & Design and took classes at the intersection of design, computer science, and mechanical engineering. 
-                    I am interested in using technology to create meaningful user experiences that are playful and immersive.
-                    I am also interested and experienced 
-                    in web design, 3D modeling/rendering, making cool stuff with code, graphic design, music, and ML/AI tools. 
+                    I'm a designer/programmer/engineer from Austin, TX. I graduated from MIT in 2024, where I majored in Art & Design and took classes in productdesign, computer science, mechanical engineering, and music. 
+                    I'm interested in using technology to create more accessible user experiences that are playful and immersive.
+                    I am also interested and experienced in web design, 3D modeling/rendering, making cool stuff with code, graphic design, music, game development, and ML/AI tools. 
 
                     <br></br>
                     <br></br>
-                    Currently, I am doing a UI/UX internship at Next Play Games, where I am helping build mobile apps focused on sports education. 
+                    Currently, I am doing UX design and frontend development for The Radar Company.
                     I am also contributing to <a target="_blank" 
                       href="https://github.com/theloni-monk/VitalVault/tree/main"
                       rel="noreferrer"
@@ -44,7 +43,7 @@ function About(props) {
                     
                     <br></br>
                     <br></br>
-                    I love to collaborate and work on various types of projects. Feel free to reach out if there's anything I might be able to help you with! I am open to doing freelance work in the following areas: branding/logo design, merch design, web design, 3D modeling/rendering. I also like to work on physical products, but currently have limited access to shops.
+                    I love to collaborate and work on various types of projects. Feel free to reach out if there's anything I might be able to help you with! I am also open to doing freelance work in the following areas: branding/logo design, merch design, web design, 3D modeling/rendering. I also like to work on physical products and electronics, but currently have limited access to shops.
                     <br></br>
                     <br></br>
 
@@ -57,9 +56,9 @@ function About(props) {
                     
                     These are some groups I have been a part of: 
                     <br></br>
-                    <a target="_blank" href="https://www.instagram.com/_movementality/" rel="noreferrer">MMT 🕺</a> 
-                    <br></br>
                     <a target="_blank" href="https://www.instagram.com/mitridonkulous/" rel="noreferrer">Donk 🕺</a>
+                    <br></br>
+                    <a target="_blank" href="https://www.instagram.com/_movementality/" rel="noreferrer">MMT 🕺</a> 
                     <br></br>
                     <a target="_blank" href="https://infinitemagazine.mit.edu/" rel="noreferrer">Infinite Magazine ♾️👕</a>
                     <br></br>
@@ -71,7 +70,7 @@ function About(props) {
 
                 <p className='PangramCompact'>CURRENT OBSESSIONS...</p>
                 <p>
-                  threejs, <a target="_blank" href="https://www.youtube.com/@blaccmassxx" rel="noreferrer">blaccmass remixes</a> 
+                  game dev, threejs, <a target="_blank" href="https://www.youtube.com/@blaccmassxx" rel="noreferrer">blaccmass remixes</a> 
 
                     
                     ,

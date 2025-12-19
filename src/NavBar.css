@@ -185,11 +185,23 @@
 
 
 .navRight span {
-    transform: scale(1.64) translateY(-12%);
-    /* outline: red 1px solid; */
-    margin-right: .1em;
-    font-family: PangramCompact, Arial, sans-serif;
     display: inline-block;
+    vertical-align: middle;
+    margin-right: .1em;
+}
+
+.navRight span svg {
+    width: 0.35em;
+    height: auto;
+    display: block;
+    fill: var(--c-black);
+    vertical-align: middle;
+    /* transform: translateY(-0.1em); */
+}
+
+.pagelink:hover span svg,
+.activeNavLink span svg {
+    fill: var(--c-blue);
 }
 
 #centerTitle {

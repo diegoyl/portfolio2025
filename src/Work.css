@@ -411,7 +411,8 @@
     color: var(--c-blue);
     font-family: PangramDisplay, 'Arial Narrow', sans-serif;
     font-size: 0.6em;
-    padding: 0.2em 0.4em 0.45em;
+    line-height: 1;
+    padding: 0.35em 0.4em 0.2em;
     margin: 0 0.4em 0 0;
     border-radius: .5em;
     cursor: pointer;
@@ -505,7 +506,8 @@
     
     .tagButton {
         font-size: 5.3vw;
-        padding: 0.1em 0.5em 0.35em;
+        line-height: 1;
+        padding: 0.25em 0.5em 0.1em;
         margin: 0.1em 0.3em 0.1em 0;
         max-width: 90%;
     }
