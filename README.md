@@ -9,5 +9,5 @@ Built in React
 
 
 
-### notes for updating
+### notes for publishing changes
 npm run deploy
