@@ -3,10 +3,13 @@
 .projectsMarginTop {
     margin-top: 5em;
 }
+#projects {
+    grid-template-columns: 30% 70%;
+}
 #projects-menu-fixed {
     position: fixed;
-    width: 48%;
-    max-width: 48%;
+    width: 30%;
+    max-width: 30%;
     box-sizing: border-box;
     padding-right: 1em;
 }
@@ -107,6 +110,7 @@
 .thumbLinkContainer {
     width: 100%;
     position: relative;
+    cursor: pointer;
 }
 .thumbLinkContainer img, .thumbLinkContainer h .thumbLinkContainer h2{
     cursor: pointer;
@@ -199,11 +203,14 @@
     transition: 400ms ease-in-out;
     min-height: 90vh;
     grid-template-rows: min-content;
+    padding-right: var(--content-pad);
 }
 
 .grid1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 2.5em;
+    max-width: 66%;
+    margin: 0 0 0 auto;
 }
 .grid2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -253,6 +260,7 @@
     opacity: .95;
 
     transition: 300ms ease-in-out;
+    cursor: pointer;
 }
 
 
@@ -367,6 +375,11 @@
         padding: 24px;
     }
 
+    .grid1 {
+        max-width: 100%;
+        margin: 0;
+    }
+
     .grid2 {
         gap: 28px 24px;
     }
@@ -412,8 +425,8 @@
     font-family: PangramDisplay, 'Arial Narrow', sans-serif;
     font-size: 0.6em;
     line-height: 1;
-    padding: 0.35em 0.4em 0.2em;
-    margin: 0 0.4em 0 0;
+    padding: 0.35em 0.5em 0.2em;
+    margin: 0 0.4em 0.2em 0;
     border-radius: .5em;
     cursor: pointer;
     transition: all 200ms ease-in-out;
@@ -421,11 +434,8 @@
     display: inline-block;
     width: auto;
     text-align: center;
-    max-width: calc(50% - 0.6em);
     box-sizing: border-box;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .tagButton:hover {
@@ -483,8 +493,8 @@
 }
 
 .tagsWrapper {
-    display: inline-block;
-    width: 100%;
+    display: block;
+    width: 80%;
 }
 
 .deselectAllButton:hover {
@@ -502,6 +512,7 @@
     .tagsWrapper {
         text-align: center;
         margin-bottom: 0.5em;
+        width: 100%;
     }
     
     .tagButton {

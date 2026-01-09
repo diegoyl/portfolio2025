@@ -104,7 +104,7 @@ const thumbDataDict = {
     "dad": [ Thumb_DAD, "D.A.D.", "A band I am a part of!", false],
     "drift": [ Thumb_Drift, "Drift", "Intentional error in machine-aided drawings", false],
     "footwork":[ Thumb_Footwork, "Footwork XVII", "Branding & T-Shirt Design" , false],
-    "21m080": [ Thumb_21m080, "21M.080 Interface", "Making music with live-coding", false],
+    "21m080": [ Thumb_21m080, "Digital Synth Interface", "Making music with live-coding", false],
     "adobe-home": [ Thumb_AdobeHome, "Adobe Home", "", false],
     "infinite-merch": [ Thumb_InfiniteMerch, "Infinite Merch", "Hand-printed T-Shirts, stickers, and totes for Infinite Magazine", false],
     "mitgala": [ Thumb_Mitgala, "MIT Gala", "Branding for Infinite's innaugural fashion show", false],
@@ -135,12 +135,11 @@ const thumbDataDict = {
 
 const tagProjects = {
     "all": [
-        "beatfarm",
         "squish",
         "clock",
         "forting", // TODO: add forting process
+        "beatfarm",
         "footwork",
-        "splash-course",
         "tangible-sampling", 
         "21m080",
         "infinite-merch",
@@ -149,6 +148,7 @@ const tagProjects = {
         "chair",
         "ai",
         "infinite", //  TODO: infinite unfinished
+        // "splash-course",
         "hardcell",
         "rejisrave",
         "tactical-type",
@@ -165,13 +165,13 @@ const tagProjects = {
     ],
     "UI/UX": [
         "beatfarm",
-        "splash-course",
+        // "splash-course",
         "21m080",
         "b2web",
     ],
     "Product Design": [
-        "clock",
         "squish",
+        "clock",
         "forting",
         "tangible-sampling", 
         "hardcell",
@@ -190,7 +190,7 @@ const tagProjects = {
     ],
     "Web Dev": [
         "beatfarm",
-        "splash-course",
+        // "splash-course",
         "rejisrave",
         "21m080",
         "tactical-type",
@@ -198,14 +198,14 @@ const tagProjects = {
         "birth-certificate",
     ],
     "Game Dev": [
-        "beatfarm",
         "rejisrave",
+        "beatfarm",
         "golf",
     ],
     "Programming": [
         "beatfarm",
         "rejisrave",
-        "splash-course",
+        // "splash-course",
         "ai",
         "hardcell",
         "clock",

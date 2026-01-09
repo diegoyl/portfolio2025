@@ -270,6 +270,7 @@
 #projectPage  .rightSplit a {
     color: var(--c-blue);
     text-decoration: underline;
+    cursor: pointer;
 }
 #projectPage  .vsc-controller { 
     /* // video tag creates this rnadom div */

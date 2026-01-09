@@ -94,7 +94,7 @@
 
 .navlink {
     display: inline-block;
-
+    cursor: pointer;
 }
 .navlink p {
     display: inline-block;

@@ -58,7 +58,7 @@ const projComponentDict = {
   "htmaa": [ <Cont_HTMAA />, "How To Make (Almost) Anything"],
   "chair": [ <Cont_Chair />, "Chair"],
   "beatfarm": [ <Cont_Beatfarm />, "Beatfarm"],
-  "21m080": [ <Cont_21m080 />, "21M.080 GUI"],
+  "21m080": [ <Cont_21m080 />, "Digital Synth Interface"],
   "mask": [ <Cont_Mask />, "Mask"],
   "hardcell": [ <Cont_Hardcell />, "HARDCELL"],
   "ims": [ <Cont_IMS />, "Interactive Music Systems"],

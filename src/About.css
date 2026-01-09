@@ -67,6 +67,7 @@
     text-decoration: underline;
     /* display: inline-block; */
     transition: 0ms ease-out;
+    cursor: pointer;
 }
 .aboutPage a:hover {
     color: var(--c-blue);

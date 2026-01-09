@@ -15,7 +15,7 @@ function Cont_21m080() {
     <div id="projectPage" className="content-left content-margintop content-padding">
         <ProjectHeader
 
-            title={<><i>Intro to Music Tech </i> Interface</>}
+            title={<>Digital Synth Interface</>}
             subtitle="Making music with live-coding"
             
             metaLists={[
@@ -60,7 +60,7 @@ function Cont_21m080() {
                 I designed a customizable, drag-and-drop GUI system using p5.js and the Web Audio API. Users can create UI elements with live-coding and specify different functional and aesthetic settings for each element. These elements appear in the GUI and can be interacted with and reorganized by dragging around.
                 <br></br>
                 <br></br>
-                This interface was used for an introductory music technology class at MIT where students used the GUI to quickly prototype and build digital synth systems.
+                This interface was used for the Intro to Music Tech class at MIT where students used the GUI to quickly prototype and build digital synth systems.
                 <br></br>
                 <br></br>
 

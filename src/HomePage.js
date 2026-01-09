@@ -302,7 +302,7 @@ function HomePage() {
           Hi, I’m Diego! I love making things, experimenting, and learning new things along the way. I graduated from MIT, where I took classes on design, computer science, mechanical engineering, and music!
           <br></br>
           <br></br>
-          I am currently a UI/UX Intern at Next Play Games and also working on some UX/webdev side projects.
+          I am currently doing UX design and frontend development for The Radar Company and also working on some app development side projects.
            Feel free to reach out if you want to work together on anything! 
           <br></br>
         </p>
