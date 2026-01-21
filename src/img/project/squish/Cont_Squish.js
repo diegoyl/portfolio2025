@@ -91,7 +91,7 @@ function Cont_Squish() {
             right={<>
                 <p>
                 Despite the growing popularity of digital music instruments (DMIs) and relevant technological advances, accessibility and expressive potential remain significant challenges for musical interface designers. 
-                These issues stem three main problems that generic input-output mappings, sensor limitations, and a lack of physical connection between musicians and instruments. Squish explores the benefits of incorporating soft materials into musical interfaces and why DMIs should be designed with musician-instrument relationships as a priority in order to enhance intuitiveness and expressiveness. 
+                These issues stem three main problems: generic input-output mappings, sensor limitations, and a lack of physical connection between musicians and instruments. Squish explores the benefits of incorporating soft materials into musical interfaces and why DMIs should be designed with musician-instrument relationships as a priority in order to enhance intuitiveness and expressiveness. 
 
                 </p>
                 
@@ -109,15 +109,15 @@ function Cont_Squish() {
                 </p>
                 <h5>Too Much Mapping Freedom</h5>
                 <p>
-                Digital mapping and new sensor technologies allow digital instruments to map any input to any output, but this also removes the natural link between physical interaction and sound. For example, piano keys have a physical weight that allows performers to control how much force they use when pressing keys, which influences the volume and timbre of the notes. I found that most digital instruments fail to remake this type of natural feedback and intuitiveness.
+                Digital mapping and new sensor technologies allow digital instruments to map any input to any output, but this also removes the natural link between physical interaction and sound. For example, piano keys have a physical weight that allows performers to control how much force they use when pressing keys, which influences the volume and timbre of the notes. I found that most digital instruments fail to recreate this type of natural feedback.
                 </p>
                 <h5>Sensor Limitations</h5>
                 <p>
-                Sensors allow for cool interactions like detecting hand motion or force-sensitive keys. However, sensors are not perfect and digital instruments have to carefully balance how much sensor data is used
+                Sensors allow for cool interactions, like detecting hand motions or force-sensitive keys. However, sensors are not perfect and digital instruments have to carefully balance how much sensor data is used.
                 <ul>
 
-                    <li>Too little: inputs lack nuance, important data is ignored</li>
-                    <li>Too much: can become too noisy and render data meaningless</li>
+                    <li>Too little: Inputs lack nuance, important data is ignored. For example, touchscreens reduce interactions into discrete events (touch down, position, touch up) which don't take other factors into account (pressure, area of contact, duration). </li>
+                    <li>Too much: Ouputs can become too noisy and render data meaningless. Without enough filtering, the instrument picks up unintentional inputs (involuntary movements, background nice, sensor drift).  </li>
                 </ul>
                 I found that most sensors are over-simplified and turn complex user inputs into discrete or even binary values.
                 </p>
@@ -126,9 +126,10 @@ function Cont_Squish() {
                 <h5>Generic Relationships</h5>
                 <p>
                 
-                As digital instruments have gotten more popular and commercialized, their design has been standardized and taken on a shared user interface language. Most interfaces feature buttons, knobs, pads, and sliders. Another selling point is the versatility of digital instruments (mapping freedom). This has led to instruments/controllers with generic designs that prioritize flexibility over usability and may even require reading manuals to be able to use them. 
-
-                The diagram below shows how interactions have become simplified in the digital setting:
+                As digital instruments have become more popular and commercialized, their interfaces have converged around a shared design language. Buttons, knobs, pads, and sliders appear on most products. This standardization offers some benefits: familiar controls are immediately legible and allow users to transfer knowledge between instruments. Similarly, the versatility gained from mapping freedom allows products to appeal to a wider range of users. However, these benefits often prioritize flexibility over usability and flatten the relationship between gestures and sound. By designing instruments that can do everything, they avoid committing to specific interactions that enable expressive control.
+                <br></br>
+                <br></br>
+                The diagram below shows how different interactions have become simplified in the digital setting:
                 </p>
                 <br></br>
 

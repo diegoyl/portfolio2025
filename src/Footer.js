@@ -62,7 +62,7 @@ function Footer({page}) {
 
         <br></br>
             <br></br>
-      <div id="createdwith">
+      {/* <div id="createdwith">
               <span>Created with </span>
 
               <span className='stLine' >
@@ -70,9 +70,8 @@ function Footer({page}) {
               </span>
 
               <span> lots of love &lt;3</span>
-              {/* TODO: heart bubbles */}
 
-      </div>
+      </div> */}
 
       <br></br>
 
