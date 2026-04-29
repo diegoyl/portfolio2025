@@ -46,9 +46,11 @@ import Thumb_HTMAA from './img/project/htmaa/thumb.gif'
 import Thumb_Golf from './img/project/golf/thumb.png'
 import Thumb_SplashCourse from './img/project/splash-course/thumb.jpg'
 import Thumb_RejisRave from './img/project/rejisrave/thumb.jpg'
+import Thumb_Radarco from './img/project/radarco/thumb.jpg'
 // import Thumb_NEWPROJ from './img/project/NEWPROJ/thumb.jpg'
 
 const preloadSrcList = [
+    Thumb_Radarco,
     Thumb_Clock,
     Thumb_Footwork,
     Thumb_Squish,
@@ -88,6 +90,7 @@ const preloadSrcList = [
 
 const thumbDataDict = {
     // "defaultName": [ Thumb_DefaultImg, "Thumb Title", "Thumb Subtitle" , redirect to other site?],
+    "radarco": [ Thumb_Radarco, "The Radar Co.", "Built frontend for radar monitoring webapp", false],
     "clock": [ Thumb_Clock, "Sequencer Clock", "An instrument that lets you play with time" , false],
 
     "squish": [ Thumb_Squish, "Squish", "A squishable & modular music interface", false],
@@ -135,23 +138,24 @@ const thumbDataDict = {
 
 const tagProjects = {
     "all": [
+        // "radarco",
         "squish",
         "clock",
         "forting", // TODO: add forting process
         "beatfarm",
         "footwork",
         "tangible-sampling", 
+        "rejisrave",
         "21m080",
         "infinite-merch",
         "mitgala",
+        "tactical-type",
         "htmaa",
-        "chair",
         "ai",
         "infinite", //  TODO: infinite unfinished
-        // "splash-course",
         "hardcell",
-        "rejisrave",
-        "tactical-type",
+        "chair",
+        // "splash-course",
         "birth-certificate",
         "honest-type",
         "golf",
@@ -159,23 +163,26 @@ const tagProjects = {
         "drift",
         "adobe-home",
         "futbot",
-        "b2web",
+        // "b2web",
         "dad",
         // "NEWPROJ",
     ],
-    "UI/UX": [
+    
+    
+    "Web Dev": [
+        // "radarco",
         "beatfarm",
         // "splash-course",
+        "rejisrave",
         "21m080",
-        "b2web",
+        "tactical-type",
+        // "b2web",
+        "birth-certificate",
     ],
     "Product Design": [
         "squish",
         "clock",
         "forting",
-        "tangible-sampling", 
-        "hardcell",
-        "chair",
     ],
     "Graphic Design": [
         "footwork",
@@ -184,72 +191,26 @@ const tagProjects = {
         "infinite-merch",
         "tactical-type",
         "honest-type",
+        "ai",
         "birth-certificate",
         "pecan-sans",
         "drift",
     ],
-    "Web Dev": [
-        "beatfarm",
-        // "splash-course",
-        "rejisrave",
-        "21m080",
-        "tactical-type",
-        "b2web",
-        "birth-certificate",
+    "Physical": [
+        "clock",
+        "squish",
+        "tangible-sampling", 
+        "forting",
+        "chair",
+        "hardcell",
+        "htmaa",
+        "futbot",
     ],
     "Game Dev": [
         "rejisrave",
         "beatfarm",
         "golf",
-    ],
-    "Programming": [
-        "beatfarm",
-        "rejisrave",
-        // "splash-course",
-        "ai",
-        "hardcell",
-        "clock",
-        "squish",
-        "tactical-type",
-        "21m080",
-        "futbot",
-        "htmaa",
-        "birth-certificate",
-        "b2web",
-        "golf",
-    ],
-    "Physical": [
-        "clock",
-        "squish",
-        "forting",
-        "tangible-sampling", 
-        "chair",
-        "hardcell",
-        "htmaa",
-        "futbot",
-        "footwork",
-        "infinite-merch",
-        "mitgala",
-    ],
-    "3D Design": [
-        "forting",
-        "clock",
-        "tangible-sampling",
-        "footwork",
-        "squish",
-        "rejisrave",
-        "hardcell",
-        "htmaa",
-        "futbot",
-        "adobe-home",
-    ],
-    "Branding": [
-        "footwork",
-        "mitgala",
-        "infinite-merch",
-        "infinite",
-        "forting"
-    ],
+    ]
 }  
 
   
@@ -265,66 +226,20 @@ function Work() {
         window.location.href = path;
       }, 310)
     }
-    var [selectedTags, setSelectedTags] = useState([]) // Empty = show all
+    var [selectedCategory, setSelectedCategory] = useState("all")
     var [gridType, setGridType] = useState("grid1")
     var [showToTop, setShowToTop] = useState(false)
-    
-    console.log("defCatInit= ",selectedTags)
+    var categoriesList = Object.keys(tagProjects)
     
     // Filtering logic
     function getProjectsToShow() {
-        if (selectedTags.length === 0) {
-            return tagProjects["all"]; // Show all projects
-        }
-        
-        if (selectedTags.length === 1) {
-            // Use the specific tag's ordering when only one tag is selected
-            return tagProjects[selectedTags[0]];
-        }
-        
-        // Check if only Graphic Design and/or Branding are selected
-        const onlyDesignTags = selectedTags.every(tag => 
-            tag === "Graphic Design" || tag === "Branding"
-        );
-        
-        if (onlyDesignTags) {
-            // Concatenate Graphic Design and Branding lists, remove duplicates
-            const concatenatedProjects = [];
-            const seenProjects = new Set();
-            
-            selectedTags.forEach(tag => {
-                tagProjects[tag].forEach(project => {
-                    if (!seenProjects.has(project)) {
-                        concatenatedProjects.push(project);
-                        seenProjects.add(project);
-                    }
-                });
-            });
-            
-            return concatenatedProjects;
-        }
-        
-        // Multiple tags selected (including non-design tags): use "all" ordering and filter
-        return tagProjects["all"].filter(project => 
-            selectedTags.some(tag => tagProjects[tag].includes(project))
-        );
+        if (!selectedCategory || selectedCategory === "all") return tagProjects["all"];
+        return tagProjects[selectedCategory] ?? tagProjects["all"];
     }
     
-    function toggleTag(tagName) {
-        setSelectedTags(prev => {
-            if (prev.includes(tagName)) {
-                return prev.filter(tag => tag !== tagName);
-            } else {
-                return [...prev, tagName];
-            }
-        });
-        
-        // Auto scroll to top when selecting a tag
+    function selectCategory(categoryName) {
+        setSelectedCategory(prev => (prev === categoryName ? "all" : categoryName));
         window.scrollTo({top: 0, behavior: 'smooth'});
-    }
-    
-    function deselectAll() {
-        setSelectedTags([]);
     }
 
     function scrollToTop() {
@@ -448,25 +363,19 @@ function Work() {
                     <div id="projects-menu-inner">
 
                         <div className="tagsContainer">
-                            <span className="tagsLabel">Tags</span>
-                                                        <button
-                                className={`deselectAllButton ${selectedTags.length > 0 ? 'visible' : ''}`}
-                                onClick={deselectAll}
-                            >
-                                DESELECT ALL
-                            </button>
+                            <span className="categoriesTitleMobile">CATEGORIES</span>
                         </div>
 
                         <div className="tagsWrapper">
-                            {Object.keys(tagProjects).filter(tag => tag !== "all").map(function(tagName,index) {
-                                const isSelected =   selectedTags.includes(tagName);
+                            {["all", ...categoriesList.filter(tag => tag !== "all")].map(function(tagName,index) {
+                                const isSelected = selectedCategory === tagName;
                                 return (
                                     <button 
                                         key={index} 
-                                        className={`tagButton ${isSelected ? 'tagButtonActive' : 'tagButtonInactive'}`}
-                                        onClick={() => toggleTag(tagName)}
+                                        className={`categoryButton ${isSelected ? 'categoryButtonActive' : 'categoryButtonInactive'}`}
+                                        onClick={() => selectCategory(tagName)}
                                     >
-                                        {tagName.toUpperCase()}
+                                        <span className="categoryButtonText">{tagName.toUpperCase()}</span>
                                     </button>
                                 )
                             })}

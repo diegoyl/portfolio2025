@@ -299,11 +299,13 @@ function HomePage() {
 
         <p id="home-bio" >
 
-          Hi, I’m Diego! I love making things, experimenting, and learning new things along the way. I graduated from MIT, where I took classes on design, computer science, mechanical engineering, and music!
+          Hi, I'm Diego! I'm a developer and designer from MIT building interactive web experiences across design and code. I'm interested in making new technologies feel intuitive, accessible, and human.
+
           <br></br>
           <br></br>
-          I am currently doing UX design and frontend development for The Radar Company and also working on some app development side projects.
-           Feel free to reach out if you want to work together on anything! 
+  
+          Most recently, I did frontend development and UX design at The Radar Company. Outside of work, I'm always exploring new things through side projects like game development, Arduino experiments, and open source contributions. Feel free to reach out if you'd like to collaborate!
+          
           <br></br>
         </p>
       </div>

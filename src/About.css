@@ -10,6 +10,7 @@
     margin-top: calc(var(--content-pad)*.5);
     font-family: PangramCompact, Arial, sans-serif;
     font-weight: 600;
+    gap: calc(var(--split-grid-gap) * 1.5);
 }
 .aboutPage .rightSplit p {
     font-size: .9em;
@@ -62,6 +63,12 @@
     line-height: 1.4em;
 }
 
+.aboutPage .aboutIndentedLinks {
+    display: block;
+    padding-left: 1.5em;
+    margin: 0;
+}
+
 .aboutPage a{
     /* color: var(--c-blue); */
     text-decoration: underline;
@@ -74,6 +81,34 @@
     font-family: PangramTextBold, Arial, sans-serif;
 
     letter-spacing: -.01em;
+}
+
+.aboutPage .aboutEmailCopy {
+    font: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    text-decoration: underline;
+    text-align: left;
+    transition: 0ms ease-out;
+}
+.aboutPage .aboutEmailCopy:hover {
+    color: var(--c-blue);
+    font-family: PangramTextBold, Arial, sans-serif;
+    letter-spacing: -.01em;
+}
+.aboutPage .aboutEmailCopyFeedback {
+    text-decoration: none;
+    font-family: PangramCompact, Arial, sans-serif;
+    font-weight: 600;
+    color: var(--c-blue);
 }
 
 

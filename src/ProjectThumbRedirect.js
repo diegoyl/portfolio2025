@@ -30,8 +30,10 @@ function ProjectThumbRedirect({thumbSrc, title, subtitle, redirect}) {
             />
         </div>
 
-        <h1>{title}</h1>
-        <h2>{subtitle}</h2>
+        <div className="thumbTitleRow">
+          <h1>{title}</h1>
+          <h2>{subtitle}</h2>
+        </div>
     </a>
   );
 }

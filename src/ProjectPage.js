@@ -42,6 +42,7 @@ import Cont_HTMAA from './img/project/htmaa/Cont_HTMAA';
 import Cont_Golf from './img/project/golf/Cont_Golf';
 import Cont_SplashCourse from './img/project/splash-course/Cont_SplashCourse';
 import Cont_RejisRave from './img/project/rejisrave/Cont_RejisRave';
+import Cont_Radarco from './img/project/radarco/Cont_Radarco';
 // import Cont_NEWPROJ from './img/project/NEWPROJ/Cont_NEWPROJ';
 // import Cont_Def from './img/project/ddef/Cont_Def';
 
@@ -82,6 +83,7 @@ const projComponentDict = {
   "golf": [ <Cont_Golf />, "Golf [🚧Under Construction]"],
   "splash-course": [ <Cont_SplashCourse />, "Splash Course"],
   "rejisrave": [ <Cont_RejisRave />, "Reji's Rave"],
+  "radarco": [ <Cont_Radarco />, "The Radar Co."],
   // "NEWPROJ": [ <Cont_NEWPROJ />, "NEWPROJ"],
 }
 

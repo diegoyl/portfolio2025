@@ -227,8 +227,24 @@
     margin-right: 0;
     margin-top: .2em;
     vertical-align: top;
+    flex: 0 0 auto;
 }
-.grid2 h2{display: none;}
+.grid2 .thumbTitleRow{
+    display: flex;
+    align-items: baseline;
+    gap: .35em;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.grid2 h2{
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
 .grid3 h1{display: none;}
 .grid3 h2{display: none;}
@@ -242,7 +258,9 @@
     margin-top:1em;
     margin-right: 1em;
     width: 100%;
-
+    /* Align first grid icon with category pill text: .categoryButton uses font-size 1.05× inner + padding-left 0.4em */
+    margin-left: calc(0.4em * 1.05);
+    text-align: left;
 }
 
 #gridBtnContainer button {
@@ -334,7 +352,10 @@
 
 
     #gridBtnContainer {
-        margin:0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-left: 0;
         width: 100%;
         text-align: center;
     }
@@ -418,78 +439,57 @@
 }
 
 /* Tag Button Styles */
-.tagButton {
-    background: none;
-    border: 2px solid var(--c-blue);
-    color: var(--c-blue);
-    font-family: PangramDisplay, 'Arial Narrow', sans-serif;
-    font-size: 0.6em;
-    line-height: 1;
-    padding: 0.35em 0.5em 0.2em;
-    margin: 0 0.4em 0.2em 0;
-    border-radius: .5em;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
-    text-transform: uppercase;
-    display: inline-block;
-    width: auto;
-    text-align: center;
-    box-sizing: border-box;
-    white-space: nowrap;
-}
-
-.tagButton:hover {
-    transform: scale(1.05);
-    background-color: var(--c-blue);
-    color: white;
-}
-
-.tagButtonActive {
-    background-color: var(--c-blue);
-    color: white;
-}
-
-.tagButtonInactive {
-    background: none;
-    color: var(--c-blue);
-}
-
-.deselectAllButton {
+.categoryButton {
     background: none;
     border: none;
-    border-radius: 0;
-    color: var(--c-gray);
-    font-family: PangramDisplay, 'Arial Narrow', sans-serif;
-    font-size: 0.5em;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0.2em 0;
     cursor: pointer;
-    transition: color 150ms ease-in-out, opacity 150ms ease-in-out;
-    text-transform: uppercase;
-    display: none;
-    width: auto;
-    text-align: center;
-    line-height: 1;
-    overflow: hidden;
-}
+    text-align: left;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 
-.deselectAllButton.visible {
-    display: inline;
-}
-
-.tagsLabel {
-    color: var(--c-black);
     font-family: PangramDisplay, 'Arial Narrow', sans-serif;
-    font-size: 0.5em;
+    font-size: 0.85em;
+    line-height: 1.05;
     text-transform: uppercase;
-    margin-right: 1em;
-    line-height: 1;
+
+    color: var(--c-gray);
+    background-color: transparent;
+    border-radius: 0.4em;
+    padding: 0.18em 0.4em 0.14em;
+    transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+}
+
+.categoryButtonActive {
+    background-color: var(--c-blue);
+    color: var(--c-cream);
+}
+
+.categoryButtonInactive {
+    color: var(--c-gray);
+}
+
+.categoryButtonInactive:hover {
+    color: var(--c-black);
+    background-color: color-mix(in srgb, var(--c-black) 15%, transparent);
+}
+
+.categoryButtonText {
+    display: inline-block;
+    transform: translateY(0.05em);
 }
 
 .tagsContainer {
     height: min-content;
-    margin-bottom: 0.3em;
-    line-height: 0;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.categoriesTitleMobile {
+    display: none;
 }
 
 .tagsWrapper {
@@ -497,58 +497,71 @@
     width: 80%;
 }
 
-.deselectAllButton:hover {
-    color: var(--c-blue);
-}
-
 @media (max-width: 800px) {
     #projects-menu-fixed {
         width: 100%;
         max-width: 100%;
-        padding-right: 0;
+        padding-left: var(--content-pad);
+        padding-right: var(--content-pad);
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    .categoriesTitleMobile {
+        display: block;
+        width: 100%;
         text-align: center;
+        color: var(--c-black);
+        font-family: PangramDisplay, 'Arial Narrow', sans-serif;
+        font-size: 5.3vw;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        margin: 0 0 0.8em 0;
     }
     
     .tagsWrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2em 0.28em;
         text-align: center;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.35em;
         width: 100%;
     }
     
-    .tagButton {
+    .categoryButton {
+        display: inline-block;
         font-size: 5.3vw;
-        line-height: 1;
-        padding: 0.25em 0.5em 0.1em;
-        margin: 0.1em 0.3em 0.1em 0;
-        max-width: 90%;
+        width: fit-content;
+        max-width: 100%;
+        margin: 0;
+        vertical-align: middle;
+        text-align: center;
+        border: 2px solid var(--c-gray);
+        padding: 0.2em 0.48em 0.16em;
+    }
+    .categoryButtonActive {
+        border-color: var(--c-blue);
+    }
+    #gridBtnContainer {
+        margin-left: 0;
+        text-align: center;
     }
     .tagsContainer {
         margin: 0;
         font-size: 1.2em;
-        margin-bottom: 0.2em;
+        margin-bottom: 0;
     }
-    .deselectAllButton {
-        display: block;
-        margin: 0 auto;
-        margin-top: 0.3em;
-        height: 0;
-        opacity: 0;
-        transition: height 300ms ease-in-out, opacity 300ms ease-in-out, margin-top 300ms ease-in-out;
+
+    /* 2-col: hide subtitle on mobile only */
+    .grid2 h2 {
+        display: none;
     }
-    
-    .deselectAllButton.visible {
-        height: 1.3em;
-        opacity: 1;
-        text-align: center;
-        display: block;
-        margin: 0 auto;
-        margin-top: 0.5em;
-    }
-    
-    .tagsLabel {
-        display: block;
-        margin: 0 auto;
-        text-align: center;
+    .grid2 .thumbTitleRow {
+        gap: 0;
     }
 }
 
