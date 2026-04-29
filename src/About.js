@@ -96,7 +96,7 @@ function About(props) {
                 <p>
                   <span className='PangramHeaderItalic' >CURRENT OBSESSIONS...</span><br></br>  
 
-                  game dev, figure skating, Ovrkast, card magic, threejs, <a target="_blank" href="https://www.youtube.com/@blaccmassxx" rel="noreferrer">blaccmass remixes</a> 
+                  game dev, figure skating, Ovrkast, card magic, threejs, <a target="_blank" href="https://www.youtube.com/@blaccmassxx" rel="noreferrer">blaccmass</a> 
                     , Three Body Problem, watermelon
                     <br></br>
 
@@ -107,7 +107,7 @@ function About(props) {
                     <span style={{"font-size":"1.5em"}} className='PangramHeaderItalic' >OBSESSIONS ARCHIVE: </span>
                     Zelda OST, Overcooked, mango sticky rice, Wii Golf, Conductor Williams instrumentals, puzzles, Dune, the olympics, 
                     cooking, <a target="_blank" href="https://www.youtube.com/@MummyJoe" rel="noreferrer">mummy joe</a>, 
-                    memphis jookin, attack on titan, pocket operators, Saba, Denzel Curry, sports betting models, Kendrick, orange chicken, Julian DeGuzman, MPC drum machine, Formula 1, buffalo wings, Avatar TLA, collaging, Rosalia, NCT 127, Hamilton
+                    memphis jookin, attack on titan, pocket operators, Saba, golf course architecture,Denzel Curry, sports betting models, Kendrick, orange chicken, Julian DeGuzman, MPC drum machine, Formula 1, buffalo wings, Avatar TLA, collaging, Rosalia, NCT 127, Hamilton
                   </p>
 
                 </div>
