@@ -213,6 +213,11 @@ const tagProjects = {
     ]
 }  
 
+function initialWorkGridType() {
+    if (typeof window === 'undefined') return 'grid2';
+    return window.matchMedia('(max-width: 768px)').matches ? 'grid1' : 'grid2';
+}
+
   
 function Work() {
 
@@ -227,7 +232,7 @@ function Work() {
       }, 310)
     }
     var [selectedCategory, setSelectedCategory] = useState("all")
-    var [gridType, setGridType] = useState("grid1")
+    var [gridType, setGridType] = useState(initialWorkGridType)
     var [showToTop, setShowToTop] = useState(false)
     var categoriesList = Object.keys(tagProjects)
     
